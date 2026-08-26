@@ -4,10 +4,13 @@ export const products = sqliteTable("products", {
   id: integer("id").primaryKey({ autoIncrement: true }),
   name: text("name").notNull(), category: text("category").notNull(), unit: text("unit").notNull(),
   packageSize: real("package_size").notNull(), remaining: real("remaining").notNull(), lowThreshold: real("low_threshold").notNull(),
+  phType: text("ph_type").notNull().default("中性"),
+  active: integer("active").notNull().default(1),
+  deletedAt: text("deleted_at"),
   createdAt: text("created_at").notNull(),
 });
 export const washSessions = sqliteTable("wash_sessions", {
-  id: text("id").primaryKey(), washedAt: text("washed_at").notNull(), note: text("note"), createdAt: text("created_at").notNull(),
+  id: text("id").primaryKey(), washedAt: text("washed_at").notNull(), note: text("note"), flowName: text("flow_name"), createdAt: text("created_at").notNull(),
 });
 export const washUsages = sqliteTable("wash_usages", {
   id: integer("id").primaryKey({ autoIncrement: true }),
@@ -17,4 +20,19 @@ export const washUsages = sqliteTable("wash_usages", {
 export const restocks = sqliteTable("restocks", {
   id: integer("id").primaryKey({ autoIncrement: true }),
   productId: integer("product_id").notNull().references(() => products.id), amount: real("amount").notNull(), createdAt: text("created_at").notNull(),
+});
+
+export const washFlows = sqliteTable("wash_flows", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
+  name: text("name").notNull(),
+  flowType: text("flow_type").notNull(),
+  createdAt: text("created_at").notNull(),
+});
+
+export const washFlowItems = sqliteTable("wash_flow_items", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
+  flowId: integer("flow_id").notNull().references(() => washFlows.id, { onDelete: "cascade" }),
+  productId: integer("product_id").notNull().references(() => products.id),
+  amount: real("amount").notNull(),
+  sortOrder: integer("sort_order").notNull().default(0),
 });
