@@ -42,7 +42,7 @@ export async function POST(request: Request) {
 }
 
 async function addProduct(body: Record<string, unknown>) {
-  const name = clean(body.name), category = clean(body.category), unit = clean(body.unit), phType = ph(body.phType);
+  const name = clean(body.name), category = productCategory(body.category), unit = clean(body.unit), phType = ph(body.phType);
   const packageSize = positive(body.packageSize), remaining = nonNegative(body.remaining), lowThreshold = nonNegative(body.lowThreshold);
   if (!name || !category || !unit || remaining > packageSize) throw new Error("請確認用品資料與剩餘數量");
   await db().prepare("INSERT INTO products (name, category, unit, package_size, remaining, low_threshold, ph_type, active, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, 1, ?)")
@@ -128,4 +128,5 @@ function positive(value: unknown) { const number = Number(value); if (!Number.is
 function nonNegative(value: unknown) { const number = Number(value); if (!Number.isFinite(number) || number < 0) throw new Error("數量不可小於 0"); return number; }
 function integer(value: unknown) { const number = positive(value); if (!Number.isInteger(number)) throw new Error("補貨罐數必須是整數"); return number; }
 function ph(value: unknown) { const text = clean(value); if (!["酸性", "中性", "鹼性"].includes(text)) throw new Error("請選擇 pH 分類"); return text; }
+function productCategory(value: unknown) { const text = clean(value); if (!["預洗", "正洗", "內裝", "其他"].includes(text)) throw new Error("請選擇用途分類"); return text; }
 function flow(value: unknown) { const text = clean(value); if (!["2PH", "3PH", "快速保養", "自訂流程"].includes(text)) throw new Error("請選擇流程類型"); return text; }
