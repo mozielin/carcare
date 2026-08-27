@@ -1,13 +1,1 @@
-import { env } from "cloudflare:workers";
-import { drizzle } from "drizzle-orm/d1";
-import * as schema from "./schema";
-
-export function getDb() {
-  if (!env.DB) {
-    throw new Error(
-      "Cloudflare D1 binding `DB` is unavailable. Set the `d1` field in .openai/hosting.json to `DB` or let your control plane inject the real binding values before using the database."
-    );
-  }
-
-  return drizzle(env.DB, { schema });
-}
+aW1wb3J0IHsgZW52IH0gZnJvbSAiY2xvdWRmbGFyZTp3b3JrZXJzIjsKaW1wb3J0IHsgZHJpenpsZSB9IGZyb20gImRyaXp6bGUtb3JtL2QxIjsKaW1wb3J0ICogYXMgc2NoZW1hIGZyb20gIi4vc2NoZW1hIjsKCmV4cG9ydCBmdW5jdGlvbiBnZXREYigpIHsKICBpZiAoIWVudi5EQikgewogICAgdGhyb3cgbmV3IEVycm9yKAogICAgICAiQ2xvdWRmbGFyZSBEMSBiaW5kaW5nIGBEQmAgaXMgdW5hdmFpbGFibGUuIFNldCB0aGUgYGQxYCBmaWVsZCBpbiAub3BlbmFpL2hvc3RpbmcuanNvbiB0byBgREJgIG9yIGxldCB5b3VyIGNvbnRyb2wgcGxhbmUgaW5qZWN0IHRoZSByZWFsIGJpbmRpbmcgdmFsdWVzIGJlZm9yZSB1c2luZyB0aGUgZGF0YWJhc2UuIgogICAgKTsKICB9CgogIHJldHVybiBkcml6emxlKGVudi5EQiwgeyBzY2hlbWEgfSk7Cn0K
