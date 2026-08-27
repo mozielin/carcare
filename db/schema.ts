@@ -2,6 +2,7 @@ import { integer, real, sqliteTable, text } from "drizzle-orm/sqlite-core";
 
 export const products = sqliteTable("products", {
   id: integer("id").primaryKey({ autoIncrement: true }),
+  ownerEmail: text("owner_email").notNull().default(""),
   brand: text("brand").notNull().default("未設定品牌"),
   name: text("name").notNull(), category: text("category").notNull(), unit: text("unit").notNull(),
   packageSize: real("package_size").notNull(), remaining: real("remaining").notNull(), lowThreshold: real("low_threshold").notNull(),
@@ -11,7 +12,7 @@ export const products = sqliteTable("products", {
   createdAt: text("created_at").notNull(),
 });
 export const washSessions = sqliteTable("wash_sessions", {
-  id: text("id").primaryKey(), washedAt: text("washed_at").notNull(), note: text("note"), flowName: text("flow_name"), createdAt: text("created_at").notNull(),
+  id: text("id").primaryKey(), ownerEmail: text("owner_email").notNull().default(""), washedAt: text("washed_at").notNull(), note: text("note"), flowName: text("flow_name"), createdAt: text("created_at").notNull(),
 });
 export const washUsages = sqliteTable("wash_usages", {
   id: integer("id").primaryKey({ autoIncrement: true }),
@@ -25,6 +26,7 @@ export const restocks = sqliteTable("restocks", {
 
 export const washFlows = sqliteTable("wash_flows", {
   id: integer("id").primaryKey({ autoIncrement: true }),
+  ownerEmail: text("owner_email").notNull().default(""),
   name: text("name").notNull(),
   flowType: text("flow_type").notNull(),
   createdAt: text("created_at").notNull(),
