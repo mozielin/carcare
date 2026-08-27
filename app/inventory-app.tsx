@@ -21,7 +21,7 @@ type Wash = { id: string; washedAt: string; note: string | null; flowName: strin
 type Data = { products: Product[]; brands: string[]; flows: WashFlow[]; washes: Wash[] };
 type Submit = (action: string, payload: Record<string, unknown>) => Promise<void>;
 const inputClass = "h-11 w-full rounded-xl border border-slate-200 bg-white px-3 text-sm outline-none transition focus:border-cyan-600 focus:ring-4 focus:ring-cyan-600/10 disabled:cursor-not-allowed disabled:bg-slate-100 disabled:text-slate-400";
-const navItems = [{ value: "inventory", label: "用品庫存" }, { value: "flows", label: "流程管理" }, { value: "history", label: "洗車紀錄" }, { value: "backup", label: "匯出／匯入" }] as const;
+const navItems = [{ value: "dashboard", label: "Dashboard" }, { value: "inventory", label: "用品庫存" }, { value: "flows", label: "流程管理" }, { value: "history", label: "洗車紀錄" }, { value: "backup", label: "匯出／匯入" }] as const;
 
 export default function InventoryApp({
   user,
@@ -36,7 +36,7 @@ export default function InventoryApp({
   });
   const [loading, setLoading] = useState(true),
     [busy, setBusy] = useState(false);
-  const [activeTab, setActiveTab] = useState("inventory");
+  const [activeTab, setActiveTab] = useState("dashboard");
   const [addOpen, setAddOpen] = useState(false),
     [washOpen, setWashOpen] = useState(false),
     [flowOpen, setFlowOpen] = useState(false);
@@ -181,44 +181,27 @@ export default function InventoryApp({
         </div>
       </header>
       <div className="mx-auto max-w-6xl px-5 py-7 sm:px-8 sm:py-10">
-        <section className="grid gap-4 md:grid-cols-2 xl:grid-cols-[1.45fr_.7fr_.7fr_.7fr]">
-          <div className="relative overflow-hidden rounded-[28px] bg-cyan-950 p-6 text-white shadow-[0_18px_55px_rgba(8,51,68,.17)] sm:p-8 md:col-span-2 xl:col-span-1">
-            <div className="absolute -right-16 -top-20 size-52 rounded-full border-[28px] border-cyan-700/30" />
-            <p className="text-sm text-cyan-200">目前庫存概況</p>
-            <div className="mt-8 flex items-end gap-3">
-              <strong className="text-6xl font-semibold tracking-[-.06em]">
-                {loading ? "—" : average}
-              </strong>
-              <span className="pb-2 text-cyan-200">% 平均剩餘</span>
-            </div>
-            <p className="mt-3 text-sm text-cyan-100/75">
-              共管理 {data.products.length} 項用品
-            </p>
-          </div>
-          <Metric
-            icon={<Archive />}
-            value={data.products.length}
-            label="庫存品項"
-          />
-          <Metric
-            icon={<AlertTriangle />}
-            value={lowStock.length}
-            label="需要補貨"
-            tone={lowStock.length > 0 ? "warning" : "neutral"}
-          />
-          <Metric
-            icon={<CalendarDays />}
-            value={loading ? "—" : daysSinceWash === null ? "—" : daysSinceWash}
-            suffix={daysSinceWash === null ? undefined : "天"}
-            label={daysSinceWash === null ? "尚無洗車紀錄" : "距上次洗車"}
-            tone={washTone}
-          />
-        </section>
-        <Tabs
-          value={activeTab}
-          onValueChange={setActiveTab}
-          className="mt-6"
-        >
+        <Tabs value={activeTab} onValueChange={setActiveTab}>
+          <TabsContent value="dashboard" className="!mt-0">
+            <section className="grid gap-4 md:grid-cols-2 xl:grid-cols-[1.45fr_.7fr_.7fr_.7fr]">
+              <div className="relative overflow-hidden rounded-[28px] bg-cyan-950 p-6 text-white shadow-[0_18px_55px_rgba(8,51,68,.17)] sm:p-8 md:col-span-2 xl:col-span-1">
+                <div className="absolute -right-16 -top-20 size-52 rounded-full border-[28px] border-cyan-700/30" />
+                <p className="text-sm text-cyan-200">目前庫存概況</p>
+                <div className="mt-8 flex items-end gap-3">
+                  <strong className="text-6xl font-semibold tracking-[-.06em]">
+                    {loading ? "—" : average}
+                  </strong>
+                  <span className="pb-2 text-cyan-200">% 平均剩餘</span>
+                </div>
+                <p className="mt-3 text-sm text-cyan-100/75">
+                  共管理 {data.products.length} 項用品
+                </p>
+              </div>
+              <Metric icon={<Archive />} value={data.products.length} label="庫存品項" />
+              <Metric icon={<AlertTriangle />} value={lowStock.length} label="需要補貨" tone={lowStock.length > 0 ? "warning" : "neutral"} />
+              <Metric icon={<CalendarDays />} value={loading ? "—" : daysSinceWash === null ? "—" : daysSinceWash} suffix={daysSinceWash === null ? undefined : "天"} label={daysSinceWash === null ? "尚無洗車紀錄" : "距上次洗車"} tone={washTone} />
+            </section>
+          </TabsContent>
           <TabsContent value="inventory" className="!mt-0">
             <SectionTitle eyebrow="INVENTORY" title="用品餘量">
               <AddProductDialog
