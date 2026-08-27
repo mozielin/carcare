@@ -1,1 +1,13 @@
-aW1wb3J0IHsgY24gfSBmcm9tICJAL2xpYi91dGlscyIKCmZ1bmN0aW9uIFNrZWxldG9uKHsgY2xhc3NOYW1lLCAuLi5wcm9wcyB9OiBSZWFjdC5Db21wb25lbnRQcm9wczwiZGl2Ij4pIHsKICByZXR1cm4gKAogICAgPGRpdgogICAgICBkYXRhLXNsb3Q9InNrZWxldG9uIgogICAgICBjbGFzc05hbWU9e2NuKCJhbmltYXRlLXB1bHNlIHJvdW5kZWQtbWQgYmctYWNjZW50IiwgY2xhc3NOYW1lKX0KICAgICAgey4uLnByb3BzfQogICAgLz4KICApCn0KCmV4cG9ydCB7IFNrZWxldG9uIH0K
+import { cn } from "@/lib/utils"
+
+function Skeleton({ className, ...props }: React.ComponentProps<"div">) {
+  return (
+    <div
+      data-slot="skeleton"
+      className={cn("animate-pulse rounded-md bg-accent", className)}
+      {...props}
+    />
+  )
+}
+
+export { Skeleton }

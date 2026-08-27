@@ -1,1 +1,45 @@
-aW1wb3J0IHsgYWNjZXNzLCBjcCwgbWtkaXIsIHJtIH0gZnJvbSAibm9kZTpmcy9wcm9taXNlcyI7CmltcG9ydCB7IHJlc29sdmUgfSBmcm9tICJub2RlOnBhdGgiOwppbXBvcnQgdHlwZSB7IFBsdWdpbiB9IGZyb20gInZpdGUiOwoKYXN5bmMgZnVuY3Rpb24gZXhpc3RzKHBhdGg6IHN0cmluZyk6IFByb21pc2U8Ym9vbGVhbj4gewogIHRyeSB7CiAgICBhd2FpdCBhY2Nlc3MocGF0aCk7CiAgICByZXR1cm4gdHJ1ZTsKICB9IGNhdGNoIChlcnJvcikgewogICAgaWYgKChlcnJvciBhcyBOb2RlSlMuRXJybm9FeGNlcHRpb24pLmNvZGUgPT09ICJFTk9FTlQiKSB7CiAgICAgIHJldHVybiBmYWxzZTsKICAgIH0KICAgIHRocm93IGVycm9yOwogIH0KfQoKLy8gUGFja2FnZXMgU2l0ZXMgbWV0YWRhdGEgYW5kIG1pZ3JhdGlvbnMgYWZ0ZXIgVml0ZSBmaW5pc2hlcyBjb21waWxpbmcuCmV4cG9ydCBmdW5jdGlvbiBzaXRlcygpOiBQbHVnaW4gewogIGxldCByb290ID0gcHJvY2Vzcy5jd2QoKTsKCiAgcmV0dXJuIHsKICAgIG5hbWU6ICJzaXRlcyIsCiAgICBhcHBseTogImJ1aWxkIiwKICAgIGNvbmZpZ1Jlc29sdmVkKGNvbmZpZykgewogICAgICByb290ID0gY29uZmlnLnJvb3Q7CiAgICB9LAogICAgYXN5bmMgY2xvc2VCdW5kbGUoKSB7CiAgICAgIGNvbnN0IG91dHB1dERpcmVjdG9yeSA9IHJlc29sdmUocm9vdCwgImRpc3QiLCAiLm9wZW5haSIpOwogICAgICBjb25zdCBob3N0aW5nQ29uZmlnID0gcmVzb2x2ZShyb290LCAiLm9wZW5haSIsICJob3N0aW5nLmpzb24iKTsKICAgICAgY29uc3QgZHJpenpsZVNvdXJjZSA9IHJlc29sdmUocm9vdCwgImRyaXp6bGUiKTsKCiAgICAgIGF3YWl0IHJtKG91dHB1dERpcmVjdG9yeSwgeyByZWN1cnNpdmU6IHRydWUsIGZvcmNlOiB0cnVlIH0pOwogICAgICBhd2FpdCBta2RpcihvdXRwdXREaXJlY3RvcnksIHsgcmVjdXJzaXZlOiB0cnVlIH0pOwoKICAgICAgaWYgKGF3YWl0IGV4aXN0cyhob3N0aW5nQ29uZmlnKSkgewogICAgICAgIGF3YWl0IGNwKGhvc3RpbmdDb25maWcsIHJlc29sdmUob3V0cHV0RGlyZWN0b3J5LCAiaG9zdGluZy5qc29uIikpOwogICAgICB9CiAgICAgIGlmIChhd2FpdCBleGlzdHMoZHJpenpsZVNvdXJjZSkpIHsKICAgICAgICBhd2FpdCBjcChkcml6emxlU291cmNlLCByZXNvbHZlKG91dHB1dERpcmVjdG9yeSwgImRyaXp6bGUiKSwgewogICAgICAgICAgcmVjdXJzaXZlOiB0cnVlLAogICAgICAgIH0pOwogICAgICB9CiAgICB9LAogIH07Cn0K
+import { access, cp, mkdir, rm } from "node:fs/promises";
+import { resolve } from "node:path";
+import type { Plugin } from "vite";
+
+async function exists(path: string): Promise<boolean> {
+  try {
+    await access(path);
+    return true;
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code === "ENOENT") {
+      return false;
+    }
+    throw error;
+  }
+}
+
+// Packages Sites metadata and migrations after Vite finishes compiling.
+export function sites(): Plugin {
+  let root = process.cwd();
+
+  return {
+    name: "sites",
+    apply: "build",
+    configResolved(config) {
+      root = config.root;
+    },
+    async closeBundle() {
+      const outputDirectory = resolve(root, "dist", ".openai");
+      const hostingConfig = resolve(root, ".openai", "hosting.json");
+      const drizzleSource = resolve(root, "drizzle");
+
+      await rm(outputDirectory, { recursive: true, force: true });
+      await mkdir(outputDirectory, { recursive: true });
+
+      if (await exists(hostingConfig)) {
+        await cp(hostingConfig, resolve(outputDirectory, "hosting.json"));
+      }
+      if (await exists(drizzleSource)) {
+        await cp(drizzleSource, resolve(outputDirectory, "drizzle"), {
+          recursive: true,
+        });
+      }
+    },
+  };
+}

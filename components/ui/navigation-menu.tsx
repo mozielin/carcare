@@ -1,1 +1,168 @@
-aW1wb3J0ICogYXMgUmVhY3QgZnJvbSAicmVhY3QiCmltcG9ydCB7IGN2YSB9IGZyb20gImNsYXNzLXZhcmlhbmNlLWF1dGhvcml0eSIKaW1wb3J0IHsgQ2hldnJvbkRvd25JY29uIH0gZnJvbSAibHVjaWRlLXJlYWN0IgppbXBvcnQgeyBOYXZpZ2F0aW9uTWVudSBhcyBOYXZpZ2F0aW9uTWVudVByaW1pdGl2ZSB9IGZyb20gInJhZGl4LXVpIgoKaW1wb3J0IHsgY24gfSBmcm9tICJAL2xpYi91dGlscyIKCmZ1bmN0aW9uIE5hdmlnYXRpb25NZW51KHsKICBjbGFzc05hbWUsCiAgY2hpbGRyZW4sCiAgdmlld3BvcnQgPSB0cnVlLAogIC4uLnByb3BzCn06IFJlYWN0LkNvbXBvbmVudFByb3BzPHR5cGVvZiBOYXZpZ2F0aW9uTWVudVByaW1pdGl2ZS5Sb290PiAmIHsKICB2aWV3cG9ydD86IGJvb2xlYW4KfSkgewogIHJldHVybiAoCiAgICA8TmF2aWdhdGlvbk1lbnVQcmltaXRpdmUuUm9vdAogICAgICBkYXRhLXNsb3Q9Im5hdmlnYXRpb24tbWVudSIKICAgICAgZGF0YS12aWV3cG9ydD17dmlld3BvcnR9CiAgICAgIGNsYXNzTmFtZT17Y24oCiAgICAgICAgImdyb3VwL25hdmlnYXRpb24tbWVudSByZWxhdGl2ZSBmbGV4IG1heC13LW1heCBmbGV4LTEgaXRlbXMtY2VudGVyIGp1c3RpZnktY2VudGVyIiwKICAgICAgICBjbGFzc05hbWUKICAgICAgKX0KICAgICAgey4uLnByb3BzfQogICAgPgogICAgICB7Y2hpbGRyZW59CiAgICAgIHt2aWV3cG9ydCAmJiA8TmF2aWdhdGlvbk1lbnVWaWV3cG9ydCAvPn0KICAgIDwvTmF2aWdhdGlvbk1lbnVQcmltaXRpdmUuUm9vdD4KICApCn0KCmZ1bmN0aW9uIE5hdmlnYXRpb25NZW51TGlzdCh7CiAgY2xhc3NOYW1lLAogIC4uLnByb3BzCn06IFJlYWN0LkNvbXBvbmVudFByb3BzPHR5cGVvZiBOYXZpZ2F0aW9uTWVudVByaW1pdGl2ZS5MaXN0PikgewogIHJldHVybiAoCiAgICA8TmF2aWdhdGlvbk1lbnVQcmltaXRpdmUuTGlzdAogICAgICBkYXRhLXNsb3Q9Im5hdmlnYXRpb24tbWVudS1saXN0IgogICAgICBjbGFzc05hbWU9e2NuKAogICAgICAgICJncm91cCBmbGV4IGZsZXgtMSBsaXN0LW5vbmUgaXRlbXMtY2VudGVyIGp1c3RpZnktY2VudGVyIGdhcC0xIiwKICAgICAgICBjbGFzc05hbWUKICAgICAgKX0KICAgICAgey4uLnByb3BzfQogICAgLz4KICApCn0KCmZ1bmN0aW9uIE5hdmlnYXRpb25NZW51SXRlbSh7CiAgY2xhc3NOYW1lLAogIC4uLnByb3BzCn06IFJlYWN0LkNvbXBvbmVudFByb3BzPHR5cGVvZiBOYXZpZ2F0aW9uTWVudVByaW1pdGl2ZS5JdGVtPikgewogIHJldHVybiAoCiAgICA8TmF2aWdhdGlvbk1lbnVQcmltaXRpdmUuSXRlbQogICAgICBkYXRhLXNsb3Q9Im5hdmlnYXRpb24tbWVudS1pdGVtIgogICAgICBjbGFzc05hbWU9e2NuKCJyZWxhdGl2ZSIsIGNsYXNzTmFtZSl9CiAgICAgIHsuLi5wcm9wc30KICAgIC8+CiAgKQp9Cgpjb25zdCBuYXZpZ2F0aW9uTWVudVRyaWdnZXJTdHlsZSA9IGN2YSgKICAiZ3JvdXAgaW5saW5lLWZsZXggaC05IHctbWF4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWNlbnRlciByb3VuZGVkLW1kIGJnLWJhY2tncm91bmQgcHgtNCBweS0yIHRleHQtc20gZm9udC1tZWRpdW0gdHJhbnNpdGlvbi1bY29sb3IsYm94LXNoYWRvd10gb3V0bGluZS1ub25lIGhvdmVyOmJnLWFjY2VudCBob3Zlcjp0ZXh0LWFjY2VudC1mb3JlZ3JvdW5kIGZvY3VzOmJnLWFjY2VudCBmb2N1czp0ZXh0LWFjY2VudC1mb3JlZ3JvdW5kIGZvY3VzLXZpc2libGU6cmluZy1bM3B4XSBmb2N1cy12aXNpYmxlOnJpbmctcmluZy81MCBmb2N1cy12aXNpYmxlOm91dGxpbmUtMSBkaXNhYmxlZDpwb2ludGVyLWV2ZW50cy1ub25lIGRpc2FibGVkOm9wYWNpdHktNTAgZGF0YS1bc3RhdGU9b3Blbl06YmctYWNjZW50LzUwIGRhdGEtW3N0YXRlPW9wZW5dOnRleHQtYWNjZW50LWZvcmVncm91bmQgZGF0YS1bc3RhdGU9b3Blbl06aG92ZXI6YmctYWNjZW50IGRhdGEtW3N0YXRlPW9wZW5dOmZvY3VzOmJnLWFjY2VudCIKKQoKZnVuY3Rpb24gTmF2aWdhdGlvbk1lbnVUcmlnZ2VyKHsKICBjbGFzc05hbWUsCiAgY2hpbGRyZW4sCiAgLi4ucHJvcHMKfTogUmVhY3QuQ29tcG9uZW50UHJvcHM8dHlwZW9mIE5hdmlnYXRpb25NZW51UHJpbWl0aXZlLlRyaWdnZXI+KSB7CiAgcmV0dXJuICgKICAgIDxOYXZpZ2F0aW9uTWVudVByaW1pdGl2ZS5UcmlnZ2VyCiAgICAgIGRhdGEtc2xvdD0ibmF2aWdhdGlvbi1tZW51LXRyaWdnZXIiCiAgICAgIGNsYXNzTmFtZT17Y24obmF2aWdhdGlvbk1lbnVUcmlnZ2VyU3R5bGUoKSwgImdyb3VwIiwgY2xhc3NOYW1lKX0KICAgICAgey4uLnByb3BzfQogICAgPgogICAgICB7Y2hpbGRyZW59eyIgIn0KICAgICAgPENoZXZyb25Eb3duSWNvbgogICAgICAgIGNsYXNzTmFtZT0icmVsYXRpdmUgdG9wLVsxcHhdIG1sLTEgc2l6ZS0zIHRyYW5zaXRpb24gZHVyYXRpb24tMzAwIGdyb3VwLWRhdGEtW3N0YXRlPW9wZW5dOnJvdGF0ZS0xODAiCiAgICAgICAgYXJpYS1oaWRkZW49InRydWUiCiAgICAgIC8+CiAgICA8L05hdmlnYXRpb25NZW51UHJpbWl0aXZlLlRyaWdnZXI+CiAgKQp9CgpmdW5jdGlvbiBOYXZpZ2F0aW9uTWVudUNvbnRlbnQoewogIGNsYXNzTmFtZSwKICAuLi5wcm9wcwp9OiBSZWFjdC5Db21wb25lbnRQcm9wczx0eXBlb2YgTmF2aWdhdGlvbk1lbnVQcmltaXRpdmUuQ29udGVudD4pIHsKICByZXR1cm4gKAogICAgPE5hdmlnYXRpb25NZW51UHJpbWl0aXZlLkNvbnRlbnQKICAgICAgZGF0YS1zbG90PSJuYXZpZ2F0aW9uLW1lbnUtY29udGVudCIKICAgICAgY2xhc3NOYW1lPXtjbigKICAgICAgICAidG9wLTAgbGVmdC0wIHctZnVsbCBwLTIgcHItMi41IGRhdGEtW21vdGlvbj1mcm9tLWVuZF06c2xpZGUtaW4tZnJvbS1yaWdodC01MiBkYXRhLVttb3Rpb249ZnJvbS1zdGFydF06c2xpZGUtaW4tZnJvbS1sZWZ0LTUyIGRhdGEtW21vdGlvbj10by1lbmRdOnNsaWRlLW91dC10by1yaWdodC01MiBkYXRhLVttb3Rpb249dG8tc3RhcnRdOnNsaWRlLW91dC10by1sZWZ0LTUyIGRhdGEtW21vdGlvbl49ZnJvbS1dOmFuaW1hdGUtaW4gZGF0YS1bbW90aW9uXj1mcm9tLV06ZmFkZS1pbiBkYXRhLVttb3Rpb25ePXRvLV06YW5pbWF0ZS1vdXQgZGF0YS1bbW90aW9uXj10by1dOmZhZGUtb3V0IG1kOmFic29sdXRlIG1kOnctYXV0byIsCiAgICAgICAgImdyb3VwLWRhdGEtW3ZpZXdwb3J0PWZhbHNlXS9uYXZpZ2F0aW9uLW1lbnU6dG9wLWZ1bGwgZ3JvdXAtZGF0YS1bdmlld3BvcnQ9ZmFsc2VdL25hdmlnYXRpb24tbWVudTptdC0xLjUgZ3JvdXAtZGF0YS1bdmlld3BvcnQ9ZmFsc2VdL25hdmlnYXRpb24tbWVudTpvdmVyZmxvdy1oaWRkZW4gZ3JvdXAtZGF0YS1bdmlld3BvcnQ9ZmFsc2VdL25hdmlnYXRpb24tbWVudTpyb3VuZGVkLW1kIGdyb3VwLWRhdGEtW3ZpZXdwb3J0PWZhbHNlXS9uYXZpZ2F0aW9uLW1lbnU6Ym9yZGVyIGdyb3VwLWRhdGEtW3ZpZXdwb3J0PWZhbHNlXS9uYXZpZ2F0aW9uLW1lbnU6YmctcG9wb3ZlciBncm91cC1kYXRhLVt2aWV3cG9ydD1mYWxzZV0vbmF2aWdhdGlvbi1tZW51OnRleHQtcG9wb3Zlci1mb3JlZ3JvdW5kIGdyb3VwLWRhdGEtW3ZpZXdwb3J0PWZhbHNlXS9uYXZpZ2F0aW9uLW1lbnU6c2hhZG93IGdyb3VwLWRhdGEtW3ZpZXdwb3J0PWZhbHNlXS9uYXZpZ2F0aW9uLW1lbnU6ZHVyYXRpb24tMjAwICoqOmRhdGEtW3Nsb3Q9bmF2aWdhdGlvbi1tZW51LWxpbmtdOmZvY3VzOnJpbmctMCAqKjpkYXRhLVtzbG90PW5hdmlnYXRpb24tbWVudS1saW5rXTpmb2N1czpvdXRsaW5lLW5vbmUgZ3JvdXAtZGF0YS1bdmlld3BvcnQ9ZmFsc2VdL25hdmlnYXRpb24tbWVudTpkYXRhLVtzdGF0ZT1jbG9zZWRdOmFuaW1hdGUtb3V0IGdyb3VwLWRhdGEtW3ZpZXdwb3J0PWZhbHNlXS9uYXZpZ2F0aW9uLW1lbnU6ZGF0YS1bc3RhdGU9Y2xvc2VkXTpmYWRlLW91dC0wIGdyb3VwLWRhdGEtW3ZpZXdwb3J0PWZhbHNlXS9uYXZpZ2F0aW9uLW1lbnU6ZGF0YS1bc3RhdGU9Y2xvc2VkXTp6b29tLW91dC05NSBncm91cC1kYXRhLVt2aWV3cG9ydD1mYWxzZV0vbmF2aWdhdGlvbi1tZW51OmRhdGEtW3N0YXRlPW9wZW5dOmFuaW1hdGUtaW4gZ3JvdXAtZGF0YS1bdmlld3BvcnQ9ZmFsc2VdL25hdmlnYXRpb24tbWVudTpkYXRhLVtzdGF0ZT1vcGVuXTpmYWRlLWluLTAgZ3JvdXAtZGF0YS1bdmlld3BvcnQ9ZmFsc2VdL25hdmlnYXRpb24tbWVudTpkYXRhLVtzdGF0ZT1vcGVuXTp6b29tLWluLTk1IiwKICAgICAgICBjbGFzc05hbWUKICAgICAgKX0KICAgICAgey4uLnByb3BzfQogICAgLz4KICApCn0KCmZ1bmN0aW9uIE5hdmlnYXRpb25NZW51Vmlld3BvcnQoewogIGNsYXNzTmFtZSwKICAuLi5wcm9wcwp9OiBSZWFjdC5Db21wb25lbnRQcm9wczx0eXBlb2YgTmF2aWdhdGlvbk1lbnVQcmltaXRpdmUuVmlld3BvcnQ+KSB7CiAgcmV0dXJuICgKICAgIDxkaXYKICAgICAgY2xhc3NOYW1lPXtjbigKICAgICAgICAiYWJzb2x1dGUgdG9wLWZ1bGwgbGVmdC0wIGlzb2xhdGUgei01MCBmbGV4IGp1c3RpZnktY2VudGVyIgogICAgICApfQogICAgPgogICAgICA8TmF2aWdhdGlvbk1lbnVQcmltaXRpdmUuVmlld3BvcnQKICAgICAgICBkYXRhLXNsb3Q9Im5hdmlnYXRpb24tbWVudS12aWV3cG9ydCIKICAgICAgICBjbGFzc05hbWU9e2NuKAogICAgICAgICAgIm9yaWdpbi10b3AtY2VudGVyIHJlbGF0aXZlIG10LTEuNSBoLVt2YXIoLS1yYWRpeC1uYXZpZ2F0aW9uLW1lbnUtdmlld3BvcnQtaGVpZ2h0KV0gdy1mdWxsIG92ZXJmbG93LWhpZGRlbiByb3VuZGVkLW1kIGJvcmRlciBiZy1wb3BvdmVyIHRleHQtcG9wb3Zlci1mb3JlZ3JvdW5kIHNoYWRvdyBkYXRhLVtzdGF0ZT1jbG9zZWRdOmFuaW1hdGUtb3V0IGRhdGEtW3N0YXRlPWNsb3NlZF06em9vbS1vdXQtOTUgZGF0YS1bc3RhdGU9b3Blbl06YW5pbWF0ZS1pbiBkYXRhLVtzdGF0ZT1vcGVuXTp6b29tLWluLTkwIG1kOnctW3ZhcigtLXJhZGl4LW5hdmlnYXRpb24tbWVudS12aWV3cG9ydC13aWR0aCldIiwKICAgICAgICAgIGNsYXNzTmFtZQogICAgICAgICl9CiAgICAgICAgey4uLnByb3BzfQogICAgICAvPgogICAgPC9kaXY+CiAgKQp9CgpmdW5jdGlvbiBOYXZpZ2F0aW9uTWVudUxpbmsoewogIGNsYXNzTmFtZSwKICAuLi5wcm9wcwp9OiBSZWFjdC5Db21wb25lbnRQcm9wczx0eXBlb2YgTmF2aWdhdGlvbk1lbnVQcmltaXRpdmUuTGluaz4pIHsKICByZXR1cm4gKAogICAgPE5hdmlnYXRpb25NZW51UHJpbWl0aXZlLkxpbmsKICAgICAgZGF0YS1zbG90PSJuYXZpZ2F0aW9uLW1lbnUtbGluayIKICAgICAgY2xhc3NOYW1lPXtjbigKICAgICAgICAiZmxleCBmbGV4LWNvbCBnYXAtMSByb3VuZGVkLXNtIHAtMiB0ZXh0LXNtIHRyYW5zaXRpb24tYWxsIG91dGxpbmUtbm9uZSBob3ZlcjpiZy1hY2NlbnQgaG92ZXI6dGV4dC1hY2NlbnQtZm9yZWdyb3VuZCBmb2N1czpiZy1hY2NlbnQgZm9jdXM6dGV4dC1hY2NlbnQtZm9yZWdyb3VuZCBmb2N1cy12aXNpYmxlOnJpbmctWzNweF0gZm9jdXMtdmlzaWJsZTpyaW5nLXJpbmcvNTAgZm9jdXMtdmlzaWJsZTpvdXRsaW5lLTEgZGF0YS1bYWN0aXZlPXRydWVdOmJnLWFjY2VudC81MCBkYXRhLVthY3RpdmU9dHJ1ZV06dGV4dC1hY2NlbnQtZm9yZWdyb3VuZCBkYXRhLVthY3RpdmU9dHJ1ZV06aG92ZXI6YmctYWNjZW50IGRhdGEtW2FjdGl2ZT10cnVlXTpmb2N1czpiZy1hY2NlbnQgWyZfc3ZnOm5vdChbY2xhc3MqPSdzaXplLSddKV06c2l6ZS00IFsmX3N2Zzpub3QoW2NsYXNzKj0ndGV4dC0nXSldOnRleHQtbXV0ZWQtZm9yZWdyb3VuZCIsCiAgICAgICAgY2xhc3NOYW1lCiAgICAgICl9CiAgICAgIHsuLi5wcm9wc30KICAgIC8+CiAgKQp9CgpmdW5jdGlvbiBOYXZpZ2F0aW9uTWVudUluZGljYXRvcih7CiAgY2xhc3NOYW1lLAogIC4uLnByb3BzCn06IFJlYWN0LkNvbXBvbmVudFByb3BzPHR5cGVvZiBOYXZpZ2F0aW9uTWVudVByaW1pdGl2ZS5JbmRpY2F0b3I+KSB7CiAgcmV0dXJuICgKICAgIDxOYXZpZ2F0aW9uTWVudVByaW1pdGl2ZS5JbmRpY2F0b3IKICAgICAgZGF0YS1zbG90PSJuYXZpZ2F0aW9uLW1lbnUtaW5kaWNhdG9yIgogICAgICBjbGFzc05hbWU9e2NuKAogICAgICAgICJ0b3AtZnVsbCB6LVsxXSBmbGV4IGgtMS41IGl0ZW1zLWVuZCBqdXN0aWZ5LWNlbnRlciBvdmVyZmxvdy1oaWRkZW4gZGF0YS1bc3RhdGU9aGlkZGVuXTphbmltYXRlLW91dCBkYXRhLVtzdGF0ZT1oaWRkZW5dOmZhZGUtb3V0IGRhdGEtW3N0YXRlPXZpc2libGVdOmFuaW1hdGUtaW4gZGF0YS1bc3RhdGU9dmlzaWJsZV06ZmFkZS1pbiIsCiAgICAgICAgY2xhc3NOYW1lCiAgICAgICl9CiAgICAgIHsuLi5wcm9wc30KICAgID4KICAgICAgPGRpdiBjbGFzc05hbWU9InJlbGF0aXZlIHRvcC1bNjAlXSBoLTIgdy0yIHJvdGF0ZS00NSByb3VuZGVkLXRsLXNtIGJnLWJvcmRlciBzaGFkb3ctbWQiIC8+CiAgICA8L05hdmlnYXRpb25NZW51UHJpbWl0aXZlLkluZGljYXRvcj4KICApCn0KCmV4cG9ydCB7CiAgTmF2aWdhdGlvbk1lbnUsCiAgTmF2aWdhdGlvbk1lbnVMaXN0LAogIE5hdmlnYXRpb25NZW51SXRlbSwKICBOYXZpZ2F0aW9uTWVudUNvbnRlbnQsCiAgTmF2aWdhdGlvbk1lbnVUcmlnZ2VyLAogIE5hdmlnYXRpb25NZW51TGluaywKICBOYXZpZ2F0aW9uTWVudUluZGljYXRvciwKICBOYXZpZ2F0aW9uTWVudVZpZXdwb3J0LAogIG5hdmlnYXRpb25NZW51VHJpZ2dlclN0eWxlLAp9Cg==
+import * as React from "react"
+import { cva } from "class-variance-authority"
+import { ChevronDownIcon } from "lucide-react"
+import { NavigationMenu as NavigationMenuPrimitive } from "radix-ui"
+
+import { cn } from "@/lib/utils"
+
+function NavigationMenu({
+  className,
+  children,
+  viewport = true,
+  ...props
+}: React.ComponentProps<typeof NavigationMenuPrimitive.Root> & {
+  viewport?: boolean
+}) {
+  return (
+    <NavigationMenuPrimitive.Root
+      data-slot="navigation-menu"
+      data-viewport={viewport}
+      className={cn(
+        "group/navigation-menu relative flex max-w-max flex-1 items-center justify-center",
+        className
+      )}
+      {...props}
+    >
+      {children}
+      {viewport && <NavigationMenuViewport />}
+    </NavigationMenuPrimitive.Root>
+  )
+}
+
+function NavigationMenuList({
+  className,
+  ...props
+}: React.ComponentProps<typeof NavigationMenuPrimitive.List>) {
+  return (
+    <NavigationMenuPrimitive.List
+      data-slot="navigation-menu-list"
+      className={cn(
+        "group flex flex-1 list-none items-center justify-center gap-1",
+        className
+      )}
+      {...props}
+    />
+  )
+}
+
+function NavigationMenuItem({
+  className,
+  ...props
+}: React.ComponentProps<typeof NavigationMenuPrimitive.Item>) {
+  return (
+    <NavigationMenuPrimitive.Item
+      data-slot="navigation-menu-item"
+      className={cn("relative", className)}
+      {...props}
+    />
+  )
+}
+
+const navigationMenuTriggerStyle = cva(
+  "group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-[color,box-shadow] outline-none hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-1 disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-accent/50 data-[state=open]:text-accent-foreground data-[state=open]:hover:bg-accent data-[state=open]:focus:bg-accent"
+)
+
+function NavigationMenuTrigger({
+  className,
+  children,
+  ...props
+}: React.ComponentProps<typeof NavigationMenuPrimitive.Trigger>) {
+  return (
+    <NavigationMenuPrimitive.Trigger
+      data-slot="navigation-menu-trigger"
+      className={cn(navigationMenuTriggerStyle(), "group", className)}
+      {...props}
+    >
+      {children}{" "}
+      <ChevronDownIcon
+        className="relative top-[1px] ml-1 size-3 transition duration-300 group-data-[state=open]:rotate-180"
+        aria-hidden="true"
+      />
+    </NavigationMenuPrimitive.Trigger>
+  )
+}
+
+function NavigationMenuContent({
+  className,
+  ...props
+}: React.ComponentProps<typeof NavigationMenuPrimitive.Content>) {
+  return (
+    <NavigationMenuPrimitive.Content
+      data-slot="navigation-menu-content"
+      className={cn(
+        "top-0 left-0 w-full p-2 pr-2.5 data-[motion=from-end]:slide-in-from-right-52 data-[motion=from-start]:slide-in-from-left-52 data-[motion=to-end]:slide-out-to-right-52 data-[motion=to-start]:slide-out-to-left-52 data-[motion^=from-]:animate-in data-[motion^=from-]:fade-in data-[motion^=to-]:animate-out data-[motion^=to-]:fade-out md:absolute md:w-auto",
+        "group-data-[viewport=false]/navigation-menu:top-full group-data-[viewport=false]/navigation-menu:mt-1.5 group-data-[viewport=false]/navigation-menu:overflow-hidden group-data-[viewport=false]/navigation-menu:rounded-md group-data-[viewport=false]/navigation-menu:border group-data-[viewport=false]/navigation-menu:bg-popover group-data-[viewport=false]/navigation-menu:text-popover-foreground group-data-[viewport=false]/navigation-menu:shadow group-data-[viewport=false]/navigation-menu:duration-200 **:data-[slot=navigation-menu-link]:focus:ring-0 **:data-[slot=navigation-menu-link]:focus:outline-none group-data-[viewport=false]/navigation-menu:data-[state=closed]:animate-out group-data-[viewport=false]/navigation-menu:data-[state=closed]:fade-out-0 group-data-[viewport=false]/navigation-menu:data-[state=closed]:zoom-out-95 group-data-[viewport=false]/navigation-menu:data-[state=open]:animate-in group-data-[viewport=false]/navigation-menu:data-[state=open]:fade-in-0 group-data-[viewport=false]/navigation-menu:data-[state=open]:zoom-in-95",
+        className
+      )}
+      {...props}
+    />
+  )
+}
+
+function NavigationMenuViewport({
+  className,
+  ...props
+}: React.ComponentProps<typeof NavigationMenuPrimitive.Viewport>) {
+  return (
+    <div
+      className={cn(
+        "absolute top-full left-0 isolate z-50 flex justify-center"
+      )}
+    >
+      <NavigationMenuPrimitive.Viewport
+        data-slot="navigation-menu-viewport"
+        className={cn(
+          "origin-top-center relative mt-1.5 h-[var(--radix-navigation-menu-viewport-height)] w-full overflow-hidden rounded-md border bg-popover text-popover-foreground shadow data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:animate-in data-[state=open]:zoom-in-90 md:w-[var(--radix-navigation-menu-viewport-width)]",
+          className
+        )}
+        {...props}
+      />
+    </div>
+  )
+}
+
+function NavigationMenuLink({
+  className,
+  ...props
+}: React.ComponentProps<typeof NavigationMenuPrimitive.Link>) {
+  return (
+    <NavigationMenuPrimitive.Link
+      data-slot="navigation-menu-link"
+      className={cn(
+        "flex flex-col gap-1 rounded-sm p-2 text-sm transition-all outline-none hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-1 data-[active=true]:bg-accent/50 data-[active=true]:text-accent-foreground data-[active=true]:hover:bg-accent data-[active=true]:focus:bg-accent [&_svg:not([class*='size-'])]:size-4 [&_svg:not([class*='text-'])]:text-muted-foreground",
+        className
+      )}
+      {...props}
+    />
+  )
+}
+
+function NavigationMenuIndicator({
+  className,
+  ...props
+}: React.ComponentProps<typeof NavigationMenuPrimitive.Indicator>) {
+  return (
+    <NavigationMenuPrimitive.Indicator
+      data-slot="navigation-menu-indicator"
+      className={cn(
+        "top-full z-[1] flex h-1.5 items-end justify-center overflow-hidden data-[state=hidden]:animate-out data-[state=hidden]:fade-out data-[state=visible]:animate-in data-[state=visible]:fade-in",
+        className
+      )}
+      {...props}
+    >
+      <div className="relative top-[60%] h-2 w-2 rotate-45 rounded-tl-sm bg-border shadow-md" />
+    </NavigationMenuPrimitive.Indicator>
+  )
+}
+
+export {
+  NavigationMenu,
+  NavigationMenuList,
+  NavigationMenuItem,
+  NavigationMenuContent,
+  NavigationMenuTrigger,
+  NavigationMenuLink,
+  NavigationMenuIndicator,
+  NavigationMenuViewport,
+  navigationMenuTriggerStyle,
+}

@@ -1,1 +1,52 @@
-IyEvdXNyL2Jpbi9lbnYgYmFzaApzZXQgLWV1byBwaXBlZmFpbAoKcHJvamVjdF9yb290PSIkKGNkICIkKGRpcm5hbWUgIiR7QkFTSF9TT1VSQ0VbMF19IikvLi4iICYmIHB3ZCkiCnJ1bnRpbWVfcm9vdD0iJHtTSVRFU19SVU5USU1FX1JPT1Q6LSR7cHJvamVjdF9yb290fS8uc2l0ZXMtcnVudGltZX0iCgpta2RpciAtcCBcCiAgIiR7cnVudGltZV9yb290fS9ob21lIiBcCiAgIiR7cnVudGltZV9yb290fS9ucG0tY2FjaGUiIFwKICAiJHtydW50aW1lX3Jvb3R9L3hkZy1jb25maWciIFwKICAiJHtydW50aW1lX3Jvb3R9L3RtcCIgXAogICIke3J1bnRpbWVfcm9vdH0vd3JhbmdsZXIvbG9ncyIKCmV4cG9ydCBTSVRFU19FTlZfUkVBRFk9MQpleHBvcnQgU0lURVNfUFJPSkVDVF9ST09UPSIke3Byb2plY3Rfcm9vdH0iCmV4cG9ydCBIT01FPSIke3J1bnRpbWVfcm9vdH0vaG9tZSIKZXhwb3J0IFhER19DT05GSUdfSE9NRT0iJHtydW50aW1lX3Jvb3R9L3hkZy1jb25maWciCmV4cG9ydCBUTVBESVI9IiR7cnVudGltZV9yb290fS90bXAiCmV4cG9ydCBXUkFOR0xFUl9XUklURV9MT0dTPWZhbHNlCmV4cG9ydCBXUkFOR0xFUl9MT0dfUEFUSD0iJHtydW50aW1lX3Jvb3R9L3dyYW5nbGVyL2xvZ3MiCmV4cG9ydCBNSU5JRkxBUkVfUkVHSVNUUllfUEFUSD0iJHtydW50aW1lX3Jvb3R9L3dyYW5nbGVyL3JlZ2lzdHJ5IgoKIyBUaGUgcnVudGltZSBtYXkgcHJvdmlkZSBhIGdsb2JhbCBucG0gY2FjaGUuIEtlZXAgdGhlIGltYWdlJ3MgcmVhZC1vbmx5IFNpdGVzCiMgc2VlZCBzZXBhcmF0ZSBhbmQgbWFrZSB0aGlzIHByb2plY3QncyB3cml0YWJsZSBjYWNoZSBhdXRob3JpdGF0aXZlLgp1bnNldCBOUE1fQ09ORklHX0NBQ0hFIG5wbV9jb25maWdfY2FjaGUgfHwgdHJ1ZQpleHBvcnQgbnBtX2NvbmZpZ19jYWNoZT0iJHtydW50aW1lX3Jvb3R9L25wbS1jYWNoZSIKZXhwb3J0IG5wbV9jb25maWdfYXVkaXQ9ZmFsc2UKZXhwb3J0IG5wbV9jb25maWdfZnVuZD1mYWxzZQpleHBvcnQgbnBtX2NvbmZpZ191cGRhdGVfbm90aWZpZXI9ZmFsc2UKCiMgVGhlIHJ1bnRpbWUgYWxyZWFkeSBzdXBwbGllcyB0aGUgc3RhbmRhcmQgSFRUUChTKV9QUk9YWSB2YXJpYWJsZXMuIFJlbW92ZQojIG5wbS1zcGVjaWZpYyBhbGlhc2VzIHNvIG5wbSAxMSBkb2VzIG5vdCByZWludGVycHJldCBvciB3YXJuIGFib3V0IHRoZW0uCnVuc2V0IFwKICBucG1fY29uZmlnX3Byb3h5IFwKICBucG1fY29uZmlnX2h0dHBfcHJveHkgXAogIG5wbV9jb25maWdfaHR0cHNfcHJveHkgXAogIE5QTV9DT05GSUdfUFJPWFkgXAogIE5QTV9DT05GSUdfSFRUUF9QUk9YWSBcCiAgTlBNX0NPTkZJR19IVFRQU19QUk9YWSBcCiAgfHwgdHJ1ZQoKaWYgW1sgIiR7MTotfSIgPT0gIi0tIiBdXTsgdGhlbgogIHNoaWZ0CmZpCgppZiBbWyAiJCMiIC1lcSAwIF1dOyB0aGVuCiAgZWNobyAidXNhZ2U6IHNjcmlwdHMvc2l0ZXMtZW52LnNoIC0tIGNvbW1hbmQgW2FyZ3MuLi5dIiA+JjIKICBleGl0IDY0CmZpCgpjZCAiJHtwcm9qZWN0X3Jvb3R9IgpleGVjICIkQCIK
+#!/usr/bin/env bash
+set -euo pipefail
+
+project_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+runtime_root="${SITES_RUNTIME_ROOT:-${project_root}/.sites-runtime}"
+
+mkdir -p \
+  "${runtime_root}/home" \
+  "${runtime_root}/npm-cache" \
+  "${runtime_root}/xdg-config" \
+  "${runtime_root}/tmp" \
+  "${runtime_root}/wrangler/logs"
+
+export SITES_ENV_READY=1
+export SITES_PROJECT_ROOT="${project_root}"
+export HOME="${runtime_root}/home"
+export XDG_CONFIG_HOME="${runtime_root}/xdg-config"
+export TMPDIR="${runtime_root}/tmp"
+export WRANGLER_WRITE_LOGS=false
+export WRANGLER_LOG_PATH="${runtime_root}/wrangler/logs"
+export MINIFLARE_REGISTRY_PATH="${runtime_root}/wrangler/registry"
+
+# The runtime may provide a global npm cache. Keep the image's read-only Sites
+# seed separate and make this project's writable cache authoritative.
+unset NPM_CONFIG_CACHE npm_config_cache || true
+export npm_config_cache="${runtime_root}/npm-cache"
+export npm_config_audit=false
+export npm_config_fund=false
+export npm_config_update_notifier=false
+
+# The runtime already supplies the standard HTTP(S)_PROXY variables. Remove
+# npm-specific aliases so npm 11 does not reinterpret or warn about them.
+unset \
+  npm_config_proxy \
+  npm_config_http_proxy \
+  npm_config_https_proxy \
+  NPM_CONFIG_PROXY \
+  NPM_CONFIG_HTTP_PROXY \
+  NPM_CONFIG_HTTPS_PROXY \
+  || true
+
+if [[ "${1:-}" == "--" ]]; then
+  shift
+fi
+
+if [[ "$#" -eq 0 ]]; then
+  echo "usage: scripts/sites-env.sh -- command [args...]" >&2
+  exit 64
+fi
+
+cd "${project_root}"
+exec "$@"

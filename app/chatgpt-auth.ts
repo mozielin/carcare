@@ -1,1 +1,86 @@
-aW1wb3J0IHsgaGVhZGVycyB9IGZyb20gIm5leHQvaGVhZGVycyI7CmltcG9ydCB7IHJlZGlyZWN0IH0gZnJvbSAibmV4dC9uYXZpZ2F0aW9uIjsKCmV4cG9ydCB0eXBlIENoYXRHUFRVc2VyID0gewogIGRpc3BsYXlOYW1lOiBzdHJpbmc7CiAgZW1haWw6IHN0cmluZzsKICBmdWxsTmFtZTogc3RyaW5nIHwgbnVsbDsKfTsKCmNvbnN0IFVTRVJfRU1BSUxfSEVBREVSID0gIm9haS1hdXRoZW50aWNhdGVkLXVzZXItZW1haWwiOwpjb25zdCBVU0VSX0ZVTExfTkFNRV9IRUFERVIgPSAib2FpLWF1dGhlbnRpY2F0ZWQtdXNlci1mdWxsLW5hbWUiOwpjb25zdCBVU0VSX0ZVTExfTkFNRV9FTkNPRElOR19IRUFERVIgPQogICJvYWktYXV0aGVudGljYXRlZC11c2VyLWZ1bGwtbmFtZS1lbmNvZGluZyI7CmNvbnN0IFBFUkNFTlRfRU5DT0RFRF9VVEY4ID0gInBlcmNlbnQtZW5jb2RlZC11dGYtOCI7CmNvbnN0IFNJR05fSU5fUEFUSCA9ICIvc2lnbmluLXdpdGgtY2hhdGdwdCI7CmNvbnN0IFNJR05fT1VUX1BBVEggPSAiL3NpZ25vdXQtd2l0aC1jaGF0Z3B0IjsKY29uc3QgQ0FMTEJBQ0tfUEFUSCA9ICIvY2FsbGJhY2siOwoKZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIGdldENoYXRHUFRVc2VyKCk6IFByb21pc2U8Q2hhdEdQVFVzZXIgfCBudWxsPiB7CiAgY29uc3QgcmVxdWVzdEhlYWRlcnMgPSBhd2FpdCBoZWFkZXJzKCk7CiAgY29uc3QgZW1haWwgPSByZXF1ZXN0SGVhZGVycy5nZXQoVVNFUl9FTUFJTF9IRUFERVIpOwogIGlmICghZW1haWwpIHJldHVybiBudWxsOwoKICBjb25zdCBlbmNvZGVkRnVsbE5hbWUgPSByZXF1ZXN0SGVhZGVycy5nZXQoVVNFUl9GVUxMX05BTUVfSEVBREVSKTsKICBjb25zdCBmdWxsTmFtZSA9CiAgICBlbmNvZGVkRnVsbE5hbWUgJiYKICAgIHJlcXVlc3RIZWFkZXJzLmdldChVU0VSX0ZVTExfTkFNRV9FTkNPRElOR19IRUFERVIpID09PSBQRVJDRU5UX0VOQ09ERURfVVRGOAogICAgICA/IHNhZmVEZWNvZGVVUklDb21wb25lbnQoZW5jb2RlZEZ1bGxOYW1lKQogICAgICA6IG51bGw7CgogIHJldHVybiB7CiAgICBkaXNwbGF5TmFtZTogZnVsbE5hbWUgPz8gZW1haWwsCiAgICBlbWFpbCwKICAgIGZ1bGxOYW1lLAogIH07Cn0KCmV4cG9ydCBhc3luYyBmdW5jdGlvbiByZXF1aXJlQ2hhdEdQVFVzZXIoCiAgcmV0dXJuVG86IHN0cmluZywKKTogUHJvbWlzZTxDaGF0R1BUVXNlcj4gewogIGNvbnN0IHVzZXIgPSBhd2FpdCBnZXRDaGF0R1BUVXNlcigpOwogIGlmICh1c2VyKSByZXR1cm4gdXNlcjsKCiAgcmVkaXJlY3QoY2hhdEdQVFNpZ25JblBhdGgocmV0dXJuVG8pKTsKfQoKZXhwb3J0IGZ1bmN0aW9uIGNoYXRHUFRTaWduSW5QYXRoKHJldHVyblRvOiBzdHJpbmcpOiBzdHJpbmcgewogIGNvbnN0IHNhZmVSZXR1cm5UbyA9IHNhZmVSZWxhdGl2ZVJldHVyblBhdGgocmV0dXJuVG8pOwogIHJldHVybiBgJHtTSUdOX0lOX1BBVEh9P3JldHVybl90bz0ke2VuY29kZVVSSUNvbXBvbmVudChzYWZlUmV0dXJuVG8pfWA7Cn0KCmV4cG9ydCBmdW5jdGlvbiBjaGF0R1BUU2lnbk91dFBhdGgocmV0dXJuVG8gPSAiLyIpOiBzdHJpbmcgewogIGNvbnN0IHNhZmVSZXR1cm5UbyA9IHNhZmVSZWxhdGl2ZVJldHVyblBhdGgocmV0dXJuVG8pOwogIHJldHVybiBgJHtTSUdOX09VVF9QQVRIfT9yZXR1cm5fdG89JHtlbmNvZGVVUklDb21wb25lbnQoc2FmZVJldHVyblRvKX1gOwp9CgpmdW5jdGlvbiBzYWZlUmVsYXRpdmVSZXR1cm5QYXRoKHZhbHVlOiBzdHJpbmcpOiBzdHJpbmcgewogIGlmICghdmFsdWUuc3RhcnRzV2l0aCgiLyIpIHx8IHZhbHVlLnN0YXJ0c1dpdGgoIi8vIikpIHJldHVybiAiLyI7CgogIGxldCB1cmw6IFVSTDsKICB0cnkgewogICAgdXJsID0gbmV3IFVSTCh2YWx1ZSwgImh0dHBzOi8vYXBwLmxvY2FsIik7CiAgfSBjYXRjaCB7CiAgICByZXR1cm4gIi8iOwogIH0KICBpZiAodXJsLm9yaWdpbiAhPT0gImh0dHBzOi8vYXBwLmxvY2FsIikgcmV0dXJuICIvIjsKICBpZiAoaXNSZXNlcnZlZEF1dGhQYXRoKHVybC5wYXRobmFtZSkpIHJldHVybiAiLyI7CgogIHJldHVybiBgJHt1cmwucGF0aG5hbWV9JHt1cmwuc2VhcmNofSR7dXJsLmhhc2h9YDsKfQoKZnVuY3Rpb24gaXNSZXNlcnZlZEF1dGhQYXRoKHBhdGhuYW1lOiBzdHJpbmcpOiBib29sZWFuIHsKICByZXR1cm4gKAogICAgcGF0aG5hbWUgPT09IFNJR05fSU5fUEFUSCB8fAogICAgcGF0aG5hbWUgPT09IFNJR05fT1VUX1BBVEggfHwKICAgIHBhdGhuYW1lID09PSBDQUxMQkFDS19QQVRICiAgKTsKfQoKZnVuY3Rpb24gc2FmZURlY29kZVVSSUNvbXBvbmVudCh2YWx1ZTogc3RyaW5nKTogc3RyaW5nIHwgbnVsbCB7CiAgdHJ5IHsKICAgIHJldHVybiBkZWNvZGVVUklDb21wb25lbnQodmFsdWUpOwogIH0gY2F0Y2ggewogICAgcmV0dXJuIG51bGw7CiAgfQp9Cg==
+import { headers } from "next/headers";
+import { redirect } from "next/navigation";
+
+export type ChatGPTUser = {
+  displayName: string;
+  email: string;
+  fullName: string | null;
+};
+
+const USER_EMAIL_HEADER = "oai-authenticated-user-email";
+const USER_FULL_NAME_HEADER = "oai-authenticated-user-full-name";
+const USER_FULL_NAME_ENCODING_HEADER =
+  "oai-authenticated-user-full-name-encoding";
+const PERCENT_ENCODED_UTF8 = "percent-encoded-utf-8";
+const SIGN_IN_PATH = "/signin-with-chatgpt";
+const SIGN_OUT_PATH = "/signout-with-chatgpt";
+const CALLBACK_PATH = "/callback";
+
+export async function getChatGPTUser(): Promise<ChatGPTUser | null> {
+  const requestHeaders = await headers();
+  const email = requestHeaders.get(USER_EMAIL_HEADER);
+  if (!email) return null;
+
+  const encodedFullName = requestHeaders.get(USER_FULL_NAME_HEADER);
+  const fullName =
+    encodedFullName &&
+    requestHeaders.get(USER_FULL_NAME_ENCODING_HEADER) === PERCENT_ENCODED_UTF8
+      ? safeDecodeURIComponent(encodedFullName)
+      : null;
+
+  return {
+    displayName: fullName ?? email,
+    email,
+    fullName,
+  };
+}
+
+export async function requireChatGPTUser(
+  returnTo: string,
+): Promise<ChatGPTUser> {
+  const user = await getChatGPTUser();
+  if (user) return user;
+
+  redirect(chatGPTSignInPath(returnTo));
+}
+
+export function chatGPTSignInPath(returnTo: string): string {
+  const safeReturnTo = safeRelativeReturnPath(returnTo);
+  return `${SIGN_IN_PATH}?return_to=${encodeURIComponent(safeReturnTo)}`;
+}
+
+export function chatGPTSignOutPath(returnTo = "/"): string {
+  const safeReturnTo = safeRelativeReturnPath(returnTo);
+  return `${SIGN_OUT_PATH}?return_to=${encodeURIComponent(safeReturnTo)}`;
+}
+
+function safeRelativeReturnPath(value: string): string {
+  if (!value.startsWith("/") || value.startsWith("//")) return "/";
+
+  let url: URL;
+  try {
+    url = new URL(value, "https://app.local");
+  } catch {
+    return "/";
+  }
+  if (url.origin !== "https://app.local") return "/";
+  if (isReservedAuthPath(url.pathname)) return "/";
+
+  return `${url.pathname}${url.search}${url.hash}`;
+}
+
+function isReservedAuthPath(pathname: string): boolean {
+  return (
+    pathname === SIGN_IN_PATH ||
+    pathname === SIGN_OUT_PATH ||
+    pathname === CALLBACK_PATH
+  );
+}
+
+function safeDecodeURIComponent(value: string): string | null {
+  try {
+    return decodeURIComponent(value);
+  } catch {
+    return null;
+  }
+}

@@ -1,1 +1,39 @@
-aW1wb3J0IHsgaW50ZWdlciwgcmVhbCwgc3FsaXRlVGFibGUsIHRleHQgfSBmcm9tICJkcml6emxlLW9ybS9zcWxpdGUtY29yZSI7CgpleHBvcnQgY29uc3QgcHJvZHVjdHMgPSBzcWxpdGVUYWJsZSgicHJvZHVjdHMiLCB7CiAgaWQ6IGludGVnZXIoImlkIikucHJpbWFyeUtleSh7IGF1dG9JbmNyZW1lbnQ6IHRydWUgfSksCiAgYnJhbmQ6IHRleHQoImJyYW5kIikubm90TnVsbCgpLmRlZmF1bHQoIuacquioreWumuWTgeeJjCIpLAogIG5hbWU6IHRleHQoIm5hbWUiKS5ub3ROdWxsKCksIGNhdGVnb3J5OiB0ZXh0KCJjYXRlZ29yeSIpLm5vdE51bGwoKSwgdW5pdDogdGV4dCgidW5pdCIpLm5vdE51bGwoKSwKICBwYWNrYWdlU2l6ZTogcmVhbCgicGFja2FnZV9zaXplIikubm90TnVsbCgpLCByZW1haW5pbmc6IHJlYWwoInJlbWFpbmluZyIpLm5vdE51bGwoKSwgbG93VGhyZXNob2xkOiByZWFsKCJsb3dfdGhyZXNob2xkIikubm90TnVsbCgpLAogIHBoVHlwZTogdGV4dCgicGhfdHlwZSIpLm5vdE51bGwoKS5kZWZhdWx0KCLkuK3mgKciKSwKICBhY3RpdmU6IGludGVnZXIoImFjdGl2ZSIpLm5vdE51bGwoKS5kZWZhdWx0KDEpLAogIGRlbGV0ZWRBdDogdGV4dCgiZGVsZXRlZF9hdCIpLAogIGNyZWF0ZWRBdDogdGV4dCgiY3JlYXRlZF9hdCIpLm5vdE51bGwoKSwKfSk7CmV4cG9ydCBjb25zdCB3YXNoU2Vzc2lvbnMgPSBzcWxpdGVUYWJsZSgid2FzaF9zZXNzaW9ucyIsIHsKICBpZDogdGV4dCgiaWQiKS5wcmltYXJ5S2V5KCksIHdhc2hlZEF0OiB0ZXh0KCJ3YXNoZWRfYXQiKS5ub3ROdWxsKCksIG5vdGU6IHRleHQoIm5vdGUiKSwgZmxvd05hbWU6IHRleHQoImZsb3dfbmFtZSIpLCBjcmVhdGVkQXQ6IHRleHQoImNyZWF0ZWRfYXQiKS5ub3ROdWxsKCksCn0pOwpleHBvcnQgY29uc3Qgd2FzaFVzYWdlcyA9IHNxbGl0ZVRhYmxlKCJ3YXNoX3VzYWdlcyIsIHsKICBpZDogaW50ZWdlcigiaWQiKS5wcmltYXJ5S2V5KHsgYXV0b0luY3JlbWVudDogdHJ1ZSB9KSwKICB3YXNoSWQ6IHRleHQoIndhc2hfaWQiKS5ub3ROdWxsKCkucmVmZXJlbmNlcygoKSA9PiB3YXNoU2Vzc2lvbnMuaWQsIHsgb25EZWxldGU6ICJjYXNjYWRlIiB9KSwKICBwcm9kdWN0SWQ6IGludGVnZXIoInByb2R1Y3RfaWQiKS5ub3ROdWxsKCkucmVmZXJlbmNlcygoKSA9PiBwcm9kdWN0cy5pZCksIGFtb3VudDogcmVhbCgiYW1vdW50Iikubm90TnVsbCgpLAp9KTsKZXhwb3J0IGNvbnN0IHJlc3RvY2tzID0gc3FsaXRlVGFibGUoInJlc3RvY2tzIiwgewogIGlkOiBpbnRlZ2VyKCJpZCIpLnByaW1hcnlLZXkoeyBhdXRvSW5jcmVtZW50OiB0cnVlIH0pLAogIHByb2R1Y3RJZDogaW50ZWdlcigicHJvZHVjdF9pZCIpLm5vdE51bGwoKS5yZWZlcmVuY2VzKCgpID0+IHByb2R1Y3RzLmlkKSwgYW1vdW50OiByZWFsKCJhbW91bnQiKS5ub3ROdWxsKCksIGNyZWF0ZWRBdDogdGV4dCgiY3JlYXRlZF9hdCIpLm5vdE51bGwoKSwKfSk7CgpleHBvcnQgY29uc3Qgd2FzaEZsb3dzID0gc3FsaXRlVGFibGUoIndhc2hfZmxvd3MiLCB7CiAgaWQ6IGludGVnZXIoImlkIikucHJpbWFyeUtleSh7IGF1dG9JbmNyZW1lbnQ6IHRydWUgfSksCiAgbmFtZTogdGV4dCgibmFtZSIpLm5vdE51bGwoKSwKICBmbG93VHlwZTogdGV4dCgiZmxvd190eXBlIikubm90TnVsbCgpLAogIGNyZWF0ZWRBdDogdGV4dCgiY3JlYXRlZF9hdCIpLm5vdE51bGwoKSwKfSk7CgpleHBvcnQgY29uc3Qgd2FzaEZsb3dJdGVtcyA9IHNxbGl0ZVRhYmxlKCJ3YXNoX2Zsb3dfaXRlbXMiLCB7CiAgaWQ6IGludGVnZXIoImlkIikucHJpbWFyeUtleSh7IGF1dG9JbmNyZW1lbnQ6IHRydWUgfSksCiAgZmxvd0lkOiBpbnRlZ2VyKCJmbG93X2lkIikubm90TnVsbCgpLnJlZmVyZW5jZXMoKCkgPT4gd2FzaEZsb3dzLmlkLCB7IG9uRGVsZXRlOiAiY2FzY2FkZSIgfSksCiAgcHJvZHVjdElkOiBpbnRlZ2VyKCJwcm9kdWN0X2lkIikubm90TnVsbCgpLnJlZmVyZW5jZXMoKCkgPT4gcHJvZHVjdHMuaWQpLAogIGFtb3VudDogcmVhbCgiYW1vdW50Iikubm90TnVsbCgpLAogIHNvcnRPcmRlcjogaW50ZWdlcigic29ydF9vcmRlciIpLm5vdE51bGwoKS5kZWZhdWx0KDApLAp9KTsK
+import { integer, real, sqliteTable, text } from "drizzle-orm/sqlite-core";
+
+export const products = sqliteTable("products", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
+  brand: text("brand").notNull().default("未設定品牌"),
+  name: text("name").notNull(), category: text("category").notNull(), unit: text("unit").notNull(),
+  packageSize: real("package_size").notNull(), remaining: real("remaining").notNull(), lowThreshold: real("low_threshold").notNull(),
+  phType: text("ph_type").notNull().default("中性"),
+  active: integer("active").notNull().default(1),
+  deletedAt: text("deleted_at"),
+  createdAt: text("created_at").notNull(),
+});
+export const washSessions = sqliteTable("wash_sessions", {
+  id: text("id").primaryKey(), washedAt: text("washed_at").notNull(), note: text("note"), flowName: text("flow_name"), createdAt: text("created_at").notNull(),
+});
+export const washUsages = sqliteTable("wash_usages", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
+  washId: text("wash_id").notNull().references(() => washSessions.id, { onDelete: "cascade" }),
+  productId: integer("product_id").notNull().references(() => products.id), amount: real("amount").notNull(),
+});
+export const restocks = sqliteTable("restocks", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
+  productId: integer("product_id").notNull().references(() => products.id), amount: real("amount").notNull(), createdAt: text("created_at").notNull(),
+});
+
+export const washFlows = sqliteTable("wash_flows", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
+  name: text("name").notNull(),
+  flowType: text("flow_type").notNull(),
+  createdAt: text("created_at").notNull(),
+});
+
+export const washFlowItems = sqliteTable("wash_flow_items", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
+  flowId: integer("flow_id").notNull().references(() => washFlows.id, { onDelete: "cascade" }),
+  productId: integer("product_id").notNull().references(() => products.id),
+  amount: real("amount").notNull(),
+  sortOrder: integer("sort_order").notNull().default(0),
+});

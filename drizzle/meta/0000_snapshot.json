@@ -1,1 +1,239 @@
-ewogICJ2ZXJzaW9uIjogIjYiLAogICJkaWFsZWN0IjogInNxbGl0ZSIsCiAgImlkIjogIjJiODJmNGE3LWU5OGMtNDYwMS04MTNmLTg2Nzg0ZWYzNTNkMyIsCiAgInByZXZJZCI6ICIwMDAwMDAwMC0wMDAwLTAwMDAtMDAwMC0wMDAwMDAwMDAwMDAiLAogICJ0YWJsZXMiOiB7CiAgICAicHJvZHVjdHMiOiB7CiAgICAgICJuYW1lIjogInByb2R1Y3RzIiwKICAgICAgImNvbHVtbnMiOiB7CiAgICAgICAgImlkIjogewogICAgICAgICAgIm5hbWUiOiAiaWQiLAogICAgICAgICAgInR5cGUiOiAiaW50ZWdlciIsCiAgICAgICAgICAicHJpbWFyeUtleSI6IHRydWUsCiAgICAgICAgICAibm90TnVsbCI6IHRydWUsCiAgICAgICAgICAiYXV0b2luY3JlbWVudCI6IHRydWUKICAgICAgICB9LAogICAgICAgICJuYW1lIjogewogICAgICAgICAgIm5hbWUiOiAibmFtZSIsCiAgICAgICAgICAidHlwZSI6ICJ0ZXh0IiwKICAgICAgICAgICJwcmltYXJ5S2V5IjogZmFsc2UsCiAgICAgICAgICAibm90TnVsbCI6IHRydWUsCiAgICAgICAgICAiYXV0b2luY3JlbWVudCI6IGZhbHNlCiAgICAgICAgfSwKICAgICAgICAiY2F0ZWdvcnkiOiB7CiAgICAgICAgICAibmFtZSI6ICJjYXRlZ29yeSIsCiAgICAgICAgICAidHlwZSI6ICJ0ZXh0IiwKICAgICAgICAgICJwcmltYXJ5S2V5IjogZmFsc2UsCiAgICAgICAgICAibm90TnVsbCI6IHRydWUsCiAgICAgICAgICAiYXV0b2luY3JlbWVudCI6IGZhbHNlCiAgICAgICAgfSwKICAgICAgICAidW5pdCI6IHsKICAgICAgICAgICJuYW1lIjogInVuaXQiLAogICAgICAgICAgInR5cGUiOiAidGV4dCIsCiAgICAgICAgICAicHJpbWFyeUtleSI6IGZhbHNlLAogICAgICAgICAgIm5vdE51bGwiOiB0cnVlLAogICAgICAgICAgImF1dG9pbmNyZW1lbnQiOiBmYWxzZQogICAgICAgIH0sCiAgICAgICAgInBhY2thZ2Vfc2l6ZSI6IHsKICAgICAgICAgICJuYW1lIjogInBhY2thZ2Vfc2l6ZSIsCiAgICAgICAgICAidHlwZSI6ICJyZWFsIiwKICAgICAgICAgICJwcmltYXJ5S2V5IjogZmFsc2UsCiAgICAgICAgICAibm90TnVsbCI6IHRydWUsCiAgICAgICAgICAiYXV0b2luY3JlbWVudCI6IGZhbHNlCiAgICAgICAgfSwKICAgICAgICAicmVtYWluaW5nIjogewogICAgICAgICAgIm5hbWUiOiAicmVtYWluaW5nIiwKICAgICAgICAgICJ0eXBlIjogInJlYWwiLAogICAgICAgICAgInByaW1hcnlLZXkiOiBmYWxzZSwKICAgICAgICAgICJub3ROdWxsIjogdHJ1ZSwKICAgICAgICAgICJhdXRvaW5jcmVtZW50IjogZmFsc2UKICAgICAgICB9LAogICAgICAgICJsb3dfdGhyZXNob2xkIjogewogICAgICAgICAgIm5hbWUiOiAibG93X3RocmVzaG9sZCIsCiAgICAgICAgICAidHlwZSI6ICJyZWFsIiwKICAgICAgICAgICJwcmltYXJ5S2V5IjogZmFsc2UsCiAgICAgICAgICAibm90TnVsbCI6IHRydWUsCiAgICAgICAgICAiYXV0b2luY3JlbWVudCI6IGZhbHNlCiAgICAgICAgfSwKICAgICAgICAiY3JlYXRlZF9hdCI6IHsKICAgICAgICAgICJuYW1lIjogImNyZWF0ZWRfYXQiLAogICAgICAgICAgInR5cGUiOiAidGV4dCIsCiAgICAgICAgICAicHJpbWFyeUtleSI6IGZhbHNlLAogICAgICAgICAgIm5vdE51bGwiOiB0cnVlLAogICAgICAgICAgImF1dG9pbmNyZW1lbnQiOiBmYWxzZQogICAgICAgIH0KICAgICAgfSwKICAgICAgImluZGV4ZXMiOiB7fSwKICAgICAgImZvcmVpZ25LZXlzIjoge30sCiAgICAgICJjb21wb3NpdGVQcmltYXJ5S2V5cyI6IHt9LAogICAgICAidW5pcXVlQ29uc3RyYWludHMiOiB7fSwKICAgICAgImNoZWNrQ29uc3RyYWludHMiOiB7fQogICAgfSwKICAgICJyZXN0b2NrcyI6IHsKICAgICAgIm5hbWUiOiAicmVzdG9ja3MiLAogICAgICAiY29sdW1ucyI6IHsKICAgICAgICAiaWQiOiB7CiAgICAgICAgICAibmFtZSI6ICJpZCIsCiAgICAgICAgICAidHlwZSI6ICJpbnRlZ2VyIiwKICAgICAgICAgICJwcmltYXJ5S2V5IjogdHJ1ZSwKICAgICAgICAgICJub3ROdWxsIjogdHJ1ZSwKICAgICAgICAgICJhdXRvaW5jcmVtZW50IjogdHJ1ZQogICAgICAgIH0sCiAgICAgICAgInByb2R1Y3RfaWQiOiB7CiAgICAgICAgICAibmFtZSI6ICJwcm9kdWN0X2lkIiwKICAgICAgICAgICJ0eXBlIjogImludGVnZXIiLAogICAgICAgICAgInByaW1hcnlLZXkiOiBmYWxzZSwKICAgICAgICAgICJub3ROdWxsIjogdHJ1ZSwKICAgICAgICAgICJhdXRvaW5jcmVtZW50IjogZmFsc2UKICAgICAgICB9LAogICAgICAgICJhbW91bnQiOiB7CiAgICAgICAgICAibmFtZSI6ICJhbW91bnQiLAogICAgICAgICAgInR5cGUiOiAicmVhbCIsCiAgICAgICAgICAicHJpbWFyeUtleSI6IGZhbHNlLAogICAgICAgICAgIm5vdE51bGwiOiB0cnVlLAogICAgICAgICAgImF1dG9pbmNyZW1lbnQiOiBmYWxzZQogICAgICAgIH0sCiAgICAgICAgImNyZWF0ZWRfYXQiOiB7CiAgICAgICAgICAibmFtZSI6ICJjcmVhdGVkX2F0IiwKICAgICAgICAgICJ0eXBlIjogInRleHQiLAogICAgICAgICAgInByaW1hcnlLZXkiOiBmYWxzZSwKICAgICAgICAgICJub3ROdWxsIjogdHJ1ZSwKICAgICAgICAgICJhdXRvaW5jcmVtZW50IjogZmFsc2UKICAgICAgICB9CiAgICAgIH0sCiAgICAgICJpbmRleGVzIjoge30sCiAgICAgICJmb3JlaWduS2V5cyI6IHsKICAgICAgICAicmVzdG9ja3NfcHJvZHVjdF9pZF9wcm9kdWN0c19pZF9mayI6IHsKICAgICAgICAgICJuYW1lIjogInJlc3RvY2tzX3Byb2R1Y3RfaWRfcHJvZHVjdHNfaWRfZmsiLAogICAgICAgICAgInRhYmxlRnJvbSI6ICJyZXN0b2NrcyIsCiAgICAgICAgICAidGFibGVUbyI6ICJwcm9kdWN0cyIsCiAgICAgICAgICAiY29sdW1uc0Zyb20iOiBbCiAgICAgICAgICAgICJwcm9kdWN0X2lkIgogICAgICAgICAgXSwKICAgICAgICAgICJjb2x1bW5zVG8iOiBbCiAgICAgICAgICAgICJpZCIKICAgICAgICAgIF0sCiAgICAgICAgICAib25EZWxldGUiOiAibm8gYWN0aW9uIiwKICAgICAgICAgICJvblVwZGF0ZSI6ICJubyBhY3Rpb24iCiAgICAgICAgfQogICAgICB9LAogICAgICAiY29tcG9zaXRlUHJpbWFyeUtleXMiOiB7fSwKICAgICAgInVuaXF1ZUNvbnN0cmFpbnRzIjoge30sCiAgICAgICJjaGVja0NvbnN0cmFpbnRzIjoge30KICAgIH0sCiAgICAid2FzaF9zZXNzaW9ucyI6IHsKICAgICAgIm5hbWUiOiAid2FzaF9zZXNzaW9ucyIsCiAgICAgICJjb2x1bW5zIjogewogICAgICAgICJpZCI6IHsKICAgICAgICAgICJuYW1lIjogImlkIiwKICAgICAgICAgICJ0eXBlIjogInRleHQiLAogICAgICAgICAgInByaW1hcnlLZXkiOiB0cnVlLAogICAgICAgICAgIm5vdE51bGwiOiB0cnVlLAogICAgICAgICAgImF1dG9pbmNyZW1lbnQiOiBmYWxzZQogICAgICAgIH0sCiAgICAgICAgIndhc2hlZF9hdCI6IHsKICAgICAgICAgICJuYW1lIjogIndhc2hlZF9hdCIsCiAgICAgICAgICAidHlwZSI6ICJ0ZXh0IiwKICAgICAgICAgICJwcmltYXJ5S2V5IjogZmFsc2UsCiAgICAgICAgICAibm90TnVsbCI6IHRydWUsCiAgICAgICAgICAiYXV0b2luY3JlbWVudCI6IGZhbHNlCiAgICAgICAgfSwKICAgICAgICAibm90ZSI6IHsKICAgICAgICAgICJuYW1lIjogIm5vdGUiLAogICAgICAgICAgInR5cGUiOiAidGV4dCIsCiAgICAgICAgICAicHJpbWFyeUtleSI6IGZhbHNlLAogICAgICAgICAgIm5vdE51bGwiOiBmYWxzZSwKICAgICAgICAgICJhdXRvaW5jcmVtZW50IjogZmFsc2UKICAgICAgICB9LAogICAgICAgICJjcmVhdGVkX2F0IjogewogICAgICAgICAgIm5hbWUiOiAiY3JlYXRlZF9hdCIsCiAgICAgICAgICAidHlwZSI6ICJ0ZXh0IiwKICAgICAgICAgICJwcmltYXJ5S2V5IjogZmFsc2UsCiAgICAgICAgICAibm90TnVsbCI6IHRydWUsCiAgICAgICAgICAiYXV0b2luY3JlbWVudCI6IGZhbHNlCiAgICAgICAgfQogICAgICB9LAogICAgICAiaW5kZXhlcyI6IHt9LAogICAgICAiZm9yZWlnbktleXMiOiB7fSwKICAgICAgImNvbXBvc2l0ZVByaW1hcnlLZXlzIjoge30sCiAgICAgICJ1bmlxdWVDb25zdHJhaW50cyI6IHt9LAogICAgICAiY2hlY2tDb25zdHJhaW50cyI6IHt9CiAgICB9LAogICAgIndhc2hfdXNhZ2VzIjogewogICAgICAibmFtZSI6ICJ3YXNoX3VzYWdlcyIsCiAgICAgICJjb2x1bW5zIjogewogICAgICAgICJpZCI6IHsKICAgICAgICAgICJuYW1lIjogImlkIiwKICAgICAgICAgICJ0eXBlIjogImludGVnZXIiLAogICAgICAgICAgInByaW1hcnlLZXkiOiB0cnVlLAogICAgICAgICAgIm5vdE51bGwiOiB0cnVlLAogICAgICAgICAgImF1dG9pbmNyZW1lbnQiOiB0cnVlCiAgICAgICAgfSwKICAgICAgICAid2FzaF9pZCI6IHsKICAgICAgICAgICJuYW1lIjogIndhc2hfaWQiLAogICAgICAgICAgInR5cGUiOiAidGV4dCIsCiAgICAgICAgICAicHJpbWFyeUtleSI6IGZhbHNlLAogICAgICAgICAgIm5vdE51bGwiOiB0cnVlLAogICAgICAgICAgImF1dG9pbmNyZW1lbnQiOiBmYWxzZQogICAgICAgIH0sCiAgICAgICAgInByb2R1Y3RfaWQiOiB7CiAgICAgICAgICAibmFtZSI6ICJwcm9kdWN0X2lkIiwKICAgICAgICAgICJ0eXBlIjogImludGVnZXIiLAogICAgICAgICAgInByaW1hcnlLZXkiOiBmYWxzZSwKICAgICAgICAgICJub3ROdWxsIjogdHJ1ZSwKICAgICAgICAgICJhdXRvaW5jcmVtZW50IjogZmFsc2UKICAgICAgICB9LAogICAgICAgICJhbW91bnQiOiB7CiAgICAgICAgICAibmFtZSI6ICJhbW91bnQiLAogICAgICAgICAgInR5cGUiOiAicmVhbCIsCiAgICAgICAgICAicHJpbWFyeUtleSI6IGZhbHNlLAogICAgICAgICAgIm5vdE51bGwiOiB0cnVlLAogICAgICAgICAgImF1dG9pbmNyZW1lbnQiOiBmYWxzZQogICAgICAgIH0KICAgICAgfSwKICAgICAgImluZGV4ZXMiOiB7fSwKICAgICAgImZvcmVpZ25LZXlzIjogewogICAgICAgICJ3YXNoX3VzYWdlc193YXNoX2lkX3dhc2hfc2Vzc2lvbnNfaWRfZmsiOiB7CiAgICAgICAgICAibmFtZSI6ICJ3YXNoX3VzYWdlc193YXNoX2lkX3dhc2hfc2Vzc2lvbnNfaWRfZmsiLAogICAgICAgICAgInRhYmxlRnJvbSI6ICJ3YXNoX3VzYWdlcyIsCiAgICAgICAgICAidGFibGVUbyI6ICJ3YXNoX3Nlc3Npb25zIiwKICAgICAgICAgICJjb2x1bW5zRnJvbSI6IFsKICAgICAgICAgICAgIndhc2hfaWQiCiAgICAgICAgICBdLAogICAgICAgICAgImNvbHVtbnNUbyI6IFsKICAgICAgICAgICAgImlkIgogICAgICAgICAgXSwKICAgICAgICAgICJvbkRlbGV0ZSI6ICJjYXNjYWRlIiwKICAgICAgICAgICJvblVwZGF0ZSI6ICJubyBhY3Rpb24iCiAgICAgICAgfSwKICAgICAgICAid2FzaF91c2FnZXNfcHJvZHVjdF9pZF9wcm9kdWN0c19pZF9mayI6IHsKICAgICAgICAgICJuYW1lIjogIndhc2hfdXNhZ2VzX3Byb2R1Y3RfaWRfcHJvZHVjdHNfaWRfZmsiLAogICAgICAgICAgInRhYmxlRnJvbSI6ICJ3YXNoX3VzYWdlcyIsCiAgICAgICAgICAidGFibGVUbyI6ICJwcm9kdWN0cyIsCiAgICAgICAgICAiY29sdW1uc0Zyb20iOiBbCiAgICAgICAgICAgICJwcm9kdWN0X2lkIgogICAgICAgICAgXSwKICAgICAgICAgICJjb2x1bW5zVG8iOiBbCiAgICAgICAgICAgICJpZCIKICAgICAgICAgIF0sCiAgICAgICAgICAib25EZWxldGUiOiAibm8gYWN0aW9uIiwKICAgICAgICAgICJvblVwZGF0ZSI6ICJubyBhY3Rpb24iCiAgICAgICAgfQogICAgICB9LAogICAgICAiY29tcG9zaXRlUHJpbWFyeUtleXMiOiB7fSwKICAgICAgInVuaXF1ZUNvbnN0cmFpbnRzIjoge30sCiAgICAgICJjaGVja0NvbnN0cmFpbnRzIjoge30KICAgIH0KICB9LAogICJ2aWV3cyI6IHt9LAogICJlbnVtcyI6IHt9LAogICJfbWV0YSI6IHsKICAgICJzY2hlbWFzIjoge30sCiAgICAidGFibGVzIjoge30sCiAgICAiY29sdW1ucyI6IHt9CiAgfSwKICAiaW50ZXJuYWwiOiB7CiAgICAiaW5kZXhlcyI6IHt9CiAgfQp9
+{
+  "version": "6",
+  "dialect": "sqlite",
+  "id": "2b82f4a7-e98c-4601-813f-86784ef353d3",
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "tables": {
+    "products": {
+      "name": "products",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "category": {
+          "name": "category",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "unit": {
+          "name": "unit",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "package_size": {
+          "name": "package_size",
+          "type": "real",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "remaining": {
+          "name": "remaining",
+          "type": "real",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "low_threshold": {
+          "name": "low_threshold",
+          "type": "real",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "restocks": {
+      "name": "restocks",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "product_id": {
+          "name": "product_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "amount": {
+          "name": "amount",
+          "type": "real",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "restocks_product_id_products_id_fk": {
+          "name": "restocks_product_id_products_id_fk",
+          "tableFrom": "restocks",
+          "tableTo": "products",
+          "columnsFrom": [
+            "product_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "wash_sessions": {
+      "name": "wash_sessions",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "washed_at": {
+          "name": "washed_at",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "note": {
+          "name": "note",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "wash_usages": {
+      "name": "wash_usages",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "wash_id": {
+          "name": "wash_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "product_id": {
+          "name": "product_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "amount": {
+          "name": "amount",
+          "type": "real",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "wash_usages_wash_id_wash_sessions_id_fk": {
+          "name": "wash_usages_wash_id_wash_sessions_id_fk",
+          "tableFrom": "wash_usages",
+          "tableTo": "wash_sessions",
+          "columnsFrom": [
+            "wash_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        },
+        "wash_usages_product_id_products_id_fk": {
+          "name": "wash_usages_product_id_products_id_fk",
+          "tableFrom": "wash_usages",
+          "tableTo": "products",
+          "columnsFrom": [
+            "product_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    }
+  },
+  "views": {},
+  "enums": {},
+  "_meta": {
+    "schemas": {},
+    "tables": {},
+    "columns": {}
+  },
+  "internal": {
+    "indexes": {}
+  }
+}

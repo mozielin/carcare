@@ -1,1 +1,21 @@
-ewogICIkc2NoZW1hIjogImh0dHBzOi8vdWkuc2hhZGNuLmNvbS9zY2hlbWEuanNvbiIsCiAgInN0eWxlIjogIm5ldy15b3JrIiwKICAicnNjIjogdHJ1ZSwKICAidHN4IjogdHJ1ZSwKICAidGFpbHdpbmQiOiB7CiAgICAiY29uZmlnIjogIiIsCiAgICAiY3NzIjogImFwcC9nbG9iYWxzLmNzcyIsCiAgICAiYmFzZUNvbG9yIjogIm5ldXRyYWwiLAogICAgImNzc1ZhcmlhYmxlcyI6IHRydWUsCiAgICAicHJlZml4IjogIiIKICB9LAogICJhbGlhc2VzIjogewogICAgImNvbXBvbmVudHMiOiAiQC9jb21wb25lbnRzIiwKICAgICJ1dGlscyI6ICJAL2xpYi91dGlscyIsCiAgICAidWkiOiAiQC9jb21wb25lbnRzL3VpIiwKICAgICJsaWIiOiAiQC9saWIiLAogICAgImhvb2tzIjogIkAvaG9va3MiCiAgfSwKICAicmVnaXN0cmllcyI6IHt9Cn0K
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "style": "new-york",
+  "rsc": true,
+  "tsx": true,
+  "tailwind": {
+    "config": "",
+    "css": "app/globals.css",
+    "baseColor": "neutral",
+    "cssVariables": true,
+    "prefix": ""
+  },
+  "aliases": {
+    "components": "@/components",
+    "utils": "@/lib/utils",
+    "ui": "@/components/ui",
+    "lib": "@/lib",
+    "hooks": "@/hooks"
+  },
+  "registries": {}
+}

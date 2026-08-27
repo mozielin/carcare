@@ -1,1 +1,57 @@
-InVzZSBjbGllbnQiCgppbXBvcnQgKiBhcyBSZWFjdCBmcm9tICJyZWFjdCIKaW1wb3J0IHsgVG9vbHRpcCBhcyBUb29sdGlwUHJpbWl0aXZlIH0gZnJvbSAicmFkaXgtdWkiCgppbXBvcnQgeyBjbiB9IGZyb20gIkAvbGliL3V0aWxzIgoKZnVuY3Rpb24gVG9vbHRpcFByb3ZpZGVyKHsKICBkZWxheUR1cmF0aW9uID0gMCwKICAuLi5wcm9wcwp9OiBSZWFjdC5Db21wb25lbnRQcm9wczx0eXBlb2YgVG9vbHRpcFByaW1pdGl2ZS5Qcm92aWRlcj4pIHsKICByZXR1cm4gKAogICAgPFRvb2x0aXBQcmltaXRpdmUuUHJvdmlkZXIKICAgICAgZGF0YS1zbG90PSJ0b29sdGlwLXByb3ZpZGVyIgogICAgICBkZWxheUR1cmF0aW9uPXtkZWxheUR1cmF0aW9ufQogICAgICB7Li4ucHJvcHN9CiAgICAvPgogICkKfQoKZnVuY3Rpb24gVG9vbHRpcCh7CiAgLi4ucHJvcHMKfTogUmVhY3QuQ29tcG9uZW50UHJvcHM8dHlwZW9mIFRvb2x0aXBQcmltaXRpdmUuUm9vdD4pIHsKICByZXR1cm4gPFRvb2x0aXBQcmltaXRpdmUuUm9vdCBkYXRhLXNsb3Q9InRvb2x0aXAiIHsuLi5wcm9wc30gLz4KfQoKZnVuY3Rpb24gVG9vbHRpcFRyaWdnZXIoewogIC4uLnByb3BzCn06IFJlYWN0LkNvbXBvbmVudFByb3BzPHR5cGVvZiBUb29sdGlwUHJpbWl0aXZlLlRyaWdnZXI+KSB7CiAgcmV0dXJuIDxUb29sdGlwUHJpbWl0aXZlLlRyaWdnZXIgZGF0YS1zbG90PSJ0b29sdGlwLXRyaWdnZXIiIHsuLi5wcm9wc30gLz4KfQoKZnVuY3Rpb24gVG9vbHRpcENvbnRlbnQoewogIGNsYXNzTmFtZSwKICBzaWRlT2Zmc2V0ID0gMCwKICBjaGlsZHJlbiwKICAuLi5wcm9wcwp9OiBSZWFjdC5Db21wb25lbnRQcm9wczx0eXBlb2YgVG9vbHRpcFByaW1pdGl2ZS5Db250ZW50PikgewogIHJldHVybiAoCiAgICA8VG9vbHRpcFByaW1pdGl2ZS5Qb3J0YWw+CiAgICAgIDxUb29sdGlwUHJpbWl0aXZlLkNvbnRlbnQKICAgICAgICBkYXRhLXNsb3Q9InRvb2x0aXAtY29udGVudCIKICAgICAgICBzaWRlT2Zmc2V0PXtzaWRlT2Zmc2V0fQogICAgICAgIGNsYXNzTmFtZT17Y24oCiAgICAgICAgICAiei01MCB3LWZpdCBvcmlnaW4tKC0tcmFkaXgtdG9vbHRpcC1jb250ZW50LXRyYW5zZm9ybS1vcmlnaW4pIGFuaW1hdGUtaW4gcm91bmRlZC1tZCBiZy1mb3JlZ3JvdW5kIHB4LTMgcHktMS41IHRleHQteHMgdGV4dC1iYWxhbmNlIHRleHQtYmFja2dyb3VuZCBmYWRlLWluLTAgem9vbS1pbi05NSBkYXRhLVtzaWRlPWJvdHRvbV06c2xpZGUtaW4tZnJvbS10b3AtMiBkYXRhLVtzaWRlPWxlZnRdOnNsaWRlLWluLWZyb20tcmlnaHQtMiBkYXRhLVtzaWRlPXJpZ2h0XTpzbGlkZS1pbi1mcm9tLWxlZnQtMiBkYXRhLVtzaWRlPXRvcF06c2xpZGUtaW4tZnJvbS1ib3R0b20tMiBkYXRhLVtzdGF0ZT1jbG9zZWRdOmFuaW1hdGUtb3V0IGRhdGEtW3N0YXRlPWNsb3NlZF06ZmFkZS1vdXQtMCBkYXRhLVtzdGF0ZT1jbG9zZWRdOnpvb20tb3V0LTk1IiwKICAgICAgICAgIGNsYXNzTmFtZQogICAgICAgICl9CiAgICAgICAgey4uLnByb3BzfQogICAgICA+CiAgICAgICAge2NoaWxkcmVufQogICAgICAgIDxUb29sdGlwUHJpbWl0aXZlLkFycm93IGNsYXNzTmFtZT0iei01MCBzaXplLTIuNSB0cmFuc2xhdGUteS1bY2FsYygtNTAlXy1fMnB4KV0gcm90YXRlLTQ1IHJvdW5kZWQtWzJweF0gYmctZm9yZWdyb3VuZCBmaWxsLWZvcmVncm91bmQiIC8+CiAgICAgIDwvVG9vbHRpcFByaW1pdGl2ZS5Db250ZW50PgogICAgPC9Ub29sdGlwUHJpbWl0aXZlLlBvcnRhbD4KICApCn0KCmV4cG9ydCB7IFRvb2x0aXAsIFRvb2x0aXBUcmlnZ2VyLCBUb29sdGlwQ29udGVudCwgVG9vbHRpcFByb3ZpZGVyIH0K
+"use client"
+
+import * as React from "react"
+import { Tooltip as TooltipPrimitive } from "radix-ui"
+
+import { cn } from "@/lib/utils"
+
+function TooltipProvider({
+  delayDuration = 0,
+  ...props
+}: React.ComponentProps<typeof TooltipPrimitive.Provider>) {
+  return (
+    <TooltipPrimitive.Provider
+      data-slot="tooltip-provider"
+      delayDuration={delayDuration}
+      {...props}
+    />
+  )
+}
+
+function Tooltip({
+  ...props
+}: React.ComponentProps<typeof TooltipPrimitive.Root>) {
+  return <TooltipPrimitive.Root data-slot="tooltip" {...props} />
+}
+
+function TooltipTrigger({
+  ...props
+}: React.ComponentProps<typeof TooltipPrimitive.Trigger>) {
+  return <TooltipPrimitive.Trigger data-slot="tooltip-trigger" {...props} />
+}
+
+function TooltipContent({
+  className,
+  sideOffset = 0,
+  children,
+  ...props
+}: React.ComponentProps<typeof TooltipPrimitive.Content>) {
+  return (
+    <TooltipPrimitive.Portal>
+      <TooltipPrimitive.Content
+        data-slot="tooltip-content"
+        sideOffset={sideOffset}
+        className={cn(
+          "z-50 w-fit origin-(--radix-tooltip-content-transform-origin) animate-in rounded-md bg-foreground px-3 py-1.5 text-xs text-balance text-background fade-in-0 zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95",
+          className
+        )}
+        {...props}
+      >
+        {children}
+        <TooltipPrimitive.Arrow className="z-50 size-2.5 translate-y-[calc(-50%_-_2px)] rotate-45 rounded-[2px] bg-foreground fill-foreground" />
+      </TooltipPrimitive.Content>
+    </TooltipPrimitive.Portal>
+  )
+}
+
+export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider }

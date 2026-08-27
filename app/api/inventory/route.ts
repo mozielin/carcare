@@ -1,1 +1,154 @@
-aW1wb3J0IHsgZW52IH0gZnJvbSAiY2xvdWRmbGFyZTp3b3JrZXJzIjsKCmV4cG9ydCBjb25zdCBkeW5hbWljID0gImZvcmNlLWR5bmFtaWMiOwpjb25zdCBkYiA9ICgpID0+IHsgaWYgKCFlbnYuREIpIHRocm93IG5ldyBFcnJvcigi6LOH5paZ5bqr5bCa5pyq6YCj57eaIik7IHJldHVybiBlbnYuREI7IH07CgpleHBvcnQgYXN5bmMgZnVuY3Rpb24gR0VUKCkgewogIGF3YWl0IGVuc3VyZURlZmF1bHRGbG93cygpOwogIGNvbnN0IFtwcm9kdWN0cywgd2FzaGVzLCBmbG93cywgZmxvd0l0ZW1zLCBicmFuZHMsIHdhc2hVc2FnZUl0ZW1zXSA9IGF3YWl0IFByb21pc2UuYWxsKFsKICAgIGRiKCkucHJlcGFyZShgU0VMRUNUIHAuaWQsIHAuYnJhbmQsIHAubmFtZSwgcC5jYXRlZ29yeSwgcC51bml0LCBwLnBhY2thZ2Vfc2l6ZSBBUyBwYWNrYWdlU2l6ZSwgcC5yZW1haW5pbmcsIHAubG93X3RocmVzaG9sZCBBUyBsb3dUaHJlc2hvbGQsIHAucGhfdHlwZSBBUyBwaFR5cGUsCiAgICAgIEdST1VQX0NPTkNBVChESVNUSU5DVCBmLm5hbWUpIEFTIGFmZmVjdGVkRmxvd05hbWVzCiAgICAgIEZST00gcHJvZHVjdHMgcCBMRUZUIEpPSU4gd2FzaF9mbG93X2l0ZW1zIGZpIE9OIGZpLnByb2R1Y3RfaWQgPSBwLmlkIExFRlQgSk9JTiB3YXNoX2Zsb3dzIGYgT04gZi5pZCA9IGZpLmZsb3dfaWQKICAgICAgV0hFUkUgcC5hY3RpdmUgPSAxIEdST1VQIEJZIHAuaWQgT1JERVIgQlkgcC5yZW1haW5pbmcgPD0gcC5sb3dfdGhyZXNob2xkIERFU0MsIHAubmFtZWApLmFsbCgpLAogICAgZGIoKS5wcmVwYXJlKGBTRUxFQ1Qgdy5pZCwgdy53YXNoZWRfYXQgQVMgd2FzaGVkQXQsIHcubm90ZSwgdy5mbG93X25hbWUgQVMgZmxvd05hbWUsCiAgICAgIChTRUxFQ1QgR1JPVVBfQ09OQ0FUKGxhYmVsLCAn44CBJykgRlJPTSAoCiAgICAgICAgU0VMRUNUIHAubmFtZSB8fCAnICcgfHwgcHJpbnRmKCclZycsIHUuYW1vdW50KSB8fCBwLnVuaXQgQVMgbGFiZWwKICAgICAgICBGUk9NIHdhc2hfdXNhZ2VzIHUgSk9JTiBwcm9kdWN0cyBwIE9OIHAuaWQgPSB1LnByb2R1Y3RfaWQKICAgICAgICBXSEVSRSB1Lndhc2hfaWQgPSB3LmlkIE9SREVSIEJZIHUuaWQKICAgICAgKSkgQVMgc3VtbWFyeQogICAgICBGUk9NIHdhc2hfc2Vzc2lvbnMgdyBPUkRFUiBCWSB3Lndhc2hlZF9hdCBERVNDLCB3LmNyZWF0ZWRfYXQgREVTQyBMSU1JVCAxMmApLmFsbCgpLAogICAgZGIoKS5wcmVwYXJlKGBTRUxFQ1QgaWQsIG5hbWUsIGZsb3dfdHlwZSBBUyBmbG93VHlwZSBGUk9NIHdhc2hfZmxvd3MgT1JERVIgQlkgQ0FTRSBmbG93X3R5cGUgV0hFTiAnMlBIJyBUSEVOIDEgV0hFTiAnM1BIJyBUSEVOIDIgV0hFTiAn5b+r6YCf5L+d6aSKJyBUSEVOIDMgRUxTRSA0IEVORCwgaWRgKS5hbGwoKSwKICAgIGRiKCkucHJlcGFyZShgU0VMRUNUIGZpLmZsb3dfaWQgQVMgZmxvd0lkLCBmaS5wcm9kdWN0X2lkIEFTIHByb2R1Y3RJZCwgZmkuYW1vdW50LCBwLm5hbWUgQVMgcHJvZHVjdE5hbWUsIHAudW5pdAogICAgICBGUk9NIHdhc2hfZmxvd19pdGVtcyBmaSBKT0lOIHByb2R1Y3RzIHAgT04gcC5pZCA9IGZpLnByb2R1Y3RfaWQgV0hFUkUgcC5hY3RpdmUgPSAxIE9SREVSIEJZIGZpLnNvcnRfb3JkZXIsIGZpLmlkYCkuYWxsKCksCiAgICBkYigpLnByZXBhcmUoIlNFTEVDVCBESVNUSU5DVCBicmFuZCBGUk9NIHByb2R1Y3RzIFdIRVJFIGFjdGl2ZSA9IDEgQU5EIGJyYW5kIDw+ICcnIE9SREVSIEJZIGJyYW5kIENPTExBVEUgTk9DQVNFIikuYWxsPHsgYnJhbmQ6IHN0cmluZyB9PigpLAogICAgZGIoKS5wcmVwYXJlKGBTRUxFQ1QgdS53YXNoX2lkIEFTIHdhc2hJZCwgcC5uYW1lLCBwLmNhdGVnb3J5LCBwLnBoX3R5cGUgQVMgcGhUeXBlLCB1LmFtb3VudCwgcC51bml0CiAgICAgIEZST00gd2FzaF91c2FnZXMgdSBKT0lOIHByb2R1Y3RzIHAgT04gcC5pZCA9IHUucHJvZHVjdF9pZAogICAgICBXSEVSRSB1Lndhc2hfaWQgSU4gKFNFTEVDVCBpZCBGUk9NIHdhc2hfc2Vzc2lvbnMgT1JERVIgQlkgd2FzaGVkX2F0IERFU0MsIGNyZWF0ZWRfYXQgREVTQyBMSU1JVCAxMikKICAgICAgT1JERVIgQlkgdS5pZGApLmFsbCgpLAogIF0pOwogIGNvbnN0IGl0ZW1zID0gZmxvd0l0ZW1zLnJlc3VsdHMgYXMgQXJyYXk8UmVjb3JkPHN0cmluZywgdW5rbm93bj4+OwogIGNvbnN0IHVzYWdlSXRlbXMgPSB3YXNoVXNhZ2VJdGVtcy5yZXN1bHRzIGFzIEFycmF5PFJlY29yZDxzdHJpbmcsIHVua25vd24+PjsKICByZXR1cm4gUmVzcG9uc2UuanNvbih7CiAgICBwcm9kdWN0czogcHJvZHVjdHMucmVzdWx0cywKICAgIHdhc2hlczogd2FzaGVzLnJlc3VsdHMubWFwKCh3YXNoOiBSZWNvcmQ8c3RyaW5nLCB1bmtub3duPikgPT4gKHsgLi4ud2FzaCwgaXRlbXM6IHVzYWdlSXRlbXMuZmlsdGVyKChpdGVtKSA9PiBpdGVtLndhc2hJZCA9PT0gd2FzaC5pZCkgfSkpLAogICAgYnJhbmRzOiBicmFuZHMucmVzdWx0cy5tYXAoKGl0ZW0pID0+IGl0ZW0uYnJhbmQpLAogICAgZmxvd3M6IGZsb3dzLnJlc3VsdHMubWFwKChmbG93OiBSZWNvcmQ8c3RyaW5nLCB1bmtub3duPikgPT4gKHsgLi4uZmxvdywgaXRlbXM6IGl0ZW1zLmZpbHRlcigoaXRlbSkgPT4gaXRlbS5mbG93SWQgPT09IGZsb3cuaWQpIH0pKSwKICB9KTsKfQoKZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIFBPU1QocmVxdWVzdDogUmVxdWVzdCkgewogIHRyeSB7CiAgICBjb25zdCBib2R5ID0gYXdhaXQgcmVxdWVzdC5qc29uKCkgYXMgUmVjb3JkPHN0cmluZywgdW5rbm93bj47CiAgICBpZiAoYm9keS5hY3Rpb24gPT09ICJhZGRQcm9kdWN0IikgYXdhaXQgYWRkUHJvZHVjdChib2R5KTsKICAgIGVsc2UgaWYgKGJvZHkuYWN0aW9uID09PSAidXBkYXRlUHJvZHVjdCIpIGF3YWl0IHVwZGF0ZVByb2R1Y3QoYm9keSk7CiAgICBlbHNlIGlmIChib2R5LmFjdGlvbiA9PT0gInJlc3RvY2siKSBhd2FpdCByZXN0b2NrUHJvZHVjdChib2R5KTsKICAgIGVsc2UgaWYgKGJvZHkuYWN0aW9uID09PSAic2F2ZUZsb3ciKSBhd2FpdCBzYXZlRmxvdyhib2R5KTsKICAgIGVsc2UgaWYgKGJvZHkuYWN0aW9uID09PSAibG9nV2FzaCIpIGF3YWl0IGxvZ1dhc2goYm9keSk7CiAgICBlbHNlIGlmIChib2R5LmFjdGlvbiA9PT0gImRlbGV0ZVByb2R1Y3QiKSBhd2FpdCBhcmNoaXZlUHJvZHVjdChib2R5KTsKICAgIGVsc2UgdGhyb3cgbmV3IEVycm9yKCLkuI3mlK/mj7TnmoTmk43kvZwiKTsKICAgIHJldHVybiBSZXNwb25zZS5qc29uKHsgb2s6IHRydWUgfSk7CiAgfSBjYXRjaCAoZXJyb3IpIHsKICAgIHJldHVybiBSZXNwb25zZS5qc29uKHsgZXJyb3I6IGVycm9yIGluc3RhbmNlb2YgRXJyb3IgPyBlcnJvci5tZXNzYWdlIDogIuaTjeS9nOWkseaVlyIgfSwgeyBzdGF0dXM6IDQwMCB9KTsKICB9Cn0KCmFzeW5jIGZ1bmN0aW9uIGFkZFByb2R1Y3QoYm9keTogUmVjb3JkPHN0cmluZywgdW5rbm93bj4pIHsKICBjb25zdCBicmFuZCA9IGNsZWFuKGJvZHkuYnJhbmQpLCBuYW1lID0gY2xlYW4oYm9keS5uYW1lKSwgY2F0ZWdvcnkgPSBwcm9kdWN0Q2F0ZWdvcnkoYm9keS5jYXRlZ29yeSksIHVuaXQgPSBjYXRlZ29yeSA9PT0gIuiAl+adkCIgPyAi5qyhIiA6IGNsZWFuKGJvZHkudW5pdCksIHBoVHlwZSA9IGNhdGVnb3J5ID09PSAi6ICX5p2QIiA/ICLkuK3mgKciIDogcGgoYm9keS5waFR5cGUpOwogIGNvbnN0IHBhY2thZ2VTaXplID0gaW50ZWdlcihib2R5LnBhY2thZ2VTaXplKSwgcmVtYWluaW5nID0gaW50ZWdlcihib2R5LnJlbWFpbmluZyksIGxvd1RocmVzaG9sZCA9IGludGVnZXIoYm9keS5sb3dUaHJlc2hvbGQpOwogIGlmICghYnJhbmQgfHwgIW5hbWUgfHwgIWNhdGVnb3J5IHx8ICF1bml0IHx8IHJlbWFpbmluZyA+IHBhY2thZ2VTaXplKSB0aHJvdyBuZXcgRXJyb3IoIuiri+eiuuiqjeWTgeeJjOOAgeeUqOWTgeizh+aWmeiIh+WJqemkmOaVuOmHjyIpOwogIGF3YWl0IGRiKCkucHJlcGFyZSgiSU5TRVJUIElOVE8gcHJvZHVjdHMgKGJyYW5kLCBuYW1lLCBjYXRlZ29yeSwgdW5pdCwgcGFja2FnZV9zaXplLCByZW1haW5pbmcsIGxvd190aHJlc2hvbGQsIHBoX3R5cGUsIGFjdGl2ZSwgY3JlYXRlZF9hdCkgVkFMVUVTICg/LCA/LCA/LCA/LCA/LCA/LCA/LCA/LCAxLCA/KSIpCiAgICAuYmluZChicmFuZCwgbmFtZSwgY2F0ZWdvcnksIHVuaXQsIHBhY2thZ2VTaXplLCByZW1haW5pbmcsIGxvd1RocmVzaG9sZCwgcGhUeXBlLCBuZXcgRGF0ZSgpLnRvSVNPU3RyaW5nKCkpLnJ1bigpOwp9Cgphc3luYyBmdW5jdGlvbiB1cGRhdGVQcm9kdWN0KGJvZHk6IFJlY29yZDxzdHJpbmcsIHVua25vd24+KSB7CiAgY29uc3QgcHJvZHVjdElkID0gcG9zaXRpdmUoYm9keS5wcm9kdWN0SWQpLCBicmFuZCA9IGNsZWFuKGJvZHkuYnJhbmQpLCBuYW1lID0gY2xlYW4oYm9keS5uYW1lKSwgY2F0ZWdvcnkgPSBwcm9kdWN0Q2F0ZWdvcnkoYm9keS5jYXRlZ29yeSksIHVuaXQgPSBjYXRlZ29yeSA9PT0gIuiAl+adkCIgPyAi5qyhIiA6IGNsZWFuKGJvZHkudW5pdCksIHBoVHlwZSA9IGNhdGVnb3J5ID09PSAi6ICX5p2QIiA/ICLkuK3mgKciIDogcGgoYm9keS5waFR5cGUpOwogIGNvbnN0IHBhY2thZ2VTaXplID0gaW50ZWdlcihib2R5LnBhY2thZ2VTaXplKSwgcmVtYWluaW5nID0gaW50ZWdlcihib2R5LnJlbWFpbmluZyksIGxvd1RocmVzaG9sZCA9IGludGVnZXIoYm9keS5sb3dUaHJlc2hvbGQpOwogIGlmICghYnJhbmQgfHwgIW5hbWUgfHwgIXVuaXQgfHwgcmVtYWluaW5nID4gcGFja2FnZVNpemUpIHRocm93IG5ldyBFcnJvcigi6KuL56K66KqN5ZOB54mM44CB55So5ZOB6LOH5paZ6IiH5Ymp6aSY5pW46YePIik7CiAgY29uc3QgcmVzdWx0ID0gYXdhaXQgZGIoKS5wcmVwYXJlKCJVUERBVEUgcHJvZHVjdHMgU0VUIGJyYW5kID0gPywgbmFtZSA9ID8sIGNhdGVnb3J5ID0gPywgdW5pdCA9ID8sIHBhY2thZ2Vfc2l6ZSA9ID8sIHJlbWFpbmluZyA9ID8sIGxvd190aHJlc2hvbGQgPSA/LCBwaF90eXBlID0gPyBXSEVSRSBpZCA9ID8gQU5EIGFjdGl2ZSA9IDEiKQogICAgLmJpbmQoYnJhbmQsIG5hbWUsIGNhdGVnb3J5LCB1bml0LCBwYWNrYWdlU2l6ZSwgcmVtYWluaW5nLCBsb3dUaHJlc2hvbGQsIHBoVHlwZSwgcHJvZHVjdElkKS5ydW4oKTsKICBpZiAoIXJlc3VsdC5tZXRhLmNoYW5nZXMpIHRocm93IG5ldyBFcnJvcigi5om+5LiN5Yiw6YCZ6aCF55So5ZOBIik7Cn0KCmFzeW5jIGZ1bmN0aW9uIHJlc3RvY2tQcm9kdWN0KGJvZHk6IFJlY29yZDxzdHJpbmcsIHVua25vd24+KSB7CiAgY29uc3QgcHJvZHVjdElkID0gcG9zaXRpdmUoYm9keS5wcm9kdWN0SWQpLCBib3R0bGVzID0gaW50ZWdlcihib2R5LmJvdHRsZXMpOwogIGNvbnN0IHByb2R1Y3QgPSBhd2FpdCBkYigpLnByZXBhcmUoIlNFTEVDVCBwYWNrYWdlX3NpemUgQVMgcGFja2FnZVNpemUsIGNhdGVnb3J5IEZST00gcHJvZHVjdHMgV0hFUkUgaWQgPSA/IEFORCBhY3RpdmUgPSAxIikuYmluZChwcm9kdWN0SWQpLmZpcnN0PHsgcGFja2FnZVNpemU6IG51bWJlcjsgY2F0ZWdvcnk6IHN0cmluZyB9PigpOwogIGlmICghcHJvZHVjdCkgdGhyb3cgbmV3IEVycm9yKCLmib7kuI3liLDpgJnpoIXnlKjlk4EiKTsKICBjb25zdCBhbW91bnQgPSBwcm9kdWN0LnBhY2thZ2VTaXplICogYm90dGxlcywgbm93ID0gbmV3IERhdGUoKS50b0lTT1N0cmluZygpOwogIGF3YWl0IGRiKCkuYmF0Y2goWwogICAgcHJvZHVjdC5jYXRlZ29yeSA9PT0gIuiAl+adkCIKICAgICAgPyBkYigpLnByZXBhcmUoIlVQREFURSBwcm9kdWN0cyBTRVQgcmVtYWluaW5nID0gcGFja2FnZV9zaXplIFdIRVJFIGlkID0gPyBBTkQgYWN0aXZlID0gMSIpLmJpbmQocHJvZHVjdElkKQogICAgICA6IGRiKCkucHJlcGFyZSgiVVBEQVRFIHByb2R1Y3RzIFNFVCByZW1haW5pbmcgPSByZW1haW5pbmcgKyA/IFdIRVJFIGlkID0gPyBBTkQgYWN0aXZlID0gMSIpLmJpbmQoYW1vdW50LCBwcm9kdWN0SWQpLAogICAgZGIoKS5wcmVwYXJlKCJJTlNFUlQgSU5UTyByZXN0b2NrcyAocHJvZHVjdF9pZCwgYW1vdW50LCBjcmVhdGVkX2F0KSBWQUxVRVMgKD8sID8sID8pIikuYmluZChwcm9kdWN0SWQsIGFtb3VudCwgbm93KSwKICBdKTsKfQoKYXN5bmMgZnVuY3Rpb24gc2F2ZUZsb3coYm9keTogUmVjb3JkPHN0cmluZywgdW5rbm93bj4pIHsKICBjb25zdCBmbG93SWQgPSBib2R5LmZsb3dJZCA/IHBvc2l0aXZlKGJvZHkuZmxvd0lkKSA6IG51bGw7CiAgY29uc3QgZmxvd1R5cGUgPSBmbG93KGJvZHkuZmxvd1R5cGUpLCBuYW1lID0gZmxvd1R5cGUgPT09ICLoh6roqILmtYHnqIsiID8gY2xlYW4oYm9keS5uYW1lKSA6IGZsb3dUeXBlOwogIGlmICghbmFtZSkgdGhyb3cgbmV3IEVycm9yKCLoq4vovLjlhaXmtYHnqIvlkI3nqLEiKTsKICBjb25zdCBpdGVtcyA9IG5vcm1hbGl6ZVVzYWdlcyhib2R5Lml0ZW1zKTsKICBpZiAoIWl0ZW1zLmxlbmd0aCkgdGhyb3cgbmV3IEVycm9yKCLoq4voh7PlsJHoqK3lrprkuIDpoIXol6XlipHoiIflipHph48iKTsKICBjb25zdCBwcm9kdWN0SWRzID0gaXRlbXMubWFwKChpdGVtKSA9PiBpdGVtLnByb2R1Y3RJZCksIHBsYWNlaG9sZGVycyA9IHByb2R1Y3RJZHMubWFwKCgpID0+ICI/Iikuam9pbigiLCIpOwogIGNvbnN0IGFjdGl2ZSA9IGF3YWl0IGRiKCkucHJlcGFyZShgU0VMRUNUIGlkIEZST00gcHJvZHVjdHMgV0hFUkUgYWN0aXZlID0gMSBBTkQgaWQgSU4gKCR7cGxhY2Vob2xkZXJzfSlgKS5iaW5kKC4uLnByb2R1Y3RJZHMpLmFsbDx7IGlkOiBudW1iZXIgfT4oKTsKICBpZiAoYWN0aXZlLnJlc3VsdHMubGVuZ3RoICE9PSBuZXcgU2V0KHByb2R1Y3RJZHMpLnNpemUpIHRocm93IG5ldyBFcnJvcigi5rWB56iL5Lit5YyF5ZCr5bey56e76Zmk55qE55So5ZOBIik7CiAgbGV0IGlkID0gZmxvd0lkOwogIGlmIChpZCkgewogICAgYXdhaXQgZGIoKS5iYXRjaChbCiAgICAgIGRiKCkucHJlcGFyZSgiVVBEQVRFIHdhc2hfZmxvd3MgU0VUIG5hbWUgPSA/LCBmbG93X3R5cGUgPSA/IFdIRVJFIGlkID0gPyIpLmJpbmQobmFtZSwgZmxvd1R5cGUsIGlkKSwKICAgICAgZGIoKS5wcmVwYXJlKCJERUxFVEUgRlJPTSB3YXNoX2Zsb3dfaXRlbXMgV0hFUkUgZmxvd19pZCA9ID8iKS5iaW5kKGlkKSwKICAgIF0pOwogIH0gZWxzZSB7CiAgICBjb25zdCBjcmVhdGVkID0gYXdhaXQgZGIoKS5wcmVwYXJlKCJJTlNFUlQgSU5UTyB3YXNoX2Zsb3dzIChuYW1lLCBmbG93X3R5cGUsIGNyZWF0ZWRfYXQpIFZBTFVFUyAoPywgPywgPykiKS5iaW5kKG5hbWUsIGZsb3dUeXBlLCBuZXcgRGF0ZSgpLnRvSVNPU3RyaW5nKCkpLnJ1bigpOwogICAgaWQgPSBOdW1iZXIoY3JlYXRlZC5tZXRhLmxhc3Rfcm93X2lkKTsKICB9CiAgYXdhaXQgZGIoKS5iYXRjaChpdGVtcy5tYXAoKGl0ZW0sIGluZGV4KSA9PiBkYigpLnByZXBhcmUoIklOU0VSVCBJTlRPIHdhc2hfZmxvd19pdGVtcyAoZmxvd19pZCwgcHJvZHVjdF9pZCwgYW1vdW50LCBzb3J0X29yZGVyKSBWQUxVRVMgKD8sID8sID8sID8pIikuYmluZChpZCwgaXRlbS5wcm9kdWN0SWQsIGl0ZW0uYW1vdW50LCBpbmRleCkpKTsKfQoKYXN5bmMgZnVuY3Rpb24gbG9nV2FzaChib2R5OiBSZWNvcmQ8c3RyaW5nLCB1bmtub3duPikgewogIGNvbnN0IHdhc2hlZEF0ID0gY2xlYW4oYm9keS53YXNoZWRBdCksIG5vdGUgPSBjbGVhbihib2R5Lm5vdGUpIHx8IG51bGwsIGZsb3dJZCA9IHBvc2l0aXZlKGJvZHkuZmxvd0lkKTsKICBjb25zdCB1c2FnZXMgPSBub3JtYWxpemVVc2FnZXMoYm9keS51c2FnZXMpOwogIGlmICghL15cZHs0fS1cZHsyfS1cZHsyfSQvLnRlc3Qod2FzaGVkQXQpIHx8ICF1c2FnZXMubGVuZ3RoKSB0aHJvdyBuZXcgRXJyb3IoIuiri+mBuOaTh+a1geeoi+S4pueiuuiqjeeUqOWTgSIpOwogIGNvbnN0IHNlbGVjdGVkRmxvdyA9IGF3YWl0IGRiKCkucHJlcGFyZSgiU0VMRUNUIG5hbWUgRlJPTSB3YXNoX2Zsb3dzIFdIRVJFIGlkID0gPyIpLmJpbmQoZmxvd0lkKS5maXJzdDx7IG5hbWU6IHN0cmluZyB9PigpOwogIGlmICghc2VsZWN0ZWRGbG93KSB0aHJvdyBuZXcgRXJyb3IoIuaJvuS4jeWIsOmAmeWAi+a1geeoiyIpOwogIGNvbnN0IHBsYWNlaG9sZGVycyA9IHVzYWdlcy5tYXAoKCkgPT4gIj8iKS5qb2luKCIsIik7CiAgY29uc3QgY3VycmVudCA9IGF3YWl0IGRiKCkucHJlcGFyZShgU0VMRUNUIGlkLCByZW1haW5pbmcgRlJPTSBwcm9kdWN0cyBXSEVSRSBhY3RpdmUgPSAxIEFORCBpZCBJTiAoJHtwbGFjZWhvbGRlcnN9KWApLmJpbmQoLi4udXNhZ2VzLm1hcCgodSkgPT4gdS5wcm9kdWN0SWQpKS5hbGw8eyBpZDogbnVtYmVyOyByZW1haW5pbmc6IG51bWJlciB9PigpOwogIGZvciAoY29uc3QgdXNhZ2Ugb2YgdXNhZ2VzKSB7IGNvbnN0IGl0ZW0gPSBjdXJyZW50LnJlc3VsdHMuZmluZCgocCkgPT4gcC5pZCA9PT0gdXNhZ2UucHJvZHVjdElkKTsgaWYgKCFpdGVtIHx8IGl0ZW0ucmVtYWluaW5nIDwgdXNhZ2UuYW1vdW50KSB0aHJvdyBuZXcgRXJyb3IoIuWFtuS4reS4gOmgheeUqOWTgeeahOWJqemkmOmHj+S4jei2syIpOyB9CiAgY29uc3Qgd2FzaElkID0gY3J5cHRvLnJhbmRvbVVVSUQoKTsKICBjb25zdCBzdGF0ZW1lbnRzID0gW2RiKCkucHJlcGFyZSgiSU5TRVJUIElOVE8gd2FzaF9zZXNzaW9ucyAoaWQsIHdhc2hlZF9hdCwgbm90ZSwgZmxvd19uYW1lLCBjcmVhdGVkX2F0KSBWQUxVRVMgKD8sID8sID8sID8sID8pIikuYmluZCh3YXNoSWQsIHdhc2hlZEF0LCBub3RlLCBzZWxlY3RlZEZsb3cubmFtZSwgbmV3IERhdGUoKS50b0lTT1N0cmluZygpKV07CiAgZm9yIChjb25zdCB1c2FnZSBvZiB1c2FnZXMpIHsKICAgIHN0YXRlbWVudHMucHVzaChkYigpLnByZXBhcmUoIklOU0VSVCBJTlRPIHdhc2hfdXNhZ2VzICh3YXNoX2lkLCBwcm9kdWN0X2lkLCBhbW91bnQpIFZBTFVFUyAoPywgPywgPykiKS5iaW5kKHdhc2hJZCwgdXNhZ2UucHJvZHVjdElkLCB1c2FnZS5hbW91bnQpKTsKICAgIHN0YXRlbWVudHMucHVzaChkYigpLnByZXBhcmUoIlVQREFURSBwcm9kdWN0cyBTRVQgcmVtYWluaW5nID0gcmVtYWluaW5nIC0gPyBXSEVSRSBpZCA9ID8gQU5EIGFjdGl2ZSA9IDEgQU5EIHJlbWFpbmluZyA+PSA/IikuYmluZCh1c2FnZS5hbW91bnQsIHVzYWdlLnByb2R1Y3RJZCwgdXNhZ2UuYW1vdW50KSk7CiAgfQogIGF3YWl0IGRiKCkuYmF0Y2goc3RhdGVtZW50cyk7Cn0KCmFzeW5jIGZ1bmN0aW9uIGFyY2hpdmVQcm9kdWN0KGJvZHk6IFJlY29yZDxzdHJpbmcsIHVua25vd24+KSB7CiAgY29uc3QgcHJvZHVjdElkID0gcG9zaXRpdmUoYm9keS5wcm9kdWN0SWQpLCBub3cgPSBuZXcgRGF0ZSgpLnRvSVNPU3RyaW5nKCk7CiAgY29uc3QgcHJvZHVjdCA9IGF3YWl0IGRiKCkucHJlcGFyZSgiU0VMRUNUIGlkIEZST00gcHJvZHVjdHMgV0hFUkUgaWQgPSA/IEFORCBhY3RpdmUgPSAxIikuYmluZChwcm9kdWN0SWQpLmZpcnN0KCk7CiAgaWYgKCFwcm9kdWN0KSB0aHJvdyBuZXcgRXJyb3IoIueUqOWTgeW3sue2k+enu+mZpCIpOwogIGF3YWl0IGRiKCkuYmF0Y2goWwogICAgZGIoKS5wcmVwYXJlKCJERUxFVEUgRlJPTSB3YXNoX2Zsb3dfaXRlbXMgV0hFUkUgcHJvZHVjdF9pZCA9ID8iKS5iaW5kKHByb2R1Y3RJZCksCiAgICBkYigpLnByZXBhcmUoIlVQREFURSBwcm9kdWN0cyBTRVQgYWN0aXZlID0gMCwgZGVsZXRlZF9hdCA9ID8gV0hFUkUgaWQgPSA/IikuYmluZChub3csIHByb2R1Y3RJZCksCiAgXSk7Cn0KCmFzeW5jIGZ1bmN0aW9uIGVuc3VyZURlZmF1bHRGbG93cygpIHsKICBjb25zdCBjb3VudCA9IGF3YWl0IGRiKCkucHJlcGFyZSgiU0VMRUNUIENPVU5UKCopIEFTIGNvdW50IEZST00gd2FzaF9mbG93cyIpLmZpcnN0PHsgY291bnQ6IG51bWJlciB9PigpOwogIGlmIChOdW1iZXIoY291bnQ/LmNvdW50KSA+IDApIHJldHVybjsKICBjb25zdCBub3cgPSBuZXcgRGF0ZSgpLnRvSVNPU3RyaW5nKCk7CiAgYXdhaXQgZGIoKS5iYXRjaChbIjJQSCIsICIzUEgiLCAi5b+r6YCf5L+d6aSKIl0ubWFwKChuYW1lKSA9PiBkYigpLnByZXBhcmUoIklOU0VSVCBJTlRPIHdhc2hfZmxvd3MgKG5hbWUsIGZsb3dfdHlwZSwgY3JlYXRlZF9hdCkgVkFMVUVTICg/LCA/LCA/KSIpLmJpbmQobmFtZSwgbmFtZSwgbm93KSkpOwp9CgpmdW5jdGlvbiBub3JtYWxpemVVc2FnZXModmFsdWU6IHVua25vd24pIHsKICBpZiAoIUFycmF5LmlzQXJyYXkodmFsdWUpKSByZXR1cm4gW107CiAgY29uc3QgdW5pcXVlID0gbmV3IE1hcDxudW1iZXIsIG51bWJlcj4oKTsKICBmb3IgKGNvbnN0IHJhdyBvZiB2YWx1ZSBhcyBBcnJheTxSZWNvcmQ8c3RyaW5nLCB1bmtub3duPj4pIHVuaXF1ZS5zZXQocG9zaXRpdmUocmF3LnByb2R1Y3RJZCksIGludGVnZXIocmF3LmFtb3VudCkpOwogIHJldHVybiBbLi4udW5pcXVlXS5tYXAoKFtwcm9kdWN0SWQsIGFtb3VudF0pID0+ICh7IHByb2R1Y3RJZCwgYW1vdW50IH0pKTsKfQpmdW5jdGlvbiBjbGVhbih2YWx1ZTogdW5rbm93bikgeyByZXR1cm4gdHlwZW9mIHZhbHVlID09PSAic3RyaW5nIiA/IHZhbHVlLnRyaW0oKS5zbGljZSgwLCAxMjApIDogIiI7IH0KZnVuY3Rpb24gcG9zaXRpdmUodmFsdWU6IHVua25vd24pIHsgY29uc3QgbnVtYmVyID0gTnVtYmVyKHZhbHVlKTsgaWYgKCFOdW1iZXIuaXNGaW5pdGUobnVtYmVyKSB8fCBudW1iZXIgPD0gMCkgdGhyb3cgbmV3IEVycm9yKCLmlbjph4/lv4XpoIjlpKfmlrwgMCIpOyByZXR1cm4gbnVtYmVyOyB9CmZ1bmN0aW9uIG5vbk5lZ2F0aXZlKHZhbHVlOiB1bmtub3duKSB7IGNvbnN0IG51bWJlciA9IE51bWJlcih2YWx1ZSk7IGlmICghTnVtYmVyLmlzRmluaXRlKG51bWJlcikgfHwgbnVtYmVyIDwgMCkgdGhyb3cgbmV3IEVycm9yKCLmlbjph4/kuI3lj6/lsI/mlrwgMCIpOyByZXR1cm4gbnVtYmVyOyB9CmZ1bmN0aW9uIGludGVnZXIodmFsdWU6IHVua25vd24pIHsgY29uc3QgbnVtYmVyID0gcG9zaXRpdmUodmFsdWUpOyBpZiAoIU51bWJlci5pc0ludGVnZXIobnVtYmVyKSkgdGhyb3cgbmV3IEVycm9yKCLmlbjph4/lv4XpoIjmmK/mlbTmlbgiKTsgcmV0dXJuIG51bWJlcjsgfQpmdW5jdGlvbiBwaCh2YWx1ZTogdW5rbm93bikgeyBjb25zdCB0ZXh0ID0gY2xlYW4odmFsdWUpOyBpZiAoIVsi6YW45oCnIiwgIuS4reaApyIsICLpubzmgKciXS5pbmNsdWRlcyh0ZXh0KSkgdGhyb3cgbmV3IEVycm9yKCLoq4vpgbjmk4cgcEgg5YiG6aGeIik7IHJldHVybiB0ZXh0OyB9CmZ1bmN0aW9uIHByb2R1Y3RDYXRlZ29yeSh2YWx1ZTogdW5rbm93bikgeyBjb25zdCB0ZXh0ID0gY2xlYW4odmFsdWUpOyBpZiAoIVsi6aCQ5rSXIiwgIuato+a0lyIsICLkv53ppIoiLCAi546755KDIiwgIuiAl+adkCIsICLlhafoo50iLCAi5YW25LuWIl0uaW5jbHVkZXModGV4dCkpIHRocm93IG5ldyBFcnJvcigi6KuL6YG45pOH55So6YCU5YiG6aGeIik7IHJldHVybiB0ZXh0OyB9CmZ1bmN0aW9uIGZsb3codmFsdWU6IHVua25vd24pIHsgY29uc3QgdGV4dCA9IGNsZWFuKHZhbHVlKTsgaWYgKCFbIjJQSCIsICIzUEgiLCAi5b+r6YCf5L+d6aSKIiwgIuiHquiogua1geeoiyJdLmluY2x1ZGVzKHRleHQpKSB0aHJvdyBuZXcgRXJyb3IoIuiri+mBuOaTh+a1geeoi+mhnuWeiyIpOyByZXR1cm4gdGV4dDsgfQo=
+import { env } from "cloudflare:workers";
+
+export const dynamic = "force-dynamic";
+const db = () => { if (!env.DB) throw new Error("資料庫尚未連線"); return env.DB; };
+
+export async function GET() {
+  await ensureDefaultFlows();
+  const [products, washes, flows, flowItems, brands, washUsageItems] = await Promise.all([
+    db().prepare(`SELECT p.id, p.brand, p.name, p.category, p.unit, p.package_size AS packageSize, p.remaining, p.low_threshold AS lowThreshold, p.ph_type AS phType,
+      GROUP_CONCAT(DISTINCT f.name) AS affectedFlowNames
+      FROM products p LEFT JOIN wash_flow_items fi ON fi.product_id = p.id LEFT JOIN wash_flows f ON f.id = fi.flow_id
+      WHERE p.active = 1 GROUP BY p.id ORDER BY p.remaining <= p.low_threshold DESC, p.name`).all(),
+    db().prepare(`SELECT w.id, w.washed_at AS washedAt, w.note, w.flow_name AS flowName,
+      (SELECT GROUP_CONCAT(label, '、') FROM (
+        SELECT p.name || ' ' || printf('%g', u.amount) || p.unit AS label
+        FROM wash_usages u JOIN products p ON p.id = u.product_id
+        WHERE u.wash_id = w.id ORDER BY u.id
+      )) AS summary
+      FROM wash_sessions w ORDER BY w.washed_at DESC, w.created_at DESC LIMIT 12`).all(),
+    db().prepare(`SELECT id, name, flow_type AS flowType FROM wash_flows ORDER BY CASE flow_type WHEN '2PH' THEN 1 WHEN '3PH' THEN 2 WHEN '快速保養' THEN 3 ELSE 4 END, id`).all(),
+    db().prepare(`SELECT fi.flow_id AS flowId, fi.product_id AS productId, fi.amount, p.name AS productName, p.unit
+      FROM wash_flow_items fi JOIN products p ON p.id = fi.product_id WHERE p.active = 1 ORDER BY fi.sort_order, fi.id`).all(),
+    db().prepare("SELECT DISTINCT brand FROM products WHERE active = 1 AND brand <> '' ORDER BY brand COLLATE NOCASE").all<{ brand: string }>(),
+    db().prepare(`SELECT u.wash_id AS washId, p.name, p.category, p.ph_type AS phType, u.amount, p.unit
+      FROM wash_usages u JOIN products p ON p.id = u.product_id
+      WHERE u.wash_id IN (SELECT id FROM wash_sessions ORDER BY washed_at DESC, created_at DESC LIMIT 12)
+      ORDER BY u.id`).all(),
+  ]);
+  const items = flowItems.results as Array<Record<string, unknown>>;
+  const usageItems = washUsageItems.results as Array<Record<string, unknown>>;
+  return Response.json({
+    products: products.results,
+    washes: washes.results.map((wash: Record<string, unknown>) => ({ ...wash, items: usageItems.filter((item) => item.washId === wash.id) })),
+    brands: brands.results.map((item) => item.brand),
+    flows: flows.results.map((flow: Record<string, unknown>) => ({ ...flow, items: items.filter((item) => item.flowId === flow.id) })),
+  });
+}
+
+export async function POST(request: Request) {
+  try {
+    const body = await request.json() as Record<string, unknown>;
+    if (body.action === "addProduct") await addProduct(body);
+    else if (body.action === "updateProduct") await updateProduct(body);
+    else if (body.action === "restock") await restockProduct(body);
+    else if (body.action === "saveFlow") await saveFlow(body);
+    else if (body.action === "logWash") await logWash(body);
+    else if (body.action === "deleteProduct") await archiveProduct(body);
+    else throw new Error("不支援的操作");
+    return Response.json({ ok: true });
+  } catch (error) {
+    return Response.json({ error: error instanceof Error ? error.message : "操作失敗" }, { status: 400 });
+  }
+}
+
+async function addProduct(body: Record<string, unknown>) {
+  const brand = clean(body.brand), name = clean(body.name), category = productCategory(body.category), unit = category === "耗材" ? "次" : clean(body.unit), phType = category === "耗材" ? "中性" : ph(body.phType);
+  const packageSize = integer(body.packageSize), remaining = integer(body.remaining), lowThreshold = integer(body.lowThreshold);
+  if (!brand || !name || !category || !unit || remaining > packageSize) throw new Error("請確認品牌、用品資料與剩餘數量");
+  await db().prepare("INSERT INTO products (brand, name, category, unit, package_size, remaining, low_threshold, ph_type, active, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, 1, ?)")
+    .bind(brand, name, category, unit, packageSize, remaining, lowThreshold, phType, new Date().toISOString()).run();
+}
+
+async function updateProduct(body: Record<string, unknown>) {
+  const productId = positive(body.productId), brand = clean(body.brand), name = clean(body.name), category = productCategory(body.category), unit = category === "耗材" ? "次" : clean(body.unit), phType = category === "耗材" ? "中性" : ph(body.phType);
+  const packageSize = integer(body.packageSize), remaining = integer(body.remaining), lowThreshold = integer(body.lowThreshold);
+  if (!brand || !name || !unit || remaining > packageSize) throw new Error("請確認品牌、用品資料與剩餘數量");
+  const result = await db().prepare("UPDATE products SET brand = ?, name = ?, category = ?, unit = ?, package_size = ?, remaining = ?, low_threshold = ?, ph_type = ? WHERE id = ? AND active = 1")
+    .bind(brand, name, category, unit, packageSize, remaining, lowThreshold, phType, productId).run();
+  if (!result.meta.changes) throw new Error("找不到這項用品");
+}
+
+async function restockProduct(body: Record<string, unknown>) {
+  const productId = positive(body.productId), bottles = integer(body.bottles);
+  const product = await db().prepare("SELECT package_size AS packageSize, category FROM products WHERE id = ? AND active = 1").bind(productId).first<{ packageSize: number; category: string }>();
+  if (!product) throw new Error("找不到這項用品");
+  const amount = product.packageSize * bottles, now = new Date().toISOString();
+  await db().batch([
+    product.category === "耗材"
+      ? db().prepare("UPDATE products SET remaining = package_size WHERE id = ? AND active = 1").bind(productId)
+      : db().prepare("UPDATE products SET remaining = remaining + ? WHERE id = ? AND active = 1").bind(amount, productId),
+    db().prepare("INSERT INTO restocks (product_id, amount, created_at) VALUES (?, ?, ?)").bind(productId, amount, now),
+  ]);
+}
+
+async function saveFlow(body: Record<string, unknown>) {
+  const flowId = body.flowId ? positive(body.flowId) : null;
+  const flowType = flow(body.flowType), name = flowType === "自訂流程" ? clean(body.name) : flowType;
+  if (!name) throw new Error("請輸入流程名稱");
+  const items = normalizeUsages(body.items);
+  if (!items.length) throw new Error("請至少設定一項藥劑與劑量");
+  const productIds = items.map((item) => item.productId), placeholders = productIds.map(() => "?").join(",");
+  const active = await db().prepare(`SELECT id FROM products WHERE active = 1 AND id IN (${placeholders})`).bind(...productIds).all<{ id: number }>();
+  if (active.results.length !== new Set(productIds).size) throw new Error("流程中包含已移除的用品");
+  let id = flowId;
+  if (id) {
+    await db().batch([
+      db().prepare("UPDATE wash_flows SET name = ?, flow_type = ? WHERE id = ?").bind(name, flowType, id),
+      db().prepare("DELETE FROM wash_flow_items WHERE flow_id = ?").bind(id),
+    ]);
+  } else {
+    const created = await db().prepare("INSERT INTO wash_flows (name, flow_type, created_at) VALUES (?, ?, ?)").bind(name, flowType, new Date().toISOString()).run();
+    id = Number(created.meta.last_row_id);
+  }
+  await db().batch(items.map((item, index) => db().prepare("INSERT INTO wash_flow_items (flow_id, product_id, amount, sort_order) VALUES (?, ?, ?, ?)").bind(id, item.productId, item.amount, index)));
+}
+
+async function logWash(body: Record<string, unknown>) {
+  const washedAt = clean(body.washedAt), note = clean(body.note) || null, flowId = positive(body.flowId);
+  const usages = normalizeUsages(body.usages);
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(washedAt) || !usages.length) throw new Error("請選擇流程並確認用品");
+  const selectedFlow = await db().prepare("SELECT name FROM wash_flows WHERE id = ?").bind(flowId).first<{ name: string }>();
+  if (!selectedFlow) throw new Error("找不到這個流程");
+  const placeholders = usages.map(() => "?").join(",");
+  const current = await db().prepare(`SELECT id, remaining FROM products WHERE active = 1 AND id IN (${placeholders})`).bind(...usages.map((u) => u.productId)).all<{ id: number; remaining: number }>();
+  for (const usage of usages) { const item = current.results.find((p) => p.id === usage.productId); if (!item || item.remaining < usage.amount) throw new Error("其中一項用品的剩餘量不足"); }
+  const washId = crypto.randomUUID();
+  const statements = [db().prepare("INSERT INTO wash_sessions (id, washed_at, note, flow_name, created_at) VALUES (?, ?, ?, ?, ?)").bind(washId, washedAt, note, selectedFlow.name, new Date().toISOString())];
+  for (const usage of usages) {
+    statements.push(db().prepare("INSERT INTO wash_usages (wash_id, product_id, amount) VALUES (?, ?, ?)").bind(washId, usage.productId, usage.amount));
+    statements.push(db().prepare("UPDATE products SET remaining = remaining - ? WHERE id = ? AND active = 1 AND remaining >= ?").bind(usage.amount, usage.productId, usage.amount));
+  }
+  await db().batch(statements);
+}
+
+async function archiveProduct(body: Record<string, unknown>) {
+  const productId = positive(body.productId), now = new Date().toISOString();
+  const product = await db().prepare("SELECT id FROM products WHERE id = ? AND active = 1").bind(productId).first();
+  if (!product) throw new Error("用品已經移除");
+  await db().batch([
+    db().prepare("DELETE FROM wash_flow_items WHERE product_id = ?").bind(productId),
+    db().prepare("UPDATE products SET active = 0, deleted_at = ? WHERE id = ?").bind(now, productId),
+  ]);
+}
+
+async function ensureDefaultFlows() {
+  const count = await db().prepare("SELECT COUNT(*) AS count FROM wash_flows").first<{ count: number }>();
+  if (Number(count?.count) > 0) return;
+  const now = new Date().toISOString();
+  await db().batch(["2PH", "3PH", "快速保養"].map((name) => db().prepare("INSERT INTO wash_flows (name, flow_type, created_at) VALUES (?, ?, ?)").bind(name, name, now)));
+}
+
+function normalizeUsages(value: unknown) {
+  if (!Array.isArray(value)) return [];
+  const unique = new Map<number, number>();
+  for (const raw of value as Array<Record<string, unknown>>) unique.set(positive(raw.productId), integer(raw.amount));
+  return [...unique].map(([productId, amount]) => ({ productId, amount }));
+}
+function clean(value: unknown) { return typeof value === "string" ? value.trim().slice(0, 120) : ""; }
+function positive(value: unknown) { const number = Number(value); if (!Number.isFinite(number) || number <= 0) throw new Error("數量必須大於 0"); return number; }
+function nonNegative(value: unknown) { const number = Number(value); if (!Number.isFinite(number) || number < 0) throw new Error("數量不可小於 0"); return number; }
+function integer(value: unknown) { const number = positive(value); if (!Number.isInteger(number)) throw new Error("數量必須是整數"); return number; }
+function ph(value: unknown) { const text = clean(value); if (!["酸性", "中性", "鹼性"].includes(text)) throw new Error("請選擇 pH 分類"); return text; }
+function productCategory(value: unknown) { const text = clean(value); if (!["預洗", "正洗", "保養", "玻璃", "耗材", "內裝", "其他"].includes(text)) throw new Error("請選擇用途分類"); return text; }
+function flow(value: unknown) { const text = clean(value); if (!["2PH", "3PH", "快速保養", "自訂流程"].includes(text)) throw new Error("請選擇流程類型"); return text; }

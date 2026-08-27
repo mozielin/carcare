@@ -1,1 +1,28 @@
-aW1wb3J0IHsgY24gfSBmcm9tICJAL2xpYi91dGlscyIKCmZ1bmN0aW9uIEtiZCh7IGNsYXNzTmFtZSwgLi4ucHJvcHMgfTogUmVhY3QuQ29tcG9uZW50UHJvcHM8ImtiZCI+KSB7CiAgcmV0dXJuICgKICAgIDxrYmQKICAgICAgZGF0YS1zbG90PSJrYmQiCiAgICAgIGNsYXNzTmFtZT17Y24oCiAgICAgICAgInBvaW50ZXItZXZlbnRzLW5vbmUgaW5saW5lLWZsZXggaC01IHctZml0IG1pbi13LTUgaXRlbXMtY2VudGVyIGp1c3RpZnktY2VudGVyIGdhcC0xIHJvdW5kZWQtc20gYmctbXV0ZWQgcHgtMSBmb250LXNhbnMgdGV4dC14cyBmb250LW1lZGl1bSB0ZXh0LW11dGVkLWZvcmVncm91bmQgc2VsZWN0LW5vbmUiLAogICAgICAgICJbJl9zdmc6bm90KFtjbGFzcyo9J3NpemUtJ10pXTpzaXplLTMiLAogICAgICAgICJbW2RhdGEtc2xvdD10b29sdGlwLWNvbnRlbnRdXyZdOmJnLWJhY2tncm91bmQvMjAgW1tkYXRhLXNsb3Q9dG9vbHRpcC1jb250ZW50XV8mXTp0ZXh0LWJhY2tncm91bmQgZGFyazpbW2RhdGEtc2xvdD10b29sdGlwLWNvbnRlbnRdXyZdOmJnLWJhY2tncm91bmQvMTAiLAogICAgICAgIGNsYXNzTmFtZQogICAgICApfQogICAgICB7Li4ucHJvcHN9CiAgICAvPgogICkKfQoKZnVuY3Rpb24gS2JkR3JvdXAoeyBjbGFzc05hbWUsIC4uLnByb3BzIH06IFJlYWN0LkNvbXBvbmVudFByb3BzPCJkaXYiPikgewogIHJldHVybiAoCiAgICA8a2JkCiAgICAgIGRhdGEtc2xvdD0ia2JkLWdyb3VwIgogICAgICBjbGFzc05hbWU9e2NuKCJpbmxpbmUtZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTEiLCBjbGFzc05hbWUpfQogICAgICB7Li4ucHJvcHN9CiAgICAvPgogICkKfQoKZXhwb3J0IHsgS2JkLCBLYmRHcm91cCB9Cg==
+import { cn } from "@/lib/utils"
+
+function Kbd({ className, ...props }: React.ComponentProps<"kbd">) {
+  return (
+    <kbd
+      data-slot="kbd"
+      className={cn(
+        "pointer-events-none inline-flex h-5 w-fit min-w-5 items-center justify-center gap-1 rounded-sm bg-muted px-1 font-sans text-xs font-medium text-muted-foreground select-none",
+        "[&_svg:not([class*='size-'])]:size-3",
+        "[[data-slot=tooltip-content]_&]:bg-background/20 [[data-slot=tooltip-content]_&]:text-background dark:[[data-slot=tooltip-content]_&]:bg-background/10",
+        className
+      )}
+      {...props}
+    />
+  )
+}
+
+function KbdGroup({ className, ...props }: React.ComponentProps<"div">) {
+  return (
+    <kbd
+      data-slot="kbd-group"
+      className={cn("inline-flex items-center gap-1", className)}
+      {...props}
+    />
+  )
+}
+
+export { Kbd, KbdGroup }

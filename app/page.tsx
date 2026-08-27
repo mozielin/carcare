@@ -1,1 +1,5 @@
-aW1wb3J0IEludmVudG9yeUFwcCBmcm9tICIuL2ludmVudG9yeS1hcHAiOwoKZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gSG9tZSgpIHsKICByZXR1cm4gPEludmVudG9yeUFwcCAvPjsKfQo=
+import InventoryApp from "./inventory-app";
+
+export default function Home() {
+  return <InventoryApp />;
+}

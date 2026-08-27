@@ -1,1 +1,44 @@
-InVzZSBjbGllbnQiCgppbXBvcnQgKiBhcyBSZWFjdCBmcm9tICJyZWFjdCIKaW1wb3J0IHsgSG92ZXJDYXJkIGFzIEhvdmVyQ2FyZFByaW1pdGl2ZSB9IGZyb20gInJhZGl4LXVpIgoKaW1wb3J0IHsgY24gfSBmcm9tICJAL2xpYi91dGlscyIKCmZ1bmN0aW9uIEhvdmVyQ2FyZCh7CiAgLi4ucHJvcHMKfTogUmVhY3QuQ29tcG9uZW50UHJvcHM8dHlwZW9mIEhvdmVyQ2FyZFByaW1pdGl2ZS5Sb290PikgewogIHJldHVybiA8SG92ZXJDYXJkUHJpbWl0aXZlLlJvb3QgZGF0YS1zbG90PSJob3Zlci1jYXJkIiB7Li4ucHJvcHN9IC8+Cn0KCmZ1bmN0aW9uIEhvdmVyQ2FyZFRyaWdnZXIoewogIC4uLnByb3BzCn06IFJlYWN0LkNvbXBvbmVudFByb3BzPHR5cGVvZiBIb3ZlckNhcmRQcmltaXRpdmUuVHJpZ2dlcj4pIHsKICByZXR1cm4gKAogICAgPEhvdmVyQ2FyZFByaW1pdGl2ZS5UcmlnZ2VyIGRhdGEtc2xvdD0iaG92ZXItY2FyZC10cmlnZ2VyIiB7Li4ucHJvcHN9IC8+CiAgKQp9CgpmdW5jdGlvbiBIb3ZlckNhcmRDb250ZW50KHsKICBjbGFzc05hbWUsCiAgYWxpZ24gPSAiY2VudGVyIiwKICBzaWRlT2Zmc2V0ID0gNCwKICAuLi5wcm9wcwp9OiBSZWFjdC5Db21wb25lbnRQcm9wczx0eXBlb2YgSG92ZXJDYXJkUHJpbWl0aXZlLkNvbnRlbnQ+KSB7CiAgcmV0dXJuICgKICAgIDxIb3ZlckNhcmRQcmltaXRpdmUuUG9ydGFsIGRhdGEtc2xvdD0iaG92ZXItY2FyZC1wb3J0YWwiPgogICAgICA8SG92ZXJDYXJkUHJpbWl0aXZlLkNvbnRlbnQKICAgICAgICBkYXRhLXNsb3Q9ImhvdmVyLWNhcmQtY29udGVudCIKICAgICAgICBhbGlnbj17YWxpZ259CiAgICAgICAgc2lkZU9mZnNldD17c2lkZU9mZnNldH0KICAgICAgICBjbGFzc05hbWU9e2NuKAogICAgICAgICAgInotNTAgdy02NCBvcmlnaW4tKC0tcmFkaXgtaG92ZXItY2FyZC1jb250ZW50LXRyYW5zZm9ybS1vcmlnaW4pIHJvdW5kZWQtbWQgYm9yZGVyIGJnLXBvcG92ZXIgcC00IHRleHQtcG9wb3Zlci1mb3JlZ3JvdW5kIHNoYWRvdy1tZCBvdXRsaW5lLWhpZGRlbiBkYXRhLVtzaWRlPWJvdHRvbV06c2xpZGUtaW4tZnJvbS10b3AtMiBkYXRhLVtzaWRlPWxlZnRdOnNsaWRlLWluLWZyb20tcmlnaHQtMiBkYXRhLVtzaWRlPXJpZ2h0XTpzbGlkZS1pbi1mcm9tLWxlZnQtMiBkYXRhLVtzaWRlPXRvcF06c2xpZGUtaW4tZnJvbS1ib3R0b20tMiBkYXRhLVtzdGF0ZT1jbG9zZWRdOmFuaW1hdGUtb3V0IGRhdGEtW3N0YXRlPWNsb3NlZF06ZmFkZS1vdXQtMCBkYXRhLVtzdGF0ZT1jbG9zZWRdOnpvb20tb3V0LTk1IGRhdGEtW3N0YXRlPW9wZW5dOmFuaW1hdGUtaW4gZGF0YS1bc3RhdGU9b3Blbl06ZmFkZS1pbi0wIGRhdGEtW3N0YXRlPW9wZW5dOnpvb20taW4tOTUiLAogICAgICAgICAgY2xhc3NOYW1lCiAgICAgICAgKX0KICAgICAgICB7Li4ucHJvcHN9CiAgICAgIC8+CiAgICA8L0hvdmVyQ2FyZFByaW1pdGl2ZS5Qb3J0YWw+CiAgKQp9CgpleHBvcnQgeyBIb3ZlckNhcmQsIEhvdmVyQ2FyZFRyaWdnZXIsIEhvdmVyQ2FyZENvbnRlbnQgfQo=
+"use client"
+
+import * as React from "react"
+import { HoverCard as HoverCardPrimitive } from "radix-ui"
+
+import { cn } from "@/lib/utils"
+
+function HoverCard({
+  ...props
+}: React.ComponentProps<typeof HoverCardPrimitive.Root>) {
+  return <HoverCardPrimitive.Root data-slot="hover-card" {...props} />
+}
+
+function HoverCardTrigger({
+  ...props
+}: React.ComponentProps<typeof HoverCardPrimitive.Trigger>) {
+  return (
+    <HoverCardPrimitive.Trigger data-slot="hover-card-trigger" {...props} />
+  )
+}
+
+function HoverCardContent({
+  className,
+  align = "center",
+  sideOffset = 4,
+  ...props
+}: React.ComponentProps<typeof HoverCardPrimitive.Content>) {
+  return (
+    <HoverCardPrimitive.Portal data-slot="hover-card-portal">
+      <HoverCardPrimitive.Content
+        data-slot="hover-card-content"
+        align={align}
+        sideOffset={sideOffset}
+        className={cn(
+          "z-50 w-64 origin-(--radix-hover-card-content-transform-origin) rounded-md border bg-popover p-4 text-popover-foreground shadow-md outline-hidden data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95",
+          className
+        )}
+        {...props}
+      />
+    </HoverCardPrimitive.Portal>
+  )
+}
+
+export { HoverCard, HoverCardTrigger, HoverCardContent }

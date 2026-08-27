@@ -1,1 +1,26 @@
-IyEvdXNyL2Jpbi9lbnYgYmFzaApzZXQgLWV1byBwaXBlZmFpbAoKc2NyaXB0X2Rpcj0iJChjZCAiJChkaXJuYW1lICIke0JBU0hfU09VUkNFWzBdfSIpIiAmJiBwd2QpIgoKaWYgW1sgIiR7U0lURVNfRU5WX1JFQURZOi19IiAhPSAiMSIgXV07IHRoZW4KICBleGVjICIke3NjcmlwdF9kaXJ9L3NpdGVzLWVudi5zaCIgLS0gIiQwIiAiJEAiCmZpCgpjb21tYW5kIC12IHRpbWVvdXQgfHwgewogIGVjaG8gImJ1aWxkLXZlcmlmaWVkLnNoIHJlcXVpcmVzIEdOVSB0aW1lb3V0LiIgPiYyCiAgZXhpdCA2OQp9Cgp2aW5leHQ9IiR7U0lURVNfUFJPSkVDVF9ST09UfS9ub2RlX21vZHVsZXMvLmJpbi92aW5leHQiCmlmIFtbICEgLXggIiR7dmluZXh0fSIgXV07IHRoZW4KICBlY2hvICJ2aW5leHQgaXMgdW5hdmFpbGFibGUuIFJ1biBucG0gcnVuIGluc3RhbGw6Y2kgYW5kIHdhaXQgZm9yIGl0IHRvIGZpbmlzaCBiZWZvcmUgYnVpbGRpbmcuIiA+JjIKICBleGl0IDY5CmZpCgplY2hvICJSdW5uaW5nIGJvdW5kZWQgdmluZXh0IGJ1aWxkLi4uIgp0aW1lb3V0IFwKICAtLXNpZ25hbD1URVJNIFwKICAtLWtpbGwtYWZ0ZXI9IiR7U0lURVNfQlVJTERfS0lMTF9BRlRFUjotMTBzfSIgXAogICIke1NJVEVTX0JVSUxEX1RJTUVPVVQ6LTNtfSIgXAogICIke3ZpbmV4dH0iIGJ1aWxkCg==
+#!/usr/bin/env bash
+set -euo pipefail
+
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+if [[ "${SITES_ENV_READY:-}" != "1" ]]; then
+  exec "${script_dir}/sites-env.sh" -- "$0" "$@"
+fi
+
+command -v timeout || {
+  echo "build-verified.sh requires GNU timeout." >&2
+  exit 69
+}
+
+vinext="${SITES_PROJECT_ROOT}/node_modules/.bin/vinext"
+if [[ ! -x "${vinext}" ]]; then
+  echo "vinext is unavailable. Run npm run install:ci and wait for it to finish before building." >&2
+  exit 69
+fi
+
+echo "Running bounded vinext build..."
+timeout \
+  --signal=TERM \
+  --kill-after="${SITES_BUILD_KILL_AFTER:-10s}" \
+  "${SITES_BUILD_TIMEOUT:-3m}" \
+  "${vinext}" build

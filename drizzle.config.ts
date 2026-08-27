@@ -1,1 +1,7 @@
-aW1wb3J0IHsgZGVmaW5lQ29uZmlnIH0gZnJvbSAiZHJpenpsZS1raXQiOwoKZXhwb3J0IGRlZmF1bHQgZGVmaW5lQ29uZmlnKHsKICBvdXQ6ICIuL2RyaXp6bGUiLAogIHNjaGVtYTogIi4vZGIvc2NoZW1hLnRzIiwKICBkaWFsZWN0OiAic3FsaXRlIiwKfSk7Cg==
+import { defineConfig } from "drizzle-kit";
+
+export default defineConfig({
+  out: "./drizzle",
+  schema: "./db/schema.ts",
+  dialect: "sqlite",
+});

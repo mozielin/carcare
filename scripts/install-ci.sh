@@ -1,1 +1,189 @@
-IyEvdXNyL2Jpbi9lbnYgYmFzaApzZXQgLWV1byBwaXBlZmFpbAoKc2NyaXB0X2Rpcj0iJChjZCAiJChkaXJuYW1lICIke0JBU0hfU09VUkNFWzBdfSIpIiAmJiBwd2QpIgoKaWYgW1sgIiR7U0lURVNfRU5WX1JFQURZOi19IiAhPSAiMSIgXV07IHRoZW4KICBleGVjICIke3NjcmlwdF9kaXJ9L3NpdGVzLWVudi5zaCIgLS0gIiQwIiAiJEAiCmZpCgpjb21tYW5kIC12IGZsb2NrIHx8IHsKICBlY2hvICJpbnN0YWxsLWNpLnNoIHJlcXVpcmVzIExpbnV4IGZsb2NrLiIgPiYyCiAgZXhpdCA2OQp9CmNvbW1hbmQgLXYgdGltZW91dCB8fCB7CiAgZWNobyAiaW5zdGFsbC1jaS5zaCByZXF1aXJlcyBHTlUgdGltZW91dC4iID4mMgogIGV4aXQgNjkKfQpjb21tYW5kIC12IGN1cmwgfHwgewogIGVjaG8gImluc3RhbGwtY2kuc2ggcmVxdWlyZXMgY3VybCBmb3IgdGhlIGxvY2tlZC10YXJiYWxsIHByZWZsaWdodC4iID4mMgogIGV4aXQgNjkKfQpjb21tYW5kIC12IHNoYTI1NnN1bSB8fCB7CiAgZWNobyAiaW5zdGFsbC1jaS5zaCByZXF1aXJlcyBzaGEyNTZzdW0gZm9yIGNhY2hlIGFuZCBpbnN0YWxsIHZlcmlmaWNhdGlvbi4iID4mMgogIGV4aXQgNjkKfQoKcnVudGltZV9yb290PSIke1NJVEVTX1BST0pFQ1RfUk9PVH0vLnNpdGVzLXJ1bnRpbWUiCmV4cGVjdGVkX2hvbWU9IiR7cnVudGltZV9yb290fS9ob21lIgpleHBlY3RlZF9jYWNoZT0iJHtydW50aW1lX3Jvb3R9L25wbS1jYWNoZSIKCmVjaG8gIltzaXRlc10gdmFsaWRhdGluZyB3cml0YWJsZSBpbnN0YWxsIGVudmlyb25tZW50IgppZiBbWyAiJHtIT01FfSIgIT0gIiR7ZXhwZWN0ZWRfaG9tZX0iIF1dOyB0aGVuCiAgZWNobyAiRXhwZWN0ZWQgSE9NRT0ke2V4cGVjdGVkX2hvbWV9LCBnb3QgSE9NRT0ke0hPTUV9LiIgPiYyCiAgZXhpdCA3OApmaQphY3R1YWxfY2FjaGU9IiQobnBtIGNvbmZpZyBnZXQgY2FjaGUpIgppZiBbWyAiJHthY3R1YWxfY2FjaGV9IiAhPSAiJHtleHBlY3RlZF9jYWNoZX0iIF1dOyB0aGVuCiAgZWNobyAiRXhwZWN0ZWQgbnBtIGNhY2hlICR7ZXhwZWN0ZWRfY2FjaGV9LCBnb3QgJHthY3R1YWxfY2FjaGV9LiIgPiYyCiAgZXhpdCA3OApmaQp0b3VjaCAiJHtIT01FfS8uc2l0ZXMtd3JpdGUtdGVzdCIgIiR7ZXhwZWN0ZWRfY2FjaGV9Ly5zaXRlcy13cml0ZS10ZXN0IgpybSAtZiAiJHtIT01FfS8uc2l0ZXMtd3JpdGUtdGVzdCIgIiR7ZXhwZWN0ZWRfY2FjaGV9Ly5zaXRlcy13cml0ZS10ZXN0IgplY2hvICJbc2l0ZXNdIGVudmlyb25tZW50IHBhc3NlZDogSE9NRT0ke0hPTUV9LCBjYWNoZT0ke2V4cGVjdGVkX2NhY2hlfSIKCmxvY2tfZmlsZT0iJHtydW50aW1lX3Jvb3R9L2luc3RhbGwubG9jayIKZXhlYyA5PiIke2xvY2tfZmlsZX0iCmlmICEgZmxvY2sgLW4gOTsgdGhlbgogIGVjaG8gIkFub3RoZXIgZGVwZW5kZW5jeSBpbnN0YWxsIGlzIGFscmVhZHkgcnVubmluZyBmb3IgJHtTSVRFU19QUk9KRUNUX1JPT1R9LiIgPiYyCiAgZXhpdCA3NQpmaQoKIyBDYXRjaCBhbiBpbnN0YWxsZXIgc3RhcnRlZCBvdXRzaWRlIHRoaXMgaGVscGVyLiBMaW51eCBleHBvc2VzIGJvdGggaXRzIGNvbW1hbmQKIyBsaW5lIGFuZCB3b3JraW5nIGRpcmVjdG9yeSB0aHJvdWdoIC9wcm9jLCBzbyBhdm9pZCBicm9hZCBwcm9jZXNzLW5hbWUgbWF0Y2hlcy4KZm9yIHByb2Nlc3MgaW4gL3Byb2MvWzAtOV0qOyBkbwogIHBpZD0iJHtwcm9jZXNzIyMqL30iCiAgW1sgIiR7cGlkfSIgIT0gIiQkIiAmJiAiJHtwaWR9IiAhPSAiJHtQUElEfSIgXV0gfHwgY29udGludWUKICBwcm9jZXNzX2N3ZD0iJChyZWFkbGluayAtZiAiJHtwcm9jZXNzfS9jd2QiIHx8IHRydWUpIgogIFtbICIke3Byb2Nlc3NfY3dkfSIgPT0gIiR7U0lURVNfUFJPSkVDVF9ST09UfSIgXV0gfHwgY29udGludWUKICBwcm9jZXNzX2NvbW1hbmQ9IiQodHIgJ1wwJyAnICcgPCIke3Byb2Nlc3N9L2NtZGxpbmUiIHx8IHRydWUpIgogIGlmIFtbICIke3Byb2Nlc3NfY29tbWFuZH0iID09ICoibnBtIGNpIiogXV07IHRoZW4KICAgIGVjaG8gIkFub3RoZXIgbnBtIGNpIGlzIHZpc2libGUgaW4gJHtTSVRFU19QUk9KRUNUX1JPT1R9OyByZWZ1c2luZyB0byBvdmVybGFwIGluc3RhbGxzLiIgPiYyCiAgICBleGl0IDc1CiAgZmkKZG9uZQoKbG9ja2ZpbGVfc2hhMjU2PSIkKHNoYTI1NnN1bSAiJHtTSVRFU19QUk9KRUNUX1JPT1R9L3BhY2thZ2UtbG9jay5qc29uIiB8IGF3ayAne3ByaW50ICQxfScpIgp1c2Vfc2VlZGVkX2NhY2hlPTAKc2VlZF9jYWNoZT0iJHtTSVRFU19OUE1fQ0FDSEVfU0VFRDotfSIKaWYgW1sgLW4gIiR7c2VlZF9jYWNoZX0iICYmIC1kICIke3NlZWRfY2FjaGV9IiBdXTsgdGhlbgogIHNlZWRfbG9ja2ZpbGVfc2hhMjU2PSIkKGNhdCAiJHtzZWVkX2NhY2hlfS8uc2l0ZXMtbG9ja2ZpbGUtc2hhMjU2IiB8fCB0cnVlKSIKICBpZiBbWyAiJHtzZWVkX2xvY2tmaWxlX3NoYTI1Nn0iID09ICIke2xvY2tmaWxlX3NoYTI1Nn0iIF1dOyB0aGVuCiAgICBlY2hvICJbc2l0ZXNdIHJlc3RvcmluZyBpbWFnZS1zZWVkZWQgbnBtIGNhY2hlIgogICAgY3AgLWEgIiR7c2VlZF9jYWNoZX0vLiIgIiR7ZXhwZWN0ZWRfY2FjaGV9LyIKICAgIHVzZV9zZWVkZWRfY2FjaGU9MQogICAgZWNobyAiW3NpdGVzXSBpbWFnZSBjYWNoZSBzZWVkIG1hdGNoZWQ7IHJlZ2lzdHJ5IGZhbGxiYWNrIHJlbWFpbnMgYXZhaWxhYmxlIgogIGVsc2UKICAgIGVjaG8gIltzaXRlc10gaW1hZ2UgY2FjaGUgc2VlZCBkb2VzIG5vdCBtYXRjaCB0aGlzIGxvY2tmaWxlOyB1c2luZyB0aGUgbmV0d29yayBwYXRoIgogIGZpCmZpCgpsb2NrZWRfdmluZXh0X291dHB1dD0iJCh7IG5vZGUgLS1pbnB1dC10eXBlPW1vZHVsZSAtICIke1NJVEVTX1BST0pFQ1RfUk9PVH0vcGFja2FnZS1sb2NrLmpzb24iIDw8J05PREUnCmltcG9ydCB7IHJlYWRGaWxlIH0gZnJvbSAibm9kZTpmcy9wcm9taXNlcyI7Cgpjb25zdCBsb2NrID0gSlNPTi5wYXJzZShhd2FpdCByZWFkRmlsZShwcm9jZXNzLmFyZ3ZbMl0sICJ1dGY4IikpOwpjb25zdCB2aW5leHQgPSBsb2NrLnBhY2thZ2VzPy5bIm5vZGVfbW9kdWxlcy92aW5leHQiXTsKaWYgKCF2aW5leHQ/LnJlc29sdmVkIHx8ICF2aW5leHQ/LmludGVncml0eSkgewogIHRocm93IG5ldyBFcnJvcigicGFja2FnZS1sb2NrLmpzb24gZG9lcyBub3QgY29udGFpbiBhIHJlc29sdmVkLCBpbnRlZ3JpdHktcGlubmVkIHZpbmV4dCB0YXJiYWxsIik7Cn0KY29uc29sZS5sb2codmluZXh0LnJlc29sdmVkKTsKY29uc29sZS5sb2codmluZXh0LmludGVncml0eSk7Ck5PREUKfSkiIHx8IHsKICBlY2hvICJDb3VsZCBub3QgcmVhZCB0aGUgaW50ZWdyaXR5LXBpbm5lZCB2aW5leHQgdGFyYmFsbCBmcm9tIHBhY2thZ2UtbG9jay5qc29uLiIgPiYyCiAgZXhpdCA2NQp9Cm1hcGZpbGUgLXQgbG9ja2VkX3ZpbmV4dCA8PDwiJHtsb2NrZWRfdmluZXh0X291dHB1dH0iCmlmIFtbICIkeyNsb2NrZWRfdmluZXh0W0BdfSIgLW5lIDIgXV07IHRoZW4KICBlY2hvICJFeHBlY3RlZCBleGFjdGx5IG9uZSBWaW5leHQgVVJMIGFuZCBpbnRlZ3JpdHkgdmFsdWUgZnJvbSBwYWNrYWdlLWxvY2suanNvbi4iID4mMgogIGV4aXQgNjUKZmkKCmxvY2tlZF90YXJiYWxsPSIke2xvY2tlZF92aW5leHRbMF19Igpsb2NrZWRfaW50ZWdyaXR5PSIke2xvY2tlZF92aW5leHRbMV19IgoKaWYgW1sgIiR7dXNlX3NlZWRlZF9jYWNoZX0iID09ICIwIiBdXTsgdGhlbgogIHJlZ2lzdHJ5PSIkKG5wbSBjb25maWcgZ2V0IHJlZ2lzdHJ5KSIKICBwcmVmbGlnaHRfdXJsPSIkKHsgbm9kZSAtLWlucHV0LXR5cGU9bW9kdWxlIC0gIiR7bG9ja2VkX3RhcmJhbGx9IiAiJHtyZWdpc3RyeX0iIDw8J05PREUnCmNvbnN0IGxvY2tlZCA9IG5ldyBVUkwocHJvY2Vzcy5hcmd2WzJdKTsKY29uc3QgcmVnaXN0cnkgPSBuZXcgVVJMKHByb2Nlc3MuYXJndlszXSk7CmlmIChsb2NrZWQuaG9zdG5hbWUgPT09ICJyZWdpc3RyeS5ucG1qcy5vcmciKSB7CiAgbG9ja2VkLnByb3RvY29sID0gcmVnaXN0cnkucHJvdG9jb2w7CiAgbG9ja2VkLmhvc3QgPSByZWdpc3RyeS5ob3N0OwogIGxvY2tlZC5wYXRobmFtZSA9IGAke3JlZ2lzdHJ5LnBhdGhuYW1lLnJlcGxhY2UoL1wvJC8sICIiKX0ke2xvY2tlZC5wYXRobmFtZX1gOwp9CnByb2Nlc3Muc3Rkb3V0LndyaXRlKGxvY2tlZC5ocmVmKTsKTk9ERQp9KSIgfHwgewogIGVjaG8gIkNvdWxkIG5vdCBjb25zdHJ1Y3QgdGhlIGxvY2tlZC10YXJiYWxsIHByZWZsaWdodCBVUkwuIiA+JjIKICBleGl0IDY1CiAgfQoKICBwcmVmbGlnaHRfZGlyPSIke3J1bnRpbWVfcm9vdH0vcHJlZmxpZ2h0IgogIHByZWZsaWdodF90YXJiYWxsPSIke3ByZWZsaWdodF9kaXJ9L3ZpbmV4dC50Z3oiCiAgbWtkaXIgLXAgIiR7cHJlZmxpZ2h0X2Rpcn0iCgogIGVjaG8gIltzaXRlc10gZG93bmxvYWRpbmcgdGhlIGNvbXBsZXRlIGxvY2tlZCB2aW5leHQgdGFyYmFsbCIKICBjdXJsIFwKICAgIC0tZmFpbCBcCiAgICAtLWxvY2F0aW9uIFwKICAgIC0tc2lsZW50IFwKICAgIC0tc2hvdy1lcnJvciBcCiAgICAtLXJldHJ5IDAgXAogICAgLS1jb25uZWN0LXRpbWVvdXQgMTUgXAogICAgLS1tYXgtdGltZSAxMjAgXAogICAgLS1vdXRwdXQgIiR7cHJlZmxpZ2h0X3RhcmJhbGx9IiBcCiAgICAiJHtwcmVmbGlnaHRfdXJsfSIKCiAgZWNobyAiW3NpdGVzXSB2ZXJpZnlpbmcgbG9ja2VkIHZpbmV4dCB0YXJiYWxsIGludGVncml0eSIKICBub2RlIC0taW5wdXQtdHlwZT1tb2R1bGUgLSAiJHtwcmVmbGlnaHRfdGFyYmFsbH0iICIke2xvY2tlZF9pbnRlZ3JpdHl9IiA8PCdOT0RFJwppbXBvcnQgeyBjcmVhdGVIYXNoIH0gZnJvbSAibm9kZTpjcnlwdG8iOwppbXBvcnQgeyByZWFkRmlsZSB9IGZyb20gIm5vZGU6ZnMvcHJvbWlzZXMiOwoKY29uc3QgW2FsZ29yaXRobSwgZXhwZWN0ZWRdID0gcHJvY2Vzcy5hcmd2WzNdLnNwbGl0KCItIiwgMik7CmlmICghYWxnb3JpdGhtIHx8ICFleHBlY3RlZCkgewogIHRocm93IG5ldyBFcnJvcihgdW5zdXBwb3J0ZWQgaW50ZWdyaXR5IHZhbHVlOiAke3Byb2Nlc3MuYXJndlszXX1gKTsKfQpjb25zdCBhY3R1YWwgPSBjcmVhdGVIYXNoKGFsZ29yaXRobSkKICAudXBkYXRlKGF3YWl0IHJlYWRGaWxlKHByb2Nlc3MuYXJndlsyXSkpCiAgLmRpZ2VzdCgiYmFzZTY0Iik7CmlmIChhY3R1YWwgIT09IGV4cGVjdGVkKSB7CiAgdGhyb3cgbmV3IEVycm9yKGB2aW5leHQgdGFyYmFsbCBpbnRlZ3JpdHkgbWlzbWF0Y2ggZm9yICR7YWxnb3JpdGhtfWApOwp9Ck5PREUKICBlY2hvICJbc2l0ZXNdIG5ldHdvcmsgYW5kIGludGVncml0eSBwcmVmbGlnaHQgcGFzc2VkIgpmaQoKZWNobyAiW3NpdGVzXSBydW5uaW5nIGV4YWN0bHkgb25lIGJvdW5kZWQgbnBtIGNpIgpleHBvcnQgTlBNX0NPTkZJR19NQVhTT0NLRVRTPTEKZXhwb3J0IE5QTV9DT05GSUdfRkVUQ0hfUkVUUklFUz0wCmV4cG9ydCBOUE1fQ09ORklHX0ZFVENIX1RJTUVPVVQ9MzAwMDAKbnBtX2NpX2FyZ3M9KGNpIC0tY2FjaGUgIiR7ZXhwZWN0ZWRfY2FjaGV9IikKaWYgW1sgIiR7dXNlX3NlZWRlZF9jYWNoZX0iID09ICIxIiBdXTsgdGhlbgogIG5wbV9jaV9hcmdzKz0oLS1wcmVmZXItb2ZmbGluZSkKZmkKdGltZW91dCBcCiAgLS1zaWduYWw9VEVSTSBcCiAgLS1raWxsLWFmdGVyPSIke1NJVEVTX0lOU1RBTExfS0lMTF9BRlRFUjotMTVzfSIgXAogICIke1NJVEVTX0lOU1RBTExfVElNRU9VVDotOG19IiBcCiAgbnBtICIke25wbV9jaV9hcmdzW0BdfSIKCnZpbmV4dD0iJHtTSVRFU19QUk9KRUNUX1JPT1R9L25vZGVfbW9kdWxlcy8uYmluL3ZpbmV4dCIKaWYgW1sgISAteCAiJHt2aW5leHR9IiBdXTsgdGhlbgogIGVjaG8gIm5wbSBjaSBleGl0ZWQgc3VjY2Vzc2Z1bGx5IGJ1dCBub2RlX21vZHVsZXMvLmJpbi92aW5leHQgaXMgdW5hdmFpbGFibGUuIiA+JjIKICBleGl0IDY5CmZpCgpub2RlIC0taW5wdXQtdHlwZT1tb2R1bGUgLSAiJHtTSVRFU19QUk9KRUNUX1JPT1R9L25vZGVfbW9kdWxlcy8uc2l0ZXMtaW5zdGFsbC5qc29uIiAiJHtsb2NrZmlsZV9zaGEyNTZ9IiA8PCdOT0RFJwppbXBvcnQgeyB3cml0ZUZpbGUgfSBmcm9tICJub2RlOmZzL3Byb21pc2VzIjsKCmF3YWl0IHdyaXRlRmlsZSgKICBwcm9jZXNzLmFyZ3ZbMl0sCiAgYCR7SlNPTi5zdHJpbmdpZnkoewogICAgbG9ja2ZpbGVfc2hhMjU2OiBwcm9jZXNzLmFyZ3ZbM10sCiAgICBub2RlOiBwcm9jZXNzLnZlcnNpb24sCiAgICBwbGF0Zm9ybTogYCR7cHJvY2Vzcy5wbGF0Zm9ybX0tJHtwcm9jZXNzLmFyY2h9YCwKICB9LCBudWxsLCAyKX1cbmAsCik7Ck5PREUKZWNobyAiW3NpdGVzXSBucG0gY2kgcGFzc2VkIGFuZCB2aW5leHQgaXMgYXZhaWxhYmxlIgo=
+#!/usr/bin/env bash
+set -euo pipefail
+
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+if [[ "${SITES_ENV_READY:-}" != "1" ]]; then
+  exec "${script_dir}/sites-env.sh" -- "$0" "$@"
+fi
+
+command -v flock || {
+  echo "install-ci.sh requires Linux flock." >&2
+  exit 69
+}
+command -v timeout || {
+  echo "install-ci.sh requires GNU timeout." >&2
+  exit 69
+}
+command -v curl || {
+  echo "install-ci.sh requires curl for the locked-tarball preflight." >&2
+  exit 69
+}
+command -v sha256sum || {
+  echo "install-ci.sh requires sha256sum for cache and install verification." >&2
+  exit 69
+}
+
+runtime_root="${SITES_PROJECT_ROOT}/.sites-runtime"
+expected_home="${runtime_root}/home"
+expected_cache="${runtime_root}/npm-cache"
+
+echo "[sites] validating writable install environment"
+if [[ "${HOME}" != "${expected_home}" ]]; then
+  echo "Expected HOME=${expected_home}, got HOME=${HOME}." >&2
+  exit 78
+fi
+actual_cache="$(npm config get cache)"
+if [[ "${actual_cache}" != "${expected_cache}" ]]; then
+  echo "Expected npm cache ${expected_cache}, got ${actual_cache}." >&2
+  exit 78
+fi
+touch "${HOME}/.sites-write-test" "${expected_cache}/.sites-write-test"
+rm -f "${HOME}/.sites-write-test" "${expected_cache}/.sites-write-test"
+echo "[sites] environment passed: HOME=${HOME}, cache=${expected_cache}"
+
+lock_file="${runtime_root}/install.lock"
+exec 9>"${lock_file}"
+if ! flock -n 9; then
+  echo "Another dependency install is already running for ${SITES_PROJECT_ROOT}." >&2
+  exit 75
+fi
+
+# Catch an installer started outside this helper. Linux exposes both its command
+# line and working directory through /proc, so avoid broad process-name matches.
+for process in /proc/[0-9]*; do
+  pid="${process##*/}"
+  [[ "${pid}" != "$$" && "${pid}" != "${PPID}" ]] || continue
+  process_cwd="$(readlink -f "${process}/cwd" || true)"
+  [[ "${process_cwd}" == "${SITES_PROJECT_ROOT}" ]] || continue
+  process_command="$(tr '\0' ' ' <"${process}/cmdline" || true)"
+  if [[ "${process_command}" == *"npm ci"* ]]; then
+    echo "Another npm ci is visible in ${SITES_PROJECT_ROOT}; refusing to overlap installs." >&2
+    exit 75
+  fi
+done
+
+lockfile_sha256="$(sha256sum "${SITES_PROJECT_ROOT}/package-lock.json" | awk '{print $1}')"
+use_seeded_cache=0
+seed_cache="${SITES_NPM_CACHE_SEED:-}"
+if [[ -n "${seed_cache}" && -d "${seed_cache}" ]]; then
+  seed_lockfile_sha256="$(cat "${seed_cache}/.sites-lockfile-sha256" || true)"
+  if [[ "${seed_lockfile_sha256}" == "${lockfile_sha256}" ]]; then
+    echo "[sites] restoring image-seeded npm cache"
+    cp -a "${seed_cache}/." "${expected_cache}/"
+    use_seeded_cache=1
+    echo "[sites] image cache seed matched; registry fallback remains available"
+  else
+    echo "[sites] image cache seed does not match this lockfile; using the network path"
+  fi
+fi
+
+locked_vinext_output="$({ node --input-type=module - "${SITES_PROJECT_ROOT}/package-lock.json" <<'NODE'
+import { readFile } from "node:fs/promises";
+
+const lock = JSON.parse(await readFile(process.argv[2], "utf8"));
+const vinext = lock.packages?.["node_modules/vinext"];
+if (!vinext?.resolved || !vinext?.integrity) {
+  throw new Error("package-lock.json does not contain a resolved, integrity-pinned vinext tarball");
+}
+console.log(vinext.resolved);
+console.log(vinext.integrity);
+NODE
+})" || {
+  echo "Could not read the integrity-pinned vinext tarball from package-lock.json." >&2
+  exit 65
+}
+mapfile -t locked_vinext <<<"${locked_vinext_output}"
+if [[ "${#locked_vinext[@]}" -ne 2 ]]; then
+  echo "Expected exactly one Vinext URL and integrity value from package-lock.json." >&2
+  exit 65
+fi
+
+locked_tarball="${locked_vinext[0]}"
+locked_integrity="${locked_vinext[1]}"
+
+if [[ "${use_seeded_cache}" == "0" ]]; then
+  registry="$(npm config get registry)"
+  preflight_url="$({ node --input-type=module - "${locked_tarball}" "${registry}" <<'NODE'
+const locked = new URL(process.argv[2]);
+const registry = new URL(process.argv[3]);
+if (locked.hostname === "registry.npmjs.org") {
+  locked.protocol = registry.protocol;
+  locked.host = registry.host;
+  locked.pathname = `${registry.pathname.replace(/\/$/, "")}${locked.pathname}`;
+}
+process.stdout.write(locked.href);
+NODE
+})" || {
+  echo "Could not construct the locked-tarball preflight URL." >&2
+  exit 65
+  }
+
+  preflight_dir="${runtime_root}/preflight"
+  preflight_tarball="${preflight_dir}/vinext.tgz"
+  mkdir -p "${preflight_dir}"
+
+  echo "[sites] downloading the complete locked vinext tarball"
+  curl \
+    --fail \
+    --location \
+    --silent \
+    --show-error \
+    --retry 0 \
+    --connect-timeout 15 \
+    --max-time 120 \
+    --output "${preflight_tarball}" \
+    "${preflight_url}"
+
+  echo "[sites] verifying locked vinext tarball integrity"
+  node --input-type=module - "${preflight_tarball}" "${locked_integrity}" <<'NODE'
+import { createHash } from "node:crypto";
+import { readFile } from "node:fs/promises";
+
+const [algorithm, expected] = process.argv[3].split("-", 2);
+if (!algorithm || !expected) {
+  throw new Error(`unsupported integrity value: ${process.argv[3]}`);
+}
+const actual = createHash(algorithm)
+  .update(await readFile(process.argv[2]))
+  .digest("base64");
+if (actual !== expected) {
+  throw new Error(`vinext tarball integrity mismatch for ${algorithm}`);
+}
+NODE
+  echo "[sites] network and integrity preflight passed"
+fi
+
+echo "[sites] running exactly one bounded npm ci"
+export NPM_CONFIG_MAXSOCKETS=1
+export NPM_CONFIG_FETCH_RETRIES=0
+export NPM_CONFIG_FETCH_TIMEOUT=30000
+npm_ci_args=(ci --cache "${expected_cache}")
+if [[ "${use_seeded_cache}" == "1" ]]; then
+  npm_ci_args+=(--prefer-offline)
+fi
+timeout \
+  --signal=TERM \
+  --kill-after="${SITES_INSTALL_KILL_AFTER:-15s}" \
+  "${SITES_INSTALL_TIMEOUT:-8m}" \
+  npm "${npm_ci_args[@]}"
+
+vinext="${SITES_PROJECT_ROOT}/node_modules/.bin/vinext"
+if [[ ! -x "${vinext}" ]]; then
+  echo "npm ci exited successfully but node_modules/.bin/vinext is unavailable." >&2
+  exit 69
+fi
+
+node --input-type=module - "${SITES_PROJECT_ROOT}/node_modules/.sites-install.json" "${lockfile_sha256}" <<'NODE'
+import { writeFile } from "node:fs/promises";
+
+await writeFile(
+  process.argv[2],
+  `${JSON.stringify({
+    lockfile_sha256: process.argv[3],
+    node: process.version,
+    platform: `${process.platform}-${process.arch}`,
+  }, null, 2)}\n`,
+);
+NODE
+echo "[sites] npm ci passed and vinext is available"

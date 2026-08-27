@@ -1,1 +1,92 @@
-aW1wb3J0ICogYXMgUmVhY3QgZnJvbSAicmVhY3QiCgppbXBvcnQgeyBjbiB9IGZyb20gIkAvbGliL3V0aWxzIgoKZnVuY3Rpb24gTWVzc2FnZUdyb3VwKHsgY2xhc3NOYW1lLCAuLi5wcm9wcyB9OiBSZWFjdC5Db21wb25lbnRQcm9wczwiZGl2Ij4pIHsKICByZXR1cm4gKAogICAgPGRpdgogICAgICBkYXRhLXNsb3Q9Im1lc3NhZ2UtZ3JvdXAiCiAgICAgIGNsYXNzTmFtZT17Y24oImZsZXggbWluLXctMCBmbGV4LWNvbCBnYXAtMiIsIGNsYXNzTmFtZSl9CiAgICAgIHsuLi5wcm9wc30KICAgIC8+CiAgKQp9CgpmdW5jdGlvbiBNZXNzYWdlKHsKICBjbGFzc05hbWUsCiAgYWxpZ24gPSAic3RhcnQiLAogIC4uLnByb3BzCn06IFJlYWN0LkNvbXBvbmVudFByb3BzPCJkaXYiPiAmIHsgYWxpZ24/OiAic3RhcnQiIHwgImVuZCIgfSkgewogIHJldHVybiAoCiAgICA8ZGl2CiAgICAgIGRhdGEtc2xvdD0ibWVzc2FnZSIKICAgICAgZGF0YS1hbGlnbj17YWxpZ259CiAgICAgIGNsYXNzTmFtZT17Y24oCiAgICAgICAgImdyb3VwL21lc3NhZ2UgcmVsYXRpdmUgZmxleCB3LWZ1bGwgbWluLXctMCBnYXAtMiB0ZXh0LXNtIGRhdGEtW2FsaWduPWVuZF06ZmxleC1yb3ctcmV2ZXJzZSIsCiAgICAgICAgY2xhc3NOYW1lCiAgICAgICl9CiAgICAgIHsuLi5wcm9wc30KICAgIC8+CiAgKQp9CgpmdW5jdGlvbiBNZXNzYWdlQXZhdGFyKHsgY2xhc3NOYW1lLCAuLi5wcm9wcyB9OiBSZWFjdC5Db21wb25lbnRQcm9wczwiZGl2Ij4pIHsKICByZXR1cm4gKAogICAgPGRpdgogICAgICBkYXRhLXNsb3Q9Im1lc3NhZ2UtYXZhdGFyIgogICAgICBjbGFzc05hbWU9e2NuKAogICAgICAgICJmbGV4IHctZml0IG1pbi13LTggc2hyaW5rLTAgaXRlbXMtY2VudGVyIGp1c3RpZnktY2VudGVyIHNlbGYtZW5kIG92ZXJmbG93LWhpZGRlbiByb3VuZGVkLWZ1bGwgYmctbXV0ZWQgZ3JvdXAtaGFzLWRhdGEtW3Nsb3Q9bWVzc2FnZS1mb290ZXJdL21lc3NhZ2U6LXRyYW5zbGF0ZS15LTgiLAogICAgICAgIGNsYXNzTmFtZQogICAgICApfQogICAgICB7Li4ucHJvcHN9CiAgICAvPgogICkKfQoKZnVuY3Rpb24gTWVzc2FnZUNvbnRlbnQoeyBjbGFzc05hbWUsIC4uLnByb3BzIH06IFJlYWN0LkNvbXBvbmVudFByb3BzPCJkaXYiPikgewogIHJldHVybiAoCiAgICA8ZGl2CiAgICAgIGRhdGEtc2xvdD0ibWVzc2FnZS1jb250ZW50IgogICAgICBjbGFzc05hbWU9e2NuKAogICAgICAgICJmbGV4IHctZnVsbCBtaW4tdy0wIGZsZXgtY29sIGdhcC0yLjUgd3JhcC1icmVhay13b3JkIGdyb3VwLWRhdGEtW2FsaWduPWVuZF0vbWVzc2FnZToqOmRhdGEtc2xvdDpzZWxmLWVuZCIsCiAgICAgICAgY2xhc3NOYW1lCiAgICAgICl9CiAgICAgIHsuLi5wcm9wc30KICAgIC8+CiAgKQp9CgpmdW5jdGlvbiBNZXNzYWdlSGVhZGVyKHsgY2xhc3NOYW1lLCAuLi5wcm9wcyB9OiBSZWFjdC5Db21wb25lbnRQcm9wczwiZGl2Ij4pIHsKICByZXR1cm4gKAogICAgPGRpdgogICAgICBkYXRhLXNsb3Q9Im1lc3NhZ2UtaGVhZGVyIgogICAgICBjbGFzc05hbWU9e2NuKAogICAgICAgICJmbGV4IG1heC13LWZ1bGwgbWluLXctMCBpdGVtcy1jZW50ZXIgcHgtMyB0ZXh0LXhzIGZvbnQtbWVkaXVtIHRleHQtbXV0ZWQtZm9yZWdyb3VuZCBncm91cC1oYXMtZGF0YS1bdmFyaWFudD1naG9zdF0vbWVzc2FnZTpweC0wIiwKICAgICAgICBjbGFzc05hbWUKICAgICAgKX0KICAgICAgey4uLnByb3BzfQogICAgLz4KICApCn0KCmZ1bmN0aW9uIE1lc3NhZ2VGb290ZXIoeyBjbGFzc05hbWUsIC4uLnByb3BzIH06IFJlYWN0LkNvbXBvbmVudFByb3BzPCJkaXYiPikgewogIHJldHVybiAoCiAgICA8ZGl2CiAgICAgIGRhdGEtc2xvdD0ibWVzc2FnZS1mb290ZXIiCiAgICAgIGNsYXNzTmFtZT17Y24oCiAgICAgICAgImZsZXggbWF4LXctZnVsbCBtaW4tdy0wIGl0ZW1zLWNlbnRlciBweC0zIHRleHQteHMgZm9udC1tZWRpdW0gdGV4dC1tdXRlZC1mb3JlZ3JvdW5kIGdyb3VwLWhhcy1kYXRhLVt2YXJpYW50PWdob3N0XS9tZXNzYWdlOnB4LTAgZ3JvdXAtZGF0YS1bYWxpZ249ZW5kXS9tZXNzYWdlOmp1c3RpZnktZW5kIiwKICAgICAgICBjbGFzc05hbWUKICAgICAgKX0KICAgICAgey4uLnByb3BzfQogICAgLz4KICApCn0KCmV4cG9ydCB7CiAgTWVzc2FnZUdyb3VwLAogIE1lc3NhZ2UsCiAgTWVzc2FnZUF2YXRhciwKICBNZXNzYWdlQ29udGVudCwKICBNZXNzYWdlRm9vdGVyLAogIE1lc3NhZ2VIZWFkZXIsCn0K
+import * as React from "react"
+
+import { cn } from "@/lib/utils"
+
+function MessageGroup({ className, ...props }: React.ComponentProps<"div">) {
+  return (
+    <div
+      data-slot="message-group"
+      className={cn("flex min-w-0 flex-col gap-2", className)}
+      {...props}
+    />
+  )
+}
+
+function Message({
+  className,
+  align = "start",
+  ...props
+}: React.ComponentProps<"div"> & { align?: "start" | "end" }) {
+  return (
+    <div
+      data-slot="message"
+      data-align={align}
+      className={cn(
+        "group/message relative flex w-full min-w-0 gap-2 text-sm data-[align=end]:flex-row-reverse",
+        className
+      )}
+      {...props}
+    />
+  )
+}
+
+function MessageAvatar({ className, ...props }: React.ComponentProps<"div">) {
+  return (
+    <div
+      data-slot="message-avatar"
+      className={cn(
+        "flex w-fit min-w-8 shrink-0 items-center justify-center self-end overflow-hidden rounded-full bg-muted group-has-data-[slot=message-footer]/message:-translate-y-8",
+        className
+      )}
+      {...props}
+    />
+  )
+}
+
+function MessageContent({ className, ...props }: React.ComponentProps<"div">) {
+  return (
+    <div
+      data-slot="message-content"
+      className={cn(
+        "flex w-full min-w-0 flex-col gap-2.5 wrap-break-word group-data-[align=end]/message:*:data-slot:self-end",
+        className
+      )}
+      {...props}
+    />
+  )
+}
+
+function MessageHeader({ className, ...props }: React.ComponentProps<"div">) {
+  return (
+    <div
+      data-slot="message-header"
+      className={cn(
+        "flex max-w-full min-w-0 items-center px-3 text-xs font-medium text-muted-foreground group-has-data-[variant=ghost]/message:px-0",
+        className
+      )}
+      {...props}
+    />
+  )
+}
+
+function MessageFooter({ className, ...props }: React.ComponentProps<"div">) {
+  return (
+    <div
+      data-slot="message-footer"
+      className={cn(
+        "flex max-w-full min-w-0 items-center px-3 text-xs font-medium text-muted-foreground group-has-data-[variant=ghost]/message:px-0 group-data-[align=end]/message:justify-end",
+        className
+      )}
+      {...props}
+    />
+  )
+}
+
+export {
+  MessageGroup,
+  Message,
+  MessageAvatar,
+  MessageContent,
+  MessageFooter,
+  MessageHeader,
+}

@@ -1,1 +1,130 @@
-InVzZSBjbGllbnQiCgppbXBvcnQgKiBhcyBSZWFjdCBmcm9tICJyZWFjdCIKaW1wb3J0IHsKICBNZXNzYWdlU2Nyb2xsZXIgYXMgTWVzc2FnZVNjcm9sbGVyUHJpbWl0aXZlLAogIHVzZU1lc3NhZ2VTY3JvbGxlciwKICB1c2VNZXNzYWdlU2Nyb2xsZXJTY3JvbGxhYmxlLAogIHVzZU1lc3NhZ2VTY3JvbGxlclZpc2liaWxpdHksCn0gZnJvbSAiQHNoYWRjbi9yZWFjdC9tZXNzYWdlLXNjcm9sbGVyIgppbXBvcnQgeyBBcnJvd0Rvd25JY29uIH0gZnJvbSAibHVjaWRlLXJlYWN0IgoKaW1wb3J0IHsgY24gfSBmcm9tICJAL2xpYi91dGlscyIKaW1wb3J0IHsgQnV0dG9uIH0gZnJvbSAiQC9jb21wb25lbnRzL3VpL2J1dHRvbiIKCmZ1bmN0aW9uIE1lc3NhZ2VTY3JvbGxlclByb3ZpZGVyKAogIHByb3BzOiBSZWFjdC5Db21wb25lbnRQcm9wczx0eXBlb2YgTWVzc2FnZVNjcm9sbGVyUHJpbWl0aXZlLlByb3ZpZGVyPgopIHsKICByZXR1cm4gPE1lc3NhZ2VTY3JvbGxlclByaW1pdGl2ZS5Qcm92aWRlciB7Li4ucHJvcHN9IC8+Cn0KCmZ1bmN0aW9uIE1lc3NhZ2VTY3JvbGxlcih7CiAgY2xhc3NOYW1lLAogIC4uLnByb3BzCn06IFJlYWN0LkNvbXBvbmVudFByb3BzPHR5cGVvZiBNZXNzYWdlU2Nyb2xsZXJQcmltaXRpdmUuUm9vdD4pIHsKICByZXR1cm4gKAogICAgPE1lc3NhZ2VTY3JvbGxlclByaW1pdGl2ZS5Sb290CiAgICAgIGRhdGEtc2xvdD0ibWVzc2FnZS1zY3JvbGxlciIKICAgICAgY2xhc3NOYW1lPXtjbigKICAgICAgICAiZ3JvdXAvbWVzc2FnZS1zY3JvbGxlciByZWxhdGl2ZSBmbGV4IHNpemUtZnVsbCBtaW4taC0wIGZsZXgtY29sIG92ZXJmbG93LWhpZGRlbiIsCiAgICAgICAgY2xhc3NOYW1lCiAgICAgICl9CiAgICAgIHsuLi5wcm9wc30KICAgIC8+CiAgKQp9CgpmdW5jdGlvbiBNZXNzYWdlU2Nyb2xsZXJWaWV3cG9ydCh7CiAgY2xhc3NOYW1lLAogIC4uLnByb3BzCn06IFJlYWN0LkNvbXBvbmVudFByb3BzPHR5cGVvZiBNZXNzYWdlU2Nyb2xsZXJQcmltaXRpdmUuVmlld3BvcnQ+KSB7CiAgcmV0dXJuICgKICAgIDxNZXNzYWdlU2Nyb2xsZXJQcmltaXRpdmUuVmlld3BvcnQKICAgICAgZGF0YS1zbG90PSJtZXNzYWdlLXNjcm9sbGVyLXZpZXdwb3J0IgogICAgICBjbGFzc05hbWU9e2NuKAogICAgICAgICJzaXplLWZ1bGwgbWluLWgtMCBtaW4tdy0wIHNjcm9sbC1mYWRlLWIgc2Nyb2xsYmFyLXRoaW4gc2Nyb2xsYmFyLWd1dHRlci1zdGFibGUgb3ZlcmZsb3cteS1hdXRvIG92ZXJzY3JvbGwtY29udGFpbiBjb250YWluLWNvbnRlbnQgZGF0YS1hdXRvc2Nyb2xsaW5nOnNjcm9sbGJhci1ub25lIiwKICAgICAgICBjbGFzc05hbWUKICAgICAgKX0KICAgICAgey4uLnByb3BzfQogICAgLz4KICApCn0KCmZ1bmN0aW9uIE1lc3NhZ2VTY3JvbGxlckNvbnRlbnQoewogIGNsYXNzTmFtZSwKICAuLi5wcm9wcwp9OiBSZWFjdC5Db21wb25lbnRQcm9wczx0eXBlb2YgTWVzc2FnZVNjcm9sbGVyUHJpbWl0aXZlLkNvbnRlbnQ+KSB7CiAgcmV0dXJuICgKICAgIDxNZXNzYWdlU2Nyb2xsZXJQcmltaXRpdmUuQ29udGVudAogICAgICBkYXRhLXNsb3Q9Im1lc3NhZ2Utc2Nyb2xsZXItY29udGVudCIKICAgICAgY2xhc3NOYW1lPXtjbigiZmxleCBoLW1heCBtaW4taC1mdWxsIGZsZXgtY29sIGdhcC04IiwgY2xhc3NOYW1lKX0KICAgICAgey4uLnByb3BzfQogICAgLz4KICApCn0KCmZ1bmN0aW9uIE1lc3NhZ2VTY3JvbGxlckl0ZW0oewogIGNsYXNzTmFtZSwKICBzY3JvbGxBbmNob3IgPSBmYWxzZSwKICAuLi5wcm9wcwp9OiBSZWFjdC5Db21wb25lbnRQcm9wczx0eXBlb2YgTWVzc2FnZVNjcm9sbGVyUHJpbWl0aXZlLkl0ZW0+KSB7CiAgcmV0dXJuICgKICAgIDxNZXNzYWdlU2Nyb2xsZXJQcmltaXRpdmUuSXRlbQogICAgICBkYXRhLXNsb3Q9Im1lc3NhZ2Utc2Nyb2xsZXItaXRlbSIKICAgICAgc2Nyb2xsQW5jaG9yPXtzY3JvbGxBbmNob3J9CiAgICAgIGNsYXNzTmFtZT17Y24oCiAgICAgICAgIm1pbi13LTAgc2hyaW5rLTAgW2NvbnRhaW4taW50cmluc2ljLXNpemU6YXV0b18xMHJlbV0gW2NvbnRlbnQtdmlzaWJpbGl0eTphdXRvXSIsCiAgICAgICAgY2xhc3NOYW1lCiAgICAgICl9CiAgICAgIHsuLi5wcm9wc30KICAgIC8+CiAgKQp9CgpmdW5jdGlvbiBNZXNzYWdlU2Nyb2xsZXJCdXR0b24oewogIGRpcmVjdGlvbiA9ICJlbmQiLAogIGNsYXNzTmFtZSwKICBjaGlsZHJlbiwKICByZW5kZXIsCiAgdmFyaWFudCA9ICJzZWNvbmRhcnkiLAogIHNpemUgPSAiaWNvbi1zbSIsCiAgLi4ucHJvcHMKfTogUmVhY3QuQ29tcG9uZW50UHJvcHM8dHlwZW9mIE1lc3NhZ2VTY3JvbGxlclByaW1pdGl2ZS5CdXR0b24+ICYKICBQaWNrPFJlYWN0LkNvbXBvbmVudFByb3BzPHR5cGVvZiBCdXR0b24+LCAidmFyaWFudCIgfCAic2l6ZSI+KSB7CiAgcmV0dXJuICgKICAgIDxNZXNzYWdlU2Nyb2xsZXJQcmltaXRpdmUuQnV0dG9uCiAgICAgIGRhdGEtc2xvdD0ibWVzc2FnZS1zY3JvbGxlci1idXR0b24iCiAgICAgIGRhdGEtZGlyZWN0aW9uPXtkaXJlY3Rpb259CiAgICAgIGRhdGEtdmFyaWFudD17dmFyaWFudH0KICAgICAgZGF0YS1zaXplPXtzaXplfQogICAgICBkaXJlY3Rpb249e2RpcmVjdGlvbn0KICAgICAgY2xhc3NOYW1lPXtjbigKICAgICAgICAiYWJzb2x1dGUgaW5zZXQtcy0xLzIgLXRyYW5zbGF0ZS14LTEvMiBib3JkZXItYm9yZGVyIGJnLWJhY2tncm91bmQgdGV4dC1mb3JlZ3JvdW5kIHRyYW5zaXRpb24tW3RyYW5zbGF0ZSxzY2FsZSxvcGFjaXR5XSBkdXJhdGlvbi0yMDAgaG92ZXI6YmctbXV0ZWQgaG92ZXI6dGV4dC1mb3JlZ3JvdW5kIGRhdGEtW2FjdGl2ZT1mYWxzZV06cG9pbnRlci1ldmVudHMtbm9uZSBkYXRhLVthY3RpdmU9ZmFsc2VdOnNjYWxlLTk1IGRhdGEtW2FjdGl2ZT1mYWxzZV06b3BhY2l0eS0wIGRhdGEtW2FjdGl2ZT1mYWxzZV06ZHVyYXRpb24tNDAwIGRhdGEtW2FjdGl2ZT1mYWxzZV06ZWFzZS1bY3ViaWMtYmV6aWVyKDAuNywwLDAuODQsMCldIGRhdGEtW2FjdGl2ZT10cnVlXTp0cmFuc2xhdGUteS0wIGRhdGEtW2FjdGl2ZT10cnVlXTpzY2FsZS0xMDAgZGF0YS1bYWN0aXZlPXRydWVdOm9wYWNpdHktMTAwIGRhdGEtW2FjdGl2ZT10cnVlXTplYXNlLVtjdWJpYy1iZXppZXIoMC4yMywxLDAuMzIsMSldIGRhdGEtW2RpcmVjdGlvbj1lbmRdOmJvdHRvbS00IGRhdGEtW2RpcmVjdGlvbj1lbmRdOmRhdGEtW2FjdGl2ZT1mYWxzZV06dHJhbnNsYXRlLXktZnVsbCBkYXRhLVtkaXJlY3Rpb249c3RhcnRdOnRvcC00IGRhdGEtW2RpcmVjdGlvbj1zdGFydF06ZGF0YS1bYWN0aXZlPWZhbHNlXTotdHJhbnNsYXRlLXktZnVsbCBydGw6dHJhbnNsYXRlLXgtMS8yIGRhdGEtW2RpcmVjdGlvbj1zdGFydF06WyZfc3ZnXTpyb3RhdGUtMTgwIiwKICAgICAgICBjbGFzc05hbWUKICAgICAgKX0KICAgICAgcmVuZGVyPXtyZW5kZXIgPz8gPEJ1dHRvbiB2YXJpYW50PXt2YXJpYW50fSBzaXplPXtzaXplfSAvPn0KICAgICAgey4uLnByb3BzfQogICAgPgogICAgICB7Y2hpbGRyZW4gPz8gKAogICAgICAgIDw+CiAgICAgICAgICA8QXJyb3dEb3duSWNvbiAvPgogICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPSJzci1vbmx5Ij4KICAgICAgICAgICAge2RpcmVjdGlvbiA9PT0gImVuZCIgPyAiU2Nyb2xsIHRvIGVuZCIgOiAiU2Nyb2xsIHRvIHN0YXJ0In0KICAgICAgICAgIDwvc3Bhbj4KICAgICAgICA8Lz4KICAgICAgKX0KICAgIDwvTWVzc2FnZVNjcm9sbGVyUHJpbWl0aXZlLkJ1dHRvbj4KICApCn0KCmV4cG9ydCB7CiAgTWVzc2FnZVNjcm9sbGVyUHJvdmlkZXIsCiAgTWVzc2FnZVNjcm9sbGVyLAogIE1lc3NhZ2VTY3JvbGxlclZpZXdwb3J0LAogIE1lc3NhZ2VTY3JvbGxlckNvbnRlbnQsCiAgTWVzc2FnZVNjcm9sbGVySXRlbSwKICBNZXNzYWdlU2Nyb2xsZXJCdXR0b24sCiAgdXNlTWVzc2FnZVNjcm9sbGVyLAogIHVzZU1lc3NhZ2VTY3JvbGxlclNjcm9sbGFibGUsCiAgdXNlTWVzc2FnZVNjcm9sbGVyVmlzaWJpbGl0eSwKfQo=
+"use client"
+
+import * as React from "react"
+import {
+  MessageScroller as MessageScrollerPrimitive,
+  useMessageScroller,
+  useMessageScrollerScrollable,
+  useMessageScrollerVisibility,
+} from "@shadcn/react/message-scroller"
+import { ArrowDownIcon } from "lucide-react"
+
+import { cn } from "@/lib/utils"
+import { Button } from "@/components/ui/button"
+
+function MessageScrollerProvider(
+  props: React.ComponentProps<typeof MessageScrollerPrimitive.Provider>
+) {
+  return <MessageScrollerPrimitive.Provider {...props} />
+}
+
+function MessageScroller({
+  className,
+  ...props
+}: React.ComponentProps<typeof MessageScrollerPrimitive.Root>) {
+  return (
+    <MessageScrollerPrimitive.Root
+      data-slot="message-scroller"
+      className={cn(
+        "group/message-scroller relative flex size-full min-h-0 flex-col overflow-hidden",
+        className
+      )}
+      {...props}
+    />
+  )
+}
+
+function MessageScrollerViewport({
+  className,
+  ...props
+}: React.ComponentProps<typeof MessageScrollerPrimitive.Viewport>) {
+  return (
+    <MessageScrollerPrimitive.Viewport
+      data-slot="message-scroller-viewport"
+      className={cn(
+        "size-full min-h-0 min-w-0 scroll-fade-b scrollbar-thin scrollbar-gutter-stable overflow-y-auto overscroll-contain contain-content data-autoscrolling:scrollbar-none",
+        className
+      )}
+      {...props}
+    />
+  )
+}
+
+function MessageScrollerContent({
+  className,
+  ...props
+}: React.ComponentProps<typeof MessageScrollerPrimitive.Content>) {
+  return (
+    <MessageScrollerPrimitive.Content
+      data-slot="message-scroller-content"
+      className={cn("flex h-max min-h-full flex-col gap-8", className)}
+      {...props}
+    />
+  )
+}
+
+function MessageScrollerItem({
+  className,
+  scrollAnchor = false,
+  ...props
+}: React.ComponentProps<typeof MessageScrollerPrimitive.Item>) {
+  return (
+    <MessageScrollerPrimitive.Item
+      data-slot="message-scroller-item"
+      scrollAnchor={scrollAnchor}
+      className={cn(
+        "min-w-0 shrink-0 [contain-intrinsic-size:auto_10rem] [content-visibility:auto]",
+        className
+      )}
+      {...props}
+    />
+  )
+}
+
+function MessageScrollerButton({
+  direction = "end",
+  className,
+  children,
+  render,
+  variant = "secondary",
+  size = "icon-sm",
+  ...props
+}: React.ComponentProps<typeof MessageScrollerPrimitive.Button> &
+  Pick<React.ComponentProps<typeof Button>, "variant" | "size">) {
+  return (
+    <MessageScrollerPrimitive.Button
+      data-slot="message-scroller-button"
+      data-direction={direction}
+      data-variant={variant}
+      data-size={size}
+      direction={direction}
+      className={cn(
+        "absolute inset-s-1/2 -translate-x-1/2 border-border bg-background text-foreground transition-[translate,scale,opacity] duration-200 hover:bg-muted hover:text-foreground data-[active=false]:pointer-events-none data-[active=false]:scale-95 data-[active=false]:opacity-0 data-[active=false]:duration-400 data-[active=false]:ease-[cubic-bezier(0.7,0,0.84,0)] data-[active=true]:translate-y-0 data-[active=true]:scale-100 data-[active=true]:opacity-100 data-[active=true]:ease-[cubic-bezier(0.23,1,0.32,1)] data-[direction=end]:bottom-4 data-[direction=end]:data-[active=false]:translate-y-full data-[direction=start]:top-4 data-[direction=start]:data-[active=false]:-translate-y-full rtl:translate-x-1/2 data-[direction=start]:[&_svg]:rotate-180",
+        className
+      )}
+      render={render ?? <Button variant={variant} size={size} />}
+      {...props}
+    >
+      {children ?? (
+        <>
+          <ArrowDownIcon />
+          <span className="sr-only">
+            {direction === "end" ? "Scroll to end" : "Scroll to start"}
+          </span>
+        </>
+      )}
+    </MessageScrollerPrimitive.Button>
+  )
+}
+
+export {
+  MessageScrollerProvider,
+  MessageScroller,
+  MessageScrollerViewport,
+  MessageScrollerContent,
+  MessageScrollerItem,
+  MessageScrollerButton,
+  useMessageScroller,
+  useMessageScrollerScrollable,
+  useMessageScrollerVisibility,
+}

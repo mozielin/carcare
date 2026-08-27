@@ -1,1 +1,89 @@
-InVzZSBjbGllbnQiCgppbXBvcnQgKiBhcyBSZWFjdCBmcm9tICJyZWFjdCIKaW1wb3J0IHsgUG9wb3ZlciBhcyBQb3BvdmVyUHJpbWl0aXZlIH0gZnJvbSAicmFkaXgtdWkiCgppbXBvcnQgeyBjbiB9IGZyb20gIkAvbGliL3V0aWxzIgoKZnVuY3Rpb24gUG9wb3Zlcih7CiAgLi4ucHJvcHMKfTogUmVhY3QuQ29tcG9uZW50UHJvcHM8dHlwZW9mIFBvcG92ZXJQcmltaXRpdmUuUm9vdD4pIHsKICByZXR1cm4gPFBvcG92ZXJQcmltaXRpdmUuUm9vdCBkYXRhLXNsb3Q9InBvcG92ZXIiIHsuLi5wcm9wc30gLz4KfQoKZnVuY3Rpb24gUG9wb3ZlclRyaWdnZXIoewogIC4uLnByb3BzCn06IFJlYWN0LkNvbXBvbmVudFByb3BzPHR5cGVvZiBQb3BvdmVyUHJpbWl0aXZlLlRyaWdnZXI+KSB7CiAgcmV0dXJuIDxQb3BvdmVyUHJpbWl0aXZlLlRyaWdnZXIgZGF0YS1zbG90PSJwb3BvdmVyLXRyaWdnZXIiIHsuLi5wcm9wc30gLz4KfQoKZnVuY3Rpb24gUG9wb3ZlckNvbnRlbnQoewogIGNsYXNzTmFtZSwKICBhbGlnbiA9ICJjZW50ZXIiLAogIHNpZGVPZmZzZXQgPSA0LAogIC4uLnByb3BzCn06IFJlYWN0LkNvbXBvbmVudFByb3BzPHR5cGVvZiBQb3BvdmVyUHJpbWl0aXZlLkNvbnRlbnQ+KSB7CiAgcmV0dXJuICgKICAgIDxQb3BvdmVyUHJpbWl0aXZlLlBvcnRhbD4KICAgICAgPFBvcG92ZXJQcmltaXRpdmUuQ29udGVudAogICAgICAgIGRhdGEtc2xvdD0icG9wb3Zlci1jb250ZW50IgogICAgICAgIGFsaWduPXthbGlnbn0KICAgICAgICBzaWRlT2Zmc2V0PXtzaWRlT2Zmc2V0fQogICAgICAgIGNsYXNzTmFtZT17Y24oCiAgICAgICAgICAiei01MCB3LTcyIG9yaWdpbi0oLS1yYWRpeC1wb3BvdmVyLWNvbnRlbnQtdHJhbnNmb3JtLW9yaWdpbikgcm91bmRlZC1tZCBib3JkZXIgYmctcG9wb3ZlciBwLTQgdGV4dC1wb3BvdmVyLWZvcmVncm91bmQgc2hhZG93LW1kIG91dGxpbmUtaGlkZGVuIGRhdGEtW3NpZGU9Ym90dG9tXTpzbGlkZS1pbi1mcm9tLXRvcC0yIGRhdGEtW3NpZGU9bGVmdF06c2xpZGUtaW4tZnJvbS1yaWdodC0yIGRhdGEtW3NpZGU9cmlnaHRdOnNsaWRlLWluLWZyb20tbGVmdC0yIGRhdGEtW3NpZGU9dG9wXTpzbGlkZS1pbi1mcm9tLWJvdHRvbS0yIGRhdGEtW3N0YXRlPWNsb3NlZF06YW5pbWF0ZS1vdXQgZGF0YS1bc3RhdGU9Y2xvc2VkXTpmYWRlLW91dC0wIGRhdGEtW3N0YXRlPWNsb3NlZF06em9vbS1vdXQtOTUgZGF0YS1bc3RhdGU9b3Blbl06YW5pbWF0ZS1pbiBkYXRhLVtzdGF0ZT1vcGVuXTpmYWRlLWluLTAgZGF0YS1bc3RhdGU9b3Blbl06em9vbS1pbi05NSIsCiAgICAgICAgICBjbGFzc05hbWUKICAgICAgICApfQogICAgICAgIHsuLi5wcm9wc30KICAgICAgLz4KICAgIDwvUG9wb3ZlclByaW1pdGl2ZS5Qb3J0YWw+CiAgKQp9CgpmdW5jdGlvbiBQb3BvdmVyQW5jaG9yKHsKICAuLi5wcm9wcwp9OiBSZWFjdC5Db21wb25lbnRQcm9wczx0eXBlb2YgUG9wb3ZlclByaW1pdGl2ZS5BbmNob3I+KSB7CiAgcmV0dXJuIDxQb3BvdmVyUHJpbWl0aXZlLkFuY2hvciBkYXRhLXNsb3Q9InBvcG92ZXItYW5jaG9yIiB7Li4ucHJvcHN9IC8+Cn0KCmZ1bmN0aW9uIFBvcG92ZXJIZWFkZXIoeyBjbGFzc05hbWUsIC4uLnByb3BzIH06IFJlYWN0LkNvbXBvbmVudFByb3BzPCJkaXYiPikgewogIHJldHVybiAoCiAgICA8ZGl2CiAgICAgIGRhdGEtc2xvdD0icG9wb3Zlci1oZWFkZXIiCiAgICAgIGNsYXNzTmFtZT17Y24oImZsZXggZmxleC1jb2wgZ2FwLTEgdGV4dC1zbSIsIGNsYXNzTmFtZSl9CiAgICAgIHsuLi5wcm9wc30KICAgIC8+CiAgKQp9CgpmdW5jdGlvbiBQb3BvdmVyVGl0bGUoeyBjbGFzc05hbWUsIC4uLnByb3BzIH06IFJlYWN0LkNvbXBvbmVudFByb3BzPCJoMiI+KSB7CiAgcmV0dXJuICgKICAgIDxkaXYKICAgICAgZGF0YS1zbG90PSJwb3BvdmVyLXRpdGxlIgogICAgICBjbGFzc05hbWU9e2NuKCJmb250LW1lZGl1bSIsIGNsYXNzTmFtZSl9CiAgICAgIHsuLi5wcm9wc30KICAgIC8+CiAgKQp9CgpmdW5jdGlvbiBQb3BvdmVyRGVzY3JpcHRpb24oewogIGNsYXNzTmFtZSwKICAuLi5wcm9wcwp9OiBSZWFjdC5Db21wb25lbnRQcm9wczwicCI+KSB7CiAgcmV0dXJuICgKICAgIDxwCiAgICAgIGRhdGEtc2xvdD0icG9wb3Zlci1kZXNjcmlwdGlvbiIKICAgICAgY2xhc3NOYW1lPXtjbigidGV4dC1tdXRlZC1mb3JlZ3JvdW5kIiwgY2xhc3NOYW1lKX0KICAgICAgey4uLnByb3BzfQogICAgLz4KICApCn0KCmV4cG9ydCB7CiAgUG9wb3ZlciwKICBQb3BvdmVyVHJpZ2dlciwKICBQb3BvdmVyQ29udGVudCwKICBQb3BvdmVyQW5jaG9yLAogIFBvcG92ZXJIZWFkZXIsCiAgUG9wb3ZlclRpdGxlLAogIFBvcG92ZXJEZXNjcmlwdGlvbiwKfQo=
+"use client"
+
+import * as React from "react"
+import { Popover as PopoverPrimitive } from "radix-ui"
+
+import { cn } from "@/lib/utils"
+
+function Popover({
+  ...props
+}: React.ComponentProps<typeof PopoverPrimitive.Root>) {
+  return <PopoverPrimitive.Root data-slot="popover" {...props} />
+}
+
+function PopoverTrigger({
+  ...props
+}: React.ComponentProps<typeof PopoverPrimitive.Trigger>) {
+  return <PopoverPrimitive.Trigger data-slot="popover-trigger" {...props} />
+}
+
+function PopoverContent({
+  className,
+  align = "center",
+  sideOffset = 4,
+  ...props
+}: React.ComponentProps<typeof PopoverPrimitive.Content>) {
+  return (
+    <PopoverPrimitive.Portal>
+      <PopoverPrimitive.Content
+        data-slot="popover-content"
+        align={align}
+        sideOffset={sideOffset}
+        className={cn(
+          "z-50 w-72 origin-(--radix-popover-content-transform-origin) rounded-md border bg-popover p-4 text-popover-foreground shadow-md outline-hidden data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95",
+          className
+        )}
+        {...props}
+      />
+    </PopoverPrimitive.Portal>
+  )
+}
+
+function PopoverAnchor({
+  ...props
+}: React.ComponentProps<typeof PopoverPrimitive.Anchor>) {
+  return <PopoverPrimitive.Anchor data-slot="popover-anchor" {...props} />
+}
+
+function PopoverHeader({ className, ...props }: React.ComponentProps<"div">) {
+  return (
+    <div
+      data-slot="popover-header"
+      className={cn("flex flex-col gap-1 text-sm", className)}
+      {...props}
+    />
+  )
+}
+
+function PopoverTitle({ className, ...props }: React.ComponentProps<"h2">) {
+  return (
+    <div
+      data-slot="popover-title"
+      className={cn("font-medium", className)}
+      {...props}
+    />
+  )
+}
+
+function PopoverDescription({
+  className,
+  ...props
+}: React.ComponentProps<"p">) {
+  return (
+    <p
+      data-slot="popover-description"
+      className={cn("text-muted-foreground", className)}
+      {...props}
+    />
+  )
+}
+
+export {
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+  PopoverAnchor,
+  PopoverHeader,
+  PopoverTitle,
+  PopoverDescription,
+}

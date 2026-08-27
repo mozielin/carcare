@@ -1,1 +1,40 @@
-InVzZSBjbGllbnQiCgppbXBvcnQgewogIENpcmNsZUNoZWNrSWNvbiwKICBJbmZvSWNvbiwKICBMb2FkZXIySWNvbiwKICBPY3RhZ29uWEljb24sCiAgVHJpYW5nbGVBbGVydEljb24sCn0gZnJvbSAibHVjaWRlLXJlYWN0IgppbXBvcnQgeyB1c2VUaGVtZSB9IGZyb20gIm5leHQtdGhlbWVzIgppbXBvcnQgeyBUb2FzdGVyIGFzIFNvbm5lciwgdHlwZSBUb2FzdGVyUHJvcHMgfSBmcm9tICJzb25uZXIiCgpjb25zdCBUb2FzdGVyID0gKHsgLi4ucHJvcHMgfTogVG9hc3RlclByb3BzKSA9PiB7CiAgY29uc3QgeyB0aGVtZSA9ICJzeXN0ZW0iIH0gPSB1c2VUaGVtZSgpCgogIHJldHVybiAoCiAgICA8U29ubmVyCiAgICAgIHRoZW1lPXt0aGVtZSBhcyBUb2FzdGVyUHJvcHNbInRoZW1lIl19CiAgICAgIGNsYXNzTmFtZT0idG9hc3RlciBncm91cCIKICAgICAgaWNvbnM9e3sKICAgICAgICBzdWNjZXNzOiA8Q2lyY2xlQ2hlY2tJY29uIGNsYXNzTmFtZT0ic2l6ZS00IiAvPiwKICAgICAgICBpbmZvOiA8SW5mb0ljb24gY2xhc3NOYW1lPSJzaXplLTQiIC8+LAogICAgICAgIHdhcm5pbmc6IDxUcmlhbmdsZUFsZXJ0SWNvbiBjbGFzc05hbWU9InNpemUtNCIgLz4sCiAgICAgICAgZXJyb3I6IDxPY3RhZ29uWEljb24gY2xhc3NOYW1lPSJzaXplLTQiIC8+LAogICAgICAgIGxvYWRpbmc6IDxMb2FkZXIySWNvbiBjbGFzc05hbWU9InNpemUtNCBhbmltYXRlLXNwaW4iIC8+LAogICAgICB9fQogICAgICBzdHlsZT17CiAgICAgICAgewogICAgICAgICAgIi0tbm9ybWFsLWJnIjogInZhcigtLXBvcG92ZXIpIiwKICAgICAgICAgICItLW5vcm1hbC10ZXh0IjogInZhcigtLXBvcG92ZXItZm9yZWdyb3VuZCkiLAogICAgICAgICAgIi0tbm9ybWFsLWJvcmRlciI6ICJ2YXIoLS1ib3JkZXIpIiwKICAgICAgICAgICItLWJvcmRlci1yYWRpdXMiOiAidmFyKC0tcmFkaXVzKSIsCiAgICAgICAgfSBhcyBSZWFjdC5DU1NQcm9wZXJ0aWVzCiAgICAgIH0KICAgICAgey4uLnByb3BzfQogICAgLz4KICApCn0KCmV4cG9ydCB7IFRvYXN0ZXIgfQo=
+"use client"
+
+import {
+  CircleCheckIcon,
+  InfoIcon,
+  Loader2Icon,
+  OctagonXIcon,
+  TriangleAlertIcon,
+} from "lucide-react"
+import { useTheme } from "next-themes"
+import { Toaster as Sonner, type ToasterProps } from "sonner"
+
+const Toaster = ({ ...props }: ToasterProps) => {
+  const { theme = "system" } = useTheme()
+
+  return (
+    <Sonner
+      theme={theme as ToasterProps["theme"]}
+      className="toaster group"
+      icons={{
+        success: <CircleCheckIcon className="size-4" />,
+        info: <InfoIcon className="size-4" />,
+        warning: <TriangleAlertIcon className="size-4" />,
+        error: <OctagonXIcon className="size-4" />,
+        loading: <Loader2Icon className="size-4 animate-spin" />,
+      }}
+      style={
+        {
+          "--normal-bg": "var(--popover)",
+          "--normal-text": "var(--popover-foreground)",
+          "--normal-border": "var(--border)",
+          "--border-radius": "var(--radius)",
+        } as React.CSSProperties
+      }
+      {...props}
+    />
+  )
+}
+
+export { Toaster }
