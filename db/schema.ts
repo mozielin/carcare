@@ -11,6 +11,14 @@ export const products = sqliteTable("products", {
   deletedAt: text("deleted_at"),
   createdAt: text("created_at").notNull(),
 });
+export const dilutionProfiles = sqliteTable("dilution_profiles", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
+  productId: integer("product_id").notNull().references(() => products.id, { onDelete: "cascade" }),
+  name: text("name").notNull(),
+  ratio: integer("ratio").notNull(),
+  defaultWater: integer("default_water").notNull().default(2000),
+  createdAt: text("created_at").notNull(),
+});
 export const washSessions = sqliteTable("wash_sessions", {
   id: text("id").primaryKey(), ownerEmail: text("owner_email").notNull().default(""), washedAt: text("washed_at").notNull(), note: text("note"), flowName: text("flow_name"), createdAt: text("created_at").notNull(),
 });

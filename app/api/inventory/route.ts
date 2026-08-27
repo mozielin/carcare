@@ -10,7 +10,7 @@ export async function GET(request: Request) {
   await claimLegacyData(ownerEmail);
   if (new URL(request.url).searchParams.get("export") === "1") return exportBackup(ownerEmail);
   await ensureDefaultFlows(ownerEmail);
-  const [products, washes, flows, flowItems, brands, washUsageItems] = await Promise.all([
+  const [products, washes, flows, flowItems, brands, washUsageItems, dilutionProfiles] = await Promise.all([
     db().prepare(`SELECT p.id, p.brand, p.name, p.category, p.unit, p.package_size AS packageSize, p.remaining, p.low_threshold AS lowThreshold, p.ph_type AS phType,
       GROUP_CONCAT(DISTINCT f.name) AS affectedFlowNames
       FROM products p LEFT JOIN wash_flow_items fi ON fi.product_id = p.id LEFT JOIN wash_flows f ON f.id = fi.flow_id AND f.owner_email = ?
@@ -30,11 +30,15 @@ export async function GET(request: Request) {
       FROM wash_usages u JOIN products p ON p.id = u.product_id
       WHERE u.wash_id IN (SELECT id FROM wash_sessions WHERE owner_email = ? ORDER BY washed_at DESC, created_at DESC LIMIT 12)
       ORDER BY u.id`).bind(ownerEmail).all(),
+    db().prepare(`SELECT d.id, d.product_id AS productId, d.name, d.ratio, d.default_water AS defaultWater
+      FROM dilution_profiles d JOIN products p ON p.id = d.product_id
+      WHERE p.owner_email = ? AND p.active = 1 ORDER BY d.id`).bind(ownerEmail).all(),
   ]);
   const items = flowItems.results as Array<Record<string, unknown>>;
   const usageItems = washUsageItems.results as Array<Record<string, unknown>>;
+  const profiles = dilutionProfiles.results as Array<Record<string, unknown>>;
   return Response.json({
-    products: products.results,
+    products: products.results.map((product: Record<string, unknown>) => ({ ...product, dilutions: profiles.filter((profile) => profile.productId === product.id) })),
     washes: washes.results.map((wash: Record<string, unknown>) => ({ ...wash, items: usageItems.filter((item) => item.washId === wash.id) })),
     brands: brands.results.map((item) => item.brand),
     flows: flows.results.map((flow: Record<string, unknown>) => ({ ...flow, items: items.filter((item) => item.flowId === flow.id) })),
@@ -65,8 +69,11 @@ async function addProduct(body: Record<string, unknown>, ownerEmail: string) {
   const brand = clean(body.brand), name = clean(body.name), category = productCategory(body.category), unit = category === "耗材" ? "次" : clean(body.unit), phType = category === "耗材" ? "中性" : ph(body.phType);
   const packageSize = integer(body.packageSize), remaining = integer(body.remaining), lowThreshold = integer(body.lowThreshold);
   if (!brand || !name || !category || !unit || remaining > packageSize) throw new Error("請確認品牌、用品資料與剩餘數量");
-  await db().prepare("INSERT INTO products (owner_email, brand, name, category, unit, package_size, remaining, low_threshold, ph_type, active, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, 1, ?)")
-    .bind(ownerEmail, brand, name, category, unit, packageSize, remaining, lowThreshold, phType, new Date().toISOString()).run();
+  const createdAt = new Date().toISOString();
+  const created = await db().prepare("INSERT INTO products (owner_email, brand, name, category, unit, package_size, remaining, low_threshold, ph_type, active, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, 1, ?)")
+    .bind(ownerEmail, brand, name, category, unit, packageSize, remaining, lowThreshold, phType, createdAt).run();
+  const productId = Number(created.meta.last_row_id);
+  await replaceDilutions(productId, category === "耗材" ? [] : normalizeDilutions(body.dilutions), ownerEmail);
 }
 
 async function updateProduct(body: Record<string, unknown>, ownerEmail: string) {
@@ -76,6 +83,17 @@ async function updateProduct(body: Record<string, unknown>, ownerEmail: string) 
   const result = await db().prepare("UPDATE products SET brand = ?, name = ?, category = ?, unit = ?, package_size = ?, remaining = ?, low_threshold = ?, ph_type = ? WHERE id = ? AND owner_email = ? AND active = 1")
     .bind(brand, name, category, unit, packageSize, remaining, lowThreshold, phType, productId, ownerEmail).run();
   if (!result.meta.changes) throw new Error("找不到這項用品");
+  await replaceDilutions(productId, category === "耗材" ? [] : normalizeDilutions(body.dilutions), ownerEmail);
+}
+
+async function replaceDilutions(productId: number, dilutions: Array<{ name: string; ratio: number; defaultWater: number }>, ownerEmail: string) {
+  const product = await db().prepare("SELECT id FROM products WHERE id = ? AND owner_email = ? AND active = 1").bind(productId, ownerEmail).first();
+  if (!product) throw new Error("找不到這項用品");
+  const now = new Date().toISOString();
+  await db().batch([
+    db().prepare("DELETE FROM dilution_profiles WHERE product_id = ?").bind(productId),
+    ...dilutions.map((item) => db().prepare("INSERT INTO dilution_profiles (product_id, name, ratio, default_water, created_at) VALUES (?, ?, ?, ?, ?)").bind(productId, item.name, item.ratio, item.defaultWater, now)),
+  ]);
 }
 
 async function restockProduct(body: Record<string, unknown>, ownerEmail: string) {
@@ -151,8 +169,9 @@ async function ensureDefaultFlows(ownerEmail: string) {
 }
 
 async function exportBackup(ownerEmail: string) {
-  const [products, flows, flowItems, washes, washUsages, restocks] = await Promise.all([
+  const [products, dilutionProfiles, flows, flowItems, washes, washUsages, restocks] = await Promise.all([
     db().prepare(`SELECT id, brand, name, category, unit, package_size AS packageSize, remaining, low_threshold AS lowThreshold, ph_type AS phType, active, deleted_at AS deletedAt, created_at AS createdAt FROM products WHERE owner_email = ? ORDER BY id`).bind(ownerEmail).all(),
+    db().prepare(`SELECT d.product_id AS productId, d.name, d.ratio, d.default_water AS defaultWater, d.created_at AS createdAt FROM dilution_profiles d JOIN products p ON p.id = d.product_id WHERE p.owner_email = ? ORDER BY d.id`).bind(ownerEmail).all(),
     db().prepare(`SELECT id, name, flow_type AS flowType, created_at AS createdAt FROM wash_flows WHERE owner_email = ? ORDER BY id`).bind(ownerEmail).all(),
     db().prepare(`SELECT fi.flow_id AS flowId, fi.product_id AS productId, fi.amount, fi.sort_order AS sortOrder FROM wash_flow_items fi JOIN wash_flows f ON f.id = fi.flow_id WHERE f.owner_email = ? ORDER BY fi.flow_id, fi.sort_order, fi.id`).bind(ownerEmail).all(),
     db().prepare(`SELECT id, washed_at AS washedAt, note, flow_name AS flowName, created_at AS createdAt FROM wash_sessions WHERE owner_email = ? ORDER BY washed_at, created_at`).bind(ownerEmail).all(),
@@ -161,24 +180,25 @@ async function exportBackup(ownerEmail: string) {
   ]);
   return Response.json({
     format: "car-care-inventory-backup",
-    version: 1,
+    version: 2,
     exportedAt: new Date().toISOString(),
-    data: { products: products.results, flows: flows.results, flowItems: flowItems.results, washes: washes.results, washUsages: washUsages.results, restocks: restocks.results },
+    data: { products: products.results, dilutionProfiles: dilutionProfiles.results, flows: flows.results, flowItems: flowItems.results, washes: washes.results, washUsages: washUsages.results, restocks: restocks.results },
   }, { headers: { "Content-Disposition": `attachment; filename="car-care-backup-${new Date().toISOString().slice(0, 10)}.json"` } });
 }
 
 async function importBackup(value: unknown, ownerEmail: string) {
   const root = object(value, "備份檔案格式不正確");
-  if (root.format !== "car-care-inventory-backup" || root.version !== 1) throw new Error("這不是支援的洗車用品備份檔");
+  if (root.format !== "car-care-inventory-backup" || ![1, 2].includes(Number(root.version))) throw new Error("這不是支援的洗車用品備份檔");
   const data = object(root.data, "備份內容不完整");
   const products = records(data.products, "用品", 500).map((item) => ({ oldId: integer(item.id), brand: requiredText(item.brand, "品牌"), name: requiredText(item.name, "用品名稱"), category: productCategory(item.category), unit: requiredText(item.unit, "單位"), packageSize: integer(item.packageSize), remaining: nonNegativeInteger(item.remaining), lowThreshold: integer(item.lowThreshold), phType: ph(item.phType), active: Number(item.active) === 0 ? 0 : 1, deletedAt: optionalText(item.deletedAt), createdAt: requiredText(item.createdAt, "建立日期") }));
+  const dilutionProfiles = (data.dilutionProfiles == null ? [] : records(data.dilutionProfiles, "稀釋比例", 2000)).map((item) => ({ productId: integer(item.productId), name: requiredText(item.name, "比例名稱"), ratio: integer(item.ratio), defaultWater: item.defaultWater == null ? 2000 : waterAmount(item.defaultWater), createdAt: optionalText(item.createdAt) || new Date().toISOString() }));
   const flows = records(data.flows, "流程", 200).map((item) => ({ oldId: integer(item.id), name: requiredText(item.name, "流程名稱"), flowType: flow(item.flowType), createdAt: requiredText(item.createdAt, "建立日期") }));
   const flowItems = records(data.flowItems, "流程用品", 1000).map((item) => ({ flowId: integer(item.flowId), productId: integer(item.productId), amount: integer(item.amount), sortOrder: nonNegativeInteger(item.sortOrder) }));
   const washes = records(data.washes, "洗車紀錄", 500).map((item) => ({ oldId: requiredText(item.id, "洗車紀錄"), washedAt: requiredText(item.washedAt, "洗車日期"), note: optionalText(item.note), flowName: optionalText(item.flowName), createdAt: requiredText(item.createdAt, "建立日期") }));
   const washUsages = records(data.washUsages, "洗車用量", 3000).map((item) => ({ washId: requiredText(item.washId, "洗車紀錄"), productId: integer(item.productId), amount: integer(item.amount) }));
   const restocks = records(data.restocks, "補貨紀錄", 2000).map((item) => ({ productId: integer(item.productId), amount: integer(item.amount), createdAt: requiredText(item.createdAt, "建立日期") }));
   if (new Set(products.map((item) => item.oldId)).size !== products.length || new Set(flows.map((item) => item.oldId)).size !== flows.length || new Set(washes.map((item) => item.oldId)).size !== washes.length) throw new Error("備份內含重複的資料編號");
-  const totalRows = products.length + flows.length + flowItems.length + washes.length + washUsages.length + restocks.length;
+  const totalRows = products.length + dilutionProfiles.length + flows.length + flowItems.length + washes.length + washUsages.length + restocks.length;
   if (totalRows > 5000) throw new Error("備份資料量過大，請分開處理");
 
   const [productMax, flowMax] = await Promise.all([
@@ -193,11 +213,13 @@ async function importBackup(value: unknown, ownerEmail: string) {
     db().prepare("DELETE FROM wash_usages WHERE wash_id IN (SELECT id FROM wash_sessions WHERE owner_email = ?)").bind(ownerEmail),
     db().prepare("DELETE FROM wash_sessions WHERE owner_email = ?").bind(ownerEmail),
     db().prepare("DELETE FROM restocks WHERE product_id IN (SELECT id FROM products WHERE owner_email = ?)").bind(ownerEmail),
+    db().prepare("DELETE FROM dilution_profiles WHERE product_id IN (SELECT id FROM products WHERE owner_email = ?)").bind(ownerEmail),
     db().prepare("DELETE FROM wash_flow_items WHERE flow_id IN (SELECT id FROM wash_flows WHERE owner_email = ?)").bind(ownerEmail),
     db().prepare("DELETE FROM wash_flows WHERE owner_email = ?").bind(ownerEmail),
     db().prepare("DELETE FROM products WHERE owner_email = ?").bind(ownerEmail),
   ];
   for (const item of products) statements.push(db().prepare("INSERT INTO products (id, owner_email, brand, name, category, unit, package_size, remaining, low_threshold, ph_type, active, deleted_at, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)").bind(productIds.get(item.oldId), ownerEmail, item.brand, item.name, item.category, item.unit, item.packageSize, item.remaining, item.lowThreshold, item.phType, item.active, item.deletedAt, item.createdAt));
+  for (const item of dilutionProfiles) { const productId = productIds.get(item.productId); if (!productId) throw new Error("稀釋比例的用品關聯不完整"); statements.push(db().prepare("INSERT INTO dilution_profiles (product_id, name, ratio, default_water, created_at) VALUES (?, ?, ?, ?, ?)").bind(productId, item.name, item.ratio, item.defaultWater, item.createdAt)); }
   for (const item of flows) statements.push(db().prepare("INSERT INTO wash_flows (id, owner_email, name, flow_type, created_at) VALUES (?, ?, ?, ?, ?)").bind(flowIds.get(item.oldId), ownerEmail, item.name, item.flowType, item.createdAt));
   for (const item of flowItems) { const flowId = flowIds.get(item.flowId), productId = productIds.get(item.productId); if (!flowId || !productId) throw new Error("流程用品關聯不完整"); statements.push(db().prepare("INSERT INTO wash_flow_items (flow_id, product_id, amount, sort_order) VALUES (?, ?, ?, ?)").bind(flowId, productId, item.amount, item.sortOrder)); }
   for (const item of washes) statements.push(db().prepare("INSERT INTO wash_sessions (id, owner_email, washed_at, note, flow_name, created_at) VALUES (?, ?, ?, ?, ?, ?)").bind(washIds.get(item.oldId), ownerEmail, item.washedAt, item.note, item.flowName, item.createdAt));
@@ -235,6 +257,20 @@ function normalizeUsages(value: unknown) {
   for (const raw of value as Array<Record<string, unknown>>) unique.set(positive(raw.productId), integer(raw.amount));
   return [...unique].map(([productId, amount]) => ({ productId, amount }));
 }
+function normalizeDilutions(value: unknown) {
+  if (value == null) return [];
+  if (!Array.isArray(value) || value.length > 20) throw new Error("稀釋比例資料格式不正確");
+  const names = new Set<string>();
+  return value.map((raw) => {
+    const item = object(raw, "稀釋比例資料格式不正確"), name = requiredText(item.name, "比例名稱"), ratio = integer(item.ratio), defaultWater = waterAmount(item.defaultWater ?? 2000);
+    if (ratio > 10000) throw new Error("稀釋比例不可超過 1:10000");
+    const key = name.toLowerCase();
+    if (names.has(key)) throw new Error("比例名稱不可重複");
+    names.add(key);
+    return { name, ratio, defaultWater };
+  });
+}
+function waterAmount(value: unknown) { const number = integer(value); if (number < 500 || number > 5000 || number % 500 !== 0) throw new Error("預設水量必須是 500～5000 ml，並以 500 ml 為一格"); return number; }
 function clean(value: unknown) { return typeof value === "string" ? value.trim().slice(0, 120) : ""; }
 function positive(value: unknown) { const number = Number(value); if (!Number.isFinite(number) || number <= 0) throw new Error("數量必須大於 0"); return number; }
 function nonNegative(value: unknown) { const number = Number(value); if (!Number.isFinite(number) || number < 0) throw new Error("數量不可小於 0"); return number; }
