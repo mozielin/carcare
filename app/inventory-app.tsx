@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { AlertTriangle, Archive, Beaker, CalendarDays, Download, Droplets, GripVertical, History, PackagePlus, Pencil, Plus, Sparkles, Trash2, Upload } from "lucide-react";
+import { AlertTriangle, Archive, Beaker, CalendarDays, Download, Droplets, GripVertical, History, Menu, PackagePlus, Pencil, Plus, Sparkles, Trash2, Upload } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -9,7 +9,8 @@ import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, D
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
 import { Progress } from "@/components/ui/progress";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Sheet, SheetClose, SheetContent, SheetDescription, SheetFooter, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import { Tabs, TabsContent } from "@/components/ui/tabs";
 import { Toaster } from "@/components/ui/sonner";
 
 type Product = { id: number; brand: string; name: string; category: string; unit: string; packageSize: number; remaining: number; lowThreshold: number; phType: "酸性" | "中性" | "鹼性"; affectedFlowNames: string | null };
@@ -20,60 +21,614 @@ type Wash = { id: string; washedAt: string; note: string | null; flowName: strin
 type Data = { products: Product[]; brands: string[]; flows: WashFlow[]; washes: Wash[] };
 type Submit = (action: string, payload: Record<string, unknown>) => Promise<void>;
 const inputClass = "h-11 w-full rounded-xl border border-slate-200 bg-white px-3 text-sm outline-none transition focus:border-cyan-600 focus:ring-4 focus:ring-cyan-600/10 disabled:cursor-not-allowed disabled:bg-slate-100 disabled:text-slate-400";
+const navItems = [{ value: "inventory", label: "用品庫存" }, { value: "flows", label: "流程管理" }, { value: "history", label: "洗車紀錄" }, { value: "backup", label: "匯出／匯入" }] as const;
 
-export default function InventoryApp({ user }: { user: { displayName: string; email: string } }) {
-  const [data, setData] = useState<Data>({ products: [], brands: [], flows: [], washes: [] });
-  const [loading, setLoading] = useState(true), [busy, setBusy] = useState(false);
-  const [addOpen, setAddOpen] = useState(false), [washOpen, setWashOpen] = useState(false), [flowOpen, setFlowOpen] = useState(false);
-  const [restock, setRestock] = useState<Product | null>(null), [editingProduct, setEditingProduct] = useState<Product | null>(null), [deleting, setDeleting] = useState<Product | null>(null), [editingFlow, setEditingFlow] = useState<WashFlow | null>(null);
+export default function InventoryApp({
+  user,
+}: {
+  user: { displayName: string; email: string };
+}) {
+  const [data, setData] = useState<Data>({
+    products: [],
+    brands: [],
+    flows: [],
+    washes: [],
+  });
+  const [loading, setLoading] = useState(true),
+    [busy, setBusy] = useState(false);
+  const [activeTab, setActiveTab] = useState("inventory");
+  const [addOpen, setAddOpen] = useState(false),
+    [washOpen, setWashOpen] = useState(false),
+    [flowOpen, setFlowOpen] = useState(false);
+  const [restock, setRestock] = useState<Product | null>(null),
+    [editingProduct, setEditingProduct] = useState<Product | null>(null),
+    [deleting, setDeleting] = useState<Product | null>(null),
+    [editingFlow, setEditingFlow] = useState<WashFlow | null>(null);
   const guard = useRef(false);
-  const load = useCallback(async () => { const r = await fetch("/api/inventory", { cache: "no-store" }); if (!r.ok) throw new Error(); setData(await r.json()); setLoading(false); }, []);
+  const load = useCallback(async () => {
+    const r = await fetch("/api/inventory", { cache: "no-store" });
+    if (!r.ok) throw new Error();
+    setData(await r.json());
+    setLoading(false);
+  }, []);
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
-    void load().catch(() => { setLoading(false); toast.error("暫時無法讀取庫存"); });
+    void load().catch(() => {
+      setLoading(false);
+      toast.error("暫時無法讀取庫存");
+    });
   }, [load]);
   const submit: Submit = async (action, payload) => {
     if (guard.current) throw new Error("操作正在處理中，請稍候");
-    guard.current = true; setBusy(true);
-    try { const r = await fetch("/api/inventory", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ action, ...payload }) }); const result = await r.json().catch(() => ({})); if (!r.ok) throw new Error(result.error || "操作失敗"); await load(); }
-    finally { guard.current = false; setBusy(false); }
+    guard.current = true;
+    setBusy(true);
+    try {
+      const r = await fetch("/api/inventory", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action, ...payload }),
+      });
+      const result = await r.json().catch(() => ({}));
+      if (!r.ok) throw new Error(result.error || "操作失敗");
+      await load();
+    } finally {
+      guard.current = false;
+      setBusy(false);
+    }
   };
-  const lowStock = useMemo(() => data.products.filter((p) => p.remaining <= p.lowThreshold), [data.products]);
-  const average = data.products.length ? Math.round(data.products.reduce((s, p) => s + Math.min(100, p.remaining / p.packageSize * 100), 0) / data.products.length) : 0;
-  const daysSinceWash = data.washes.length ? daysSince(data.washes[0].washedAt) : null;
-  const washTone = daysSinceWash === null ? "neutral" : daysSinceWash > 14 ? "danger" : daysSinceWash > 7 ? "warning" : "success";
-  return <main className="min-h-screen bg-[#f2f7f7] text-slate-950"><Toaster position="top-center" richColors />
-    <header className="border-b border-slate-200/80 bg-white/90 backdrop-blur"><div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-5 py-4 sm:px-8"><div className="flex items-center gap-3"><div className="grid size-10 place-items-center rounded-2xl bg-cyan-950 text-cyan-100"><Droplets className="size-5" /></div><div><p className="text-xs font-semibold tracking-[.18em] text-cyan-700">CAR CARE</p><h1 className="font-semibold tracking-tight">洗車用品庫存</h1></div></div><div className="flex items-center gap-2"><div className="hidden text-right sm:block"><p className="max-w-44 truncate text-xs font-medium text-slate-700">{user.displayName}</p><a href="/signout-with-chatgpt?return_to=%2F" target="_top" className="text-[11px] text-slate-500 hover:text-cyan-800">切換帳號</a></div><Button disabled={busy} onClick={() => setWashOpen(true)} className="rounded-xl bg-cyan-950 text-white hover:bg-cyan-900"><Sparkles className="size-4" />記錄洗車</Button></div></div></header>
-    <div className="mx-auto max-w-6xl px-5 py-7 sm:px-8 sm:py-10">
-      <section className="grid gap-4 md:grid-cols-2 xl:grid-cols-[1.45fr_.7fr_.7fr_.7fr]"><div className="relative overflow-hidden rounded-[28px] bg-cyan-950 p-6 text-white shadow-[0_18px_55px_rgba(8,51,68,.17)] sm:p-8 md:col-span-2 xl:col-span-1"><div className="absolute -right-16 -top-20 size-52 rounded-full border-[28px] border-cyan-700/30" /><p className="text-sm text-cyan-200">目前庫存概況</p><div className="mt-8 flex items-end gap-3"><strong className="text-6xl font-semibold tracking-[-.06em]">{loading ? "—" : average}</strong><span className="pb-2 text-cyan-200">% 平均剩餘</span></div><p className="mt-3 text-sm text-cyan-100/75">共管理 {data.products.length} 項用品</p></div><Metric icon={<Archive />} value={data.products.length} label="庫存品項" /><Metric icon={<AlertTriangle />} value={lowStock.length} label="需要補貨" tone={lowStock.length > 0 ? "warning" : "neutral"} /><Metric icon={<CalendarDays />} value={loading ? "—" : daysSinceWash === null ? "—" : daysSinceWash} suffix={daysSinceWash === null ? undefined : "天"} label={daysSinceWash === null ? "尚無洗車紀錄" : "距上次洗車"} tone={washTone} /></section>
-      <Tabs defaultValue="inventory" className="mt-9"><div className="w-full rounded-2xl bg-white p-1 shadow-sm sm:w-fit"><TabsList className="grid h-auto w-full grid-cols-2 gap-1 bg-transparent p-0 sm:flex"><TabsTrigger value="inventory" className="w-full rounded-xl px-4 sm:w-auto">用品庫存</TabsTrigger><TabsTrigger value="flows" className="w-full rounded-xl px-4 sm:w-auto">流程管理</TabsTrigger><TabsTrigger value="history" className="w-full rounded-xl px-4 sm:w-auto">洗車紀錄</TabsTrigger><TabsTrigger value="backup" className="w-full rounded-xl px-4 sm:w-auto">匯出／匯入</TabsTrigger></TabsList></div>
-        <TabsContent value="inventory" className="!mt-8"><SectionTitle eyebrow="INVENTORY" title="用品餘量"><AddProductDialog open={addOpen} setOpen={setAddOpen} submit={submit} busy={busy} brands={data.brands} /></SectionTitle>{loading ? <Loading /> : data.products.length === 0 ? <EmptyState onAdd={() => setAddOpen(true)} /> : <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{data.products.map((p) => <ProductCard key={p.id} product={p} onRestock={() => setRestock(p)} onEdit={() => setEditingProduct(p)} onDelete={() => setDeleting(p)} />)}</div>}</TabsContent>
-        <TabsContent value="flows" className="!mt-8"><SectionTitle eyebrow="WASH ROUTINES" title="洗車流程"><Button variant="outline" className="rounded-xl" onClick={() => { setEditingFlow(null); setFlowOpen(true); }}><Plus />自訂流程</Button></SectionTitle><div className="grid gap-4 md:grid-cols-3">{data.flows.map((flow) => <article key={flow.id} className="rounded-3xl border border-white bg-white p-5 shadow-sm"><div className="flex items-center justify-between"><span className="rounded-full bg-cyan-50 px-3 py-1 text-xs font-semibold text-cyan-800">{flow.flowType}</span><button aria-label={`編輯 ${flow.name}`} onClick={() => { setEditingFlow(flow); setFlowOpen(true); }} className="grid size-9 place-items-center rounded-xl text-slate-400 hover:bg-slate-100 hover:text-cyan-800"><Pencil className="size-4" /></button></div><h3 className="mt-4 text-lg font-semibold">{flow.name}</h3>{flow.items.length ? <div className="mt-4 space-y-2">{flow.items.map((item) => <div key={item.productId} className="flex justify-between text-sm"><span className="text-slate-600">{item.productName}</span><span className="font-medium">{format(item.amount)} {item.unit}</span></div>)}</div> : <p className="mt-4 text-sm text-amber-700">尚未設定藥劑，請點右上角編輯。</p>}</article>)}</div></TabsContent>
-        <TabsContent value="history" className="!mt-8"><HistoryList washes={data.washes} /></TabsContent>
-        <TabsContent value="backup" className="!mt-8"><BackupPanel submit={submit} busy={busy} /></TabsContent>
-      </Tabs>
-    </div>
-    <WashDialog open={washOpen} setOpen={setWashOpen} flows={data.flows} products={data.products} submit={submit} busy={busy} />
-    <FlowDialog open={flowOpen} setOpen={setFlowOpen} flow={editingFlow} products={data.products} submit={submit} busy={busy} />
-    <RestockDialog product={restock} setProduct={setRestock} submit={submit} busy={busy} />
-    <EditProductDialog product={editingProduct} setProduct={setEditingProduct} submit={submit} busy={busy} brands={data.brands} />
-    <DeleteProductDialog product={deleting} setProduct={setDeleting} submit={submit} busy={busy} />
-  </main>;
+  const lowStock = useMemo(
+    () => data.products.filter((p) => p.remaining <= p.lowThreshold),
+    [data.products],
+  );
+  const average = data.products.length
+    ? Math.round(
+        data.products.reduce(
+          (s, p) => s + Math.min(100, (p.remaining / p.packageSize) * 100),
+          0,
+        ) / data.products.length,
+      )
+    : 0;
+  const daysSinceWash = data.washes.length
+    ? daysSince(data.washes[0].washedAt)
+    : null;
+  const washTone =
+    daysSinceWash === null
+      ? "neutral"
+      : daysSinceWash > 14
+        ? "danger"
+        : daysSinceWash > 7
+          ? "warning"
+          : "success";
+  return (
+    <main className="min-h-screen bg-[#f2f7f7] text-slate-950">
+      <Toaster position="top-center" richColors />
+      <header className="sticky top-0 z-40 border-b border-slate-200/80 bg-white/95 backdrop-blur">
+        <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-5 py-3 sm:px-8 sm:py-4">
+          <div className="flex min-w-0 items-center gap-3">
+            <div className="grid size-10 shrink-0 place-items-center rounded-2xl bg-cyan-950 text-cyan-100">
+              <Droplets className="size-5" />
+            </div>
+            <div className="min-w-0">
+              <p className="text-xs font-semibold tracking-[.18em] text-cyan-700">
+                CAR CARE
+              </p>
+              <h1 className="truncate font-semibold tracking-tight">
+                洗車用品庫存
+              </h1>
+            </div>
+          </div>
+          <div className="flex shrink-0 items-center gap-2">
+            <div className="hidden text-right sm:block">
+              <p className="max-w-44 truncate text-xs font-medium text-slate-700">
+                {user.displayName}
+              </p>
+              <a
+                href="/signout-with-chatgpt?return_to=%2F"
+                target="_top"
+                className="text-[11px] text-slate-500 hover:text-cyan-800"
+              >
+                切換帳號
+              </a>
+            </div>
+            <Button
+              disabled={busy}
+              onClick={() => setWashOpen(true)}
+              className="rounded-xl bg-cyan-950 px-3 text-white hover:bg-cyan-900"
+            >
+              <Sparkles className="size-4" />
+              <span className="hidden min-[430px]:inline">記錄洗車</span>
+            </Button>
+            <Sheet>
+              <SheetTrigger asChild>
+                <Button
+                  variant="outline"
+                  size="icon"
+                  className="rounded-xl"
+                  aria-label="開啟功能選單"
+                >
+                  <Menu className="size-5" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-[82%] bg-white">
+                <SheetHeader>
+                  <SheetTitle>功能選單</SheetTitle>
+                  <SheetDescription>{user.displayName}</SheetDescription>
+                </SheetHeader>
+                <nav className="grid gap-2 px-4">
+                  {navItems.map((item) => (
+                    <SheetClose asChild key={item.value}>
+                      <button
+                        onClick={() => setActiveTab(item.value)}
+                        className={`rounded-2xl px-4 py-3 text-left text-sm font-medium transition ${activeTab === item.value ? "bg-cyan-950 text-white" : "bg-slate-50 text-slate-700 hover:bg-cyan-50"}`}
+                      >
+                        {item.label}
+                      </button>
+                    </SheetClose>
+                  ))}
+                </nav>
+                <SheetFooter>
+                  <a
+                    href="/signout-with-chatgpt?return_to=%2F"
+                    target="_top"
+                    className="rounded-xl border border-slate-200 px-4 py-2.5 text-center text-sm font-medium text-slate-600"
+                  >
+                    切換帳號
+                  </a>
+                </SheetFooter>
+              </SheetContent>
+            </Sheet>
+          </div>
+        </div>
+      </header>
+      <div className="mx-auto max-w-6xl px-5 py-7 sm:px-8 sm:py-10">
+        <section className="grid gap-4 md:grid-cols-2 xl:grid-cols-[1.45fr_.7fr_.7fr_.7fr]">
+          <div className="relative overflow-hidden rounded-[28px] bg-cyan-950 p-6 text-white shadow-[0_18px_55px_rgba(8,51,68,.17)] sm:p-8 md:col-span-2 xl:col-span-1">
+            <div className="absolute -right-16 -top-20 size-52 rounded-full border-[28px] border-cyan-700/30" />
+            <p className="text-sm text-cyan-200">目前庫存概況</p>
+            <div className="mt-8 flex items-end gap-3">
+              <strong className="text-6xl font-semibold tracking-[-.06em]">
+                {loading ? "—" : average}
+              </strong>
+              <span className="pb-2 text-cyan-200">% 平均剩餘</span>
+            </div>
+            <p className="mt-3 text-sm text-cyan-100/75">
+              共管理 {data.products.length} 項用品
+            </p>
+          </div>
+          <Metric
+            icon={<Archive />}
+            value={data.products.length}
+            label="庫存品項"
+          />
+          <Metric
+            icon={<AlertTriangle />}
+            value={lowStock.length}
+            label="需要補貨"
+            tone={lowStock.length > 0 ? "warning" : "neutral"}
+          />
+          <Metric
+            icon={<CalendarDays />}
+            value={loading ? "—" : daysSinceWash === null ? "—" : daysSinceWash}
+            suffix={daysSinceWash === null ? undefined : "天"}
+            label={daysSinceWash === null ? "尚無洗車紀錄" : "距上次洗車"}
+            tone={washTone}
+          />
+        </section>
+        <Tabs
+          value={activeTab}
+          onValueChange={setActiveTab}
+          className="mt-6"
+        >
+          <TabsContent value="inventory" className="!mt-0">
+            <SectionTitle eyebrow="INVENTORY" title="用品餘量">
+              <AddProductDialog
+                open={addOpen}
+                setOpen={setAddOpen}
+                submit={submit}
+                busy={busy}
+                brands={data.brands}
+              />
+            </SectionTitle>
+            {loading ? (
+              <Loading />
+            ) : data.products.length === 0 ? (
+              <EmptyState onAdd={() => setAddOpen(true)} />
+            ) : (
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {data.products.map((p) => (
+                  <ProductCard
+                    key={p.id}
+                    product={p}
+                    onRestock={() => setRestock(p)}
+                    onEdit={() => setEditingProduct(p)}
+                    onDelete={() => setDeleting(p)}
+                  />
+                ))}
+              </div>
+            )}
+          </TabsContent>
+          <TabsContent value="flows" className="!mt-0">
+            <SectionTitle eyebrow="WASH ROUTINES" title="洗車流程">
+              <Button
+                variant="outline"
+                className="rounded-xl"
+                onClick={() => {
+                  setEditingFlow(null);
+                  setFlowOpen(true);
+                }}
+              >
+                <Plus />
+                自訂流程
+              </Button>
+            </SectionTitle>
+            <div className="grid gap-4 md:grid-cols-3">
+              {data.flows.map((flow) => (
+                <article
+                  key={flow.id}
+                  className="rounded-3xl border border-white bg-white p-5 shadow-sm"
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="rounded-full bg-cyan-50 px-3 py-1 text-xs font-semibold text-cyan-800">
+                      {flow.flowType}
+                    </span>
+                    <button
+                      aria-label={`編輯 ${flow.name}`}
+                      onClick={() => {
+                        setEditingFlow(flow);
+                        setFlowOpen(true);
+                      }}
+                      className="grid size-9 place-items-center rounded-xl text-slate-400 hover:bg-slate-100 hover:text-cyan-800"
+                    >
+                      <Pencil className="size-4" />
+                    </button>
+                  </div>
+                  <h3 className="mt-4 text-lg font-semibold">{flow.name}</h3>
+                  {flow.items.length ? (
+                    <div className="mt-4 space-y-2">
+                      {flow.items.map((item) => (
+                        <div
+                          key={item.productId}
+                          className="flex justify-between text-sm"
+                        >
+                          <span className="text-slate-600">
+                            {item.productName}
+                          </span>
+                          <span className="font-medium">
+                            {format(item.amount)} {item.unit}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <p className="mt-4 text-sm text-amber-700">
+                      尚未設定藥劑，請點右上角編輯。
+                    </p>
+                  )}
+                </article>
+              ))}
+            </div>
+          </TabsContent>
+          <TabsContent value="history" className="!mt-0">
+            <HistoryList washes={data.washes} />
+          </TabsContent>
+          <TabsContent value="backup" className="!mt-0">
+            <BackupPanel submit={submit} busy={busy} />
+          </TabsContent>
+        </Tabs>
+      </div>
+      <WashDialog
+        open={washOpen}
+        setOpen={setWashOpen}
+        flows={data.flows}
+        products={data.products}
+        submit={submit}
+        busy={busy}
+      />
+      <FlowDialog
+        open={flowOpen}
+        setOpen={setFlowOpen}
+        flow={editingFlow}
+        products={data.products}
+        submit={submit}
+        busy={busy}
+      />
+      <RestockDialog
+        product={restock}
+        setProduct={setRestock}
+        submit={submit}
+        busy={busy}
+      />
+      <EditProductDialog
+        product={editingProduct}
+        setProduct={setEditingProduct}
+        submit={submit}
+        busy={busy}
+        brands={data.brands}
+      />
+      <DeleteProductDialog
+        product={deleting}
+        setProduct={setDeleting}
+        submit={submit}
+        busy={busy}
+      />
+    </main>
+  );
 }
 
-function ProductCard({ product: p, onRestock, onEdit, onDelete }: { product: Product; onRestock: () => void; onEdit: () => void; onDelete: () => void }) {
-  const consumable = p.category === "耗材", bottleCount = p.remaining > 0 ? Math.ceil(p.remaining / p.packageSize) : 0, bottleRemaining = p.remaining > 0 ? (p.remaining % p.packageSize || p.packageSize) : 0, percent = Math.max(0, Math.min(100, (consumable ? p.remaining : bottleRemaining) / p.packageSize * 100)), low = p.remaining <= p.lowThreshold;
-  return <article className="rounded-3xl border border-white bg-white p-5 shadow-sm"><div className="flex items-start justify-between gap-3"><div className="flex flex-wrap gap-2"><span className="rounded-full bg-slate-100 px-2.5 py-1 text-xs text-slate-600">{p.category}</span>{!consumable && <span className={`rounded-full px-2.5 py-1 text-xs font-medium ${phClass(p.phType)}`}>{p.phType}</span>}</div>{low && <span className="rounded-full bg-amber-100 px-2 py-1 text-xs font-medium text-amber-800">{consumable ? "需更換" : "補貨"}</span>}</div><p className="mt-4 text-[13px] font-semibold tracking-wide text-slate-500">{p.brand || "未設定品牌"}</p><h3 className="mt-0.5 text-lg font-semibold">{p.name}</h3><div className="mt-8 flex items-baseline justify-between"><span className="text-3xl font-semibold tracking-tight">{format(p.remaining)}</span><span className="text-sm text-slate-500">{consumable ? `剩餘次數 / ${format(p.packageSize)} 次` : `${p.unit} 總庫存`}</span></div>{consumable ? <p className="mt-3 text-xs text-slate-500">使用至 0 次後更換新品</p> : <div className="mt-3 flex items-center justify-between text-xs text-slate-500"><span>目前這瓶 {format(bottleRemaining)} / {format(p.packageSize)} {p.unit}</span><span className="rounded-full bg-cyan-50 px-2.5 py-1 font-semibold text-cyan-800">×{bottleCount}</span></div>}<Progress value={percent} className={`mt-2 h-2 ${low ? "[&_[data-slot=progress-indicator]]:bg-amber-500" : "[&_[data-slot=progress-indicator]]:bg-cyan-700"}`} /><div className="mt-5 flex items-center justify-between"><button onClick={onRestock} className="text-sm font-medium text-cyan-800 hover:text-cyan-600">＋ {consumable ? "更換新品" : "補充庫存"}</button><div className="flex items-center gap-1"><button onClick={onEdit} aria-label={`編輯 ${p.name}`} className="grid size-9 place-items-center rounded-xl text-slate-400 hover:bg-cyan-50 hover:text-cyan-800"><Pencil className="size-4" /></button><button onClick={onDelete} aria-label={`刪除 ${p.name}`} className="grid size-9 place-items-center rounded-xl text-slate-300 hover:bg-red-50 hover:text-red-600"><Trash2 className="size-4" /></button></div></div></article>;
+function ProductCard({
+  product: p,
+  onRestock,
+  onEdit,
+  onDelete,
+}: {
+  product: Product;
+  onRestock: () => void;
+  onEdit: () => void;
+  onDelete: () => void;
+}) {
+  const consumable = p.category === "耗材",
+    bottleCount = p.remaining > 0 ? Math.ceil(p.remaining / p.packageSize) : 0,
+    bottleRemaining =
+      p.remaining > 0 ? p.remaining % p.packageSize || p.packageSize : 0,
+    percent = Math.max(
+      0,
+      Math.min(
+        100,
+        ((consumable ? p.remaining : bottleRemaining) / p.packageSize) * 100,
+      ),
+    ),
+    low = p.remaining <= p.lowThreshold;
+  return (
+    <article className="rounded-3xl border border-white bg-white p-5 shadow-sm">
+      <div className="flex items-start justify-between gap-3">
+        <div className="flex flex-wrap gap-2">
+          <span className="rounded-full bg-slate-100 px-2.5 py-1 text-xs text-slate-600">
+            {p.category}
+          </span>
+          {!consumable && (
+            <span
+              className={`rounded-full px-2.5 py-1 text-xs font-medium ${phClass(p.phType)}`}
+            >
+              {p.phType}
+            </span>
+          )}
+        </div>
+        {low && (
+          <span className="rounded-full bg-amber-100 px-2 py-1 text-xs font-medium text-amber-800">
+            {consumable ? "需更換" : "補貨"}
+          </span>
+        )}
+      </div>
+      <p className="mt-4 text-[13px] font-semibold tracking-wide text-slate-500">
+        {p.brand || "未設定品牌"}
+      </p>
+      <h3 className="mt-0.5 text-3xl font-semibold tracking-tight">{p.name}</h3>
+      <div className="mt-8 flex items-baseline justify-between">
+        <span className="text-lg font-semibold">{format(p.remaining)}</span>
+        <span className="text-sm text-slate-500">
+          {consumable
+            ? `剩餘次數 / ${format(p.packageSize)} 次`
+            : `${p.unit} 總庫存`}
+        </span>
+      </div>
+      {consumable ? (
+        <p className="mt-3 text-xs text-slate-500">使用至 0 次後更換新品</p>
+      ) : (
+        <div className="mt-3 flex items-center justify-between text-xs text-slate-500">
+          <span>
+            目前這瓶 {format(bottleRemaining)} / {format(p.packageSize)}{" "}
+            {p.unit}
+          </span>
+          <span className="rounded-full bg-cyan-50 px-2.5 py-1 font-semibold text-cyan-800">
+            ×{bottleCount}
+          </span>
+        </div>
+      )}
+      <Progress
+        value={percent}
+        className={`mt-2 h-2 ${low ? "[&_[data-slot=progress-indicator]]:bg-amber-500" : "[&_[data-slot=progress-indicator]]:bg-cyan-700"}`}
+      />
+      <div className="mt-5 flex items-center justify-between">
+        <button
+          onClick={onRestock}
+          className="text-sm font-medium text-cyan-800 hover:text-cyan-600"
+        >
+          ＋ {consumable ? "更換新品" : "補充庫存"}
+        </button>
+        <div className="flex items-center gap-1">
+          <button
+            onClick={onEdit}
+            aria-label={`編輯 ${p.name}`}
+            className="grid size-9 place-items-center rounded-xl text-slate-400 hover:bg-cyan-50 hover:text-cyan-800"
+          >
+            <Pencil className="size-4" />
+          </button>
+          <button
+            onClick={onDelete}
+            aria-label={`刪除 ${p.name}`}
+            className="grid size-9 place-items-center rounded-xl text-slate-300 hover:bg-red-50 hover:text-red-600"
+          >
+            <Trash2 className="size-4" />
+          </button>
+        </div>
+      </div>
+    </article>
+  );
 }
 
-function AddProductDialog({ open, setOpen, submit, busy, brands }: DialogProps & { brands: string[] }) {
-  const [packageSize, setPackageSize] = useState(""), [remaining, setRemaining] = useState(""), [lowThreshold, setLowThreshold] = useState(""), [category, setCategory] = useState("預洗");
+function AddProductDialog({
+  open,
+  setOpen,
+  submit,
+  busy,
+  brands,
+}: DialogProps & { brands: string[] }) {
+  const [packageSize, setPackageSize] = useState(""),
+    [remaining, setRemaining] = useState(""),
+    [lowThreshold, setLowThreshold] = useState(""),
+    [category, setCategory] = useState("預洗");
   const [saving, setSaving] = useState(false);
   const consumable = category === "耗材";
-  function changePackage(value: string) { setPackageSize(value); setRemaining(value); const amount = Number(value); setLowThreshold(value && Number.isFinite(amount) ? String(consumable ? 1 : Math.max(1, Math.round(amount * 0.1))) : ""); }
-  async function save(event: React.FormEvent<HTMLFormElement>) { event.preventDefault(); if (saving || busy) return; setSaving(true); const toastId = toast.loading("正在儲存用品…"); try { await submit("addProduct", Object.fromEntries(new FormData(event.currentTarget))); setPackageSize(""); setRemaining(""); setLowThreshold(""); setCategory("預洗"); setOpen(false); toast.success("用品已加入庫存", { id: toastId }); } catch (e) { toast.error(msg(e), { id: toastId }); } finally { setSaving(false); } }
+  function changePackage(value: string) {
+    setPackageSize(value);
+    setRemaining(value);
+    const amount = Number(value);
+    setLowThreshold(
+      value && Number.isFinite(amount)
+        ? String(consumable ? 1 : Math.max(1, Math.round(amount * 0.1)))
+        : "",
+    );
+  }
+  async function save(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    if (saving || busy) return;
+    setSaving(true);
+    const toastId = toast.loading("正在儲存用品…");
+    try {
+      await submit(
+        "addProduct",
+        Object.fromEntries(new FormData(event.currentTarget)),
+      );
+      setPackageSize("");
+      setRemaining("");
+      setLowThreshold("");
+      setCategory("預洗");
+      setOpen(false);
+      toast.success("用品已加入庫存", { id: toastId });
+    } catch (e) {
+      toast.error(msg(e), { id: toastId });
+    } finally {
+      setSaving(false);
+    }
+  }
   const locked = saving || busy;
-  return <Dialog open={open} onOpenChange={(next) => { if (!locked) setOpen(next); }}><DialogTrigger asChild><Button variant="outline" className="rounded-xl"><Plus />新增用品</Button></DialogTrigger><DialogContent className="rounded-3xl"><DialogHeader><DialogTitle>新增洗車用品</DialogTitle><DialogDescription>{consumable ? "耗材會依可使用次數扣除，歸零時提醒更換新品。" : "輸入瓶身容量後，會自動填入目前剩餘與 10% 提醒門檻。"}</DialogDescription></DialogHeader><form onSubmit={save} aria-busy={locked} className="grid gap-4"><BrandField brands={brands} /><Field label="用品名稱"><input className={inputClass} name="name" required /></Field><div className="grid grid-cols-3 gap-3"><Field label="用途分類"><input type="hidden" name="category" value={category} /><Select value={category} disabled={locked} onValueChange={(value) => { setCategory(value); if (value === "耗材") setLowThreshold("1"); }}><SelectTrigger className={`${inputClass} w-full`}><SelectValue /></SelectTrigger><SelectContent><SelectItem value="預洗">預洗</SelectItem><SelectItem value="正洗">正洗</SelectItem><SelectItem value="保養">保養</SelectItem><SelectItem value="玻璃">玻璃</SelectItem><SelectItem value="耗材">耗材</SelectItem><SelectItem value="內裝">內裝</SelectItem><SelectItem value="其他">其他</SelectItem></SelectContent></Select></Field><Field label="pH 分類">{consumable ? <><input type="hidden" name="phType" value="中性" /><input className={inputClass} value="不適用" disabled /></> : <select className={inputClass} name="phType" defaultValue="中性"><option>酸性</option><option>中性</option><option>鹼性</option></select>}</Field><Field label="單位">{consumable ? <input className={inputClass} name="unit" value="次" readOnly /> : <select className={inputClass} name="unit" defaultValue="ml"><option>ml</option><option>g</option><option>顆</option><option>片</option></select>}</Field></div><div className="grid grid-cols-3 gap-3"><Field label={consumable ? "可使用次數" : "瓶身容量"}><NumberInput name="packageSize" value={packageSize} onChange={(e) => changePackage(e.target.value)} /></Field><Field label={consumable ? "剩餘次數" : "目前剩餘"}><NumberInput name="remaining" value={remaining} onChange={(e) => setRemaining(e.target.value)} /></Field><Field label={consumable ? "更換提醒" : "提醒門檻"}><NumberInput name="lowThreshold" value={lowThreshold} onChange={(e) => setLowThreshold(e.target.value)} /></Field></div><DialogFooter><Button disabled={locked} type="submit" aria-disabled={locked} className="min-w-28 rounded-xl bg-cyan-950">{locked ? <><span className="size-4 animate-spin rounded-full border-2 border-white/40 border-t-white" />儲存中…</> : "儲存用品"}</Button></DialogFooter></form></DialogContent></Dialog>;
+  return (
+    <Dialog
+      open={open}
+      onOpenChange={(next) => {
+        if (!locked) setOpen(next);
+      }}
+    >
+      <DialogTrigger asChild>
+        <Button variant="outline" className="rounded-xl">
+          <Plus />
+          新增用品
+        </Button>
+      </DialogTrigger>
+      <DialogContent className="rounded-3xl">
+        <DialogHeader>
+          <DialogTitle>新增洗車用品</DialogTitle>
+          <DialogDescription>
+            {consumable
+              ? "耗材會依可使用次數扣除，歸零時提醒更換新品。"
+              : "輸入瓶身容量後，會自動填入目前剩餘與 10% 提醒門檻。"}
+          </DialogDescription>
+        </DialogHeader>
+        <form onSubmit={save} aria-busy={locked} className="grid gap-4">
+          <BrandField brands={brands} />
+          <Field label="用品名稱">
+            <input className={inputClass} name="name" required />
+          </Field>
+          <div className="grid grid-cols-3 gap-3">
+            <Field label="用途分類">
+              <input type="hidden" name="category" value={category} />
+              <Select
+                value={category}
+                disabled={locked}
+                onValueChange={(value) => {
+                  setCategory(value);
+                  if (value === "耗材") setLowThreshold("1");
+                }}
+              >
+                <SelectTrigger className={`${inputClass} w-full`}>
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="預洗">預洗</SelectItem>
+                  <SelectItem value="正洗">正洗</SelectItem>
+                  <SelectItem value="保養">保養</SelectItem>
+                  <SelectItem value="玻璃">玻璃</SelectItem>
+                  <SelectItem value="耗材">耗材</SelectItem>
+                  <SelectItem value="內裝">內裝</SelectItem>
+                  <SelectItem value="其他">其他</SelectItem>
+                </SelectContent>
+              </Select>
+            </Field>
+            <Field label="pH 分類">
+              {consumable ? (
+                <>
+                  <input type="hidden" name="phType" value="中性" />
+                  <input className={inputClass} value="不適用" disabled />
+                </>
+              ) : (
+                <select
+                  className={inputClass}
+                  name="phType"
+                  defaultValue="中性"
+                >
+                  <option>酸性</option>
+                  <option>中性</option>
+                  <option>鹼性</option>
+                </select>
+              )}
+            </Field>
+            <Field label="單位">
+              {consumable ? (
+                <input className={inputClass} name="unit" value="次" readOnly />
+              ) : (
+                <select className={inputClass} name="unit" defaultValue="ml">
+                  <option>ml</option>
+                  <option>g</option>
+                  <option>顆</option>
+                  <option>片</option>
+                </select>
+              )}
+            </Field>
+          </div>
+          <div className="grid grid-cols-3 gap-3">
+            <Field label={consumable ? "可使用次數" : "瓶身容量"}>
+              <NumberInput
+                name="packageSize"
+                value={packageSize}
+                onChange={(e) => changePackage(e.target.value)}
+              />
+            </Field>
+            <Field label={consumable ? "剩餘次數" : "目前剩餘"}>
+              <NumberInput
+                name="remaining"
+                value={remaining}
+                onChange={(e) => setRemaining(e.target.value)}
+              />
+            </Field>
+            <Field label={consumable ? "更換提醒" : "提醒門檻"}>
+              <NumberInput
+                name="lowThreshold"
+                value={lowThreshold}
+                onChange={(e) => setLowThreshold(e.target.value)}
+              />
+            </Field>
+          </div>
+          <DialogFooter>
+            <Button
+              disabled={locked}
+              type="submit"
+              aria-disabled={locked}
+              className="min-w-28 rounded-xl bg-cyan-950"
+            >
+              {locked ? (
+                <>
+                  <span className="size-4 animate-spin rounded-full border-2 border-white/40 border-t-white" />
+                  儲存中…
+                </>
+              ) : (
+                "儲存用品"
+              )}
+            </Button>
+          </DialogFooter>
+        </form>
+      </DialogContent>
+    </Dialog>
+  );
 }
 
 function EditProductDialog({ product, setProduct, submit, busy, brands }: { product: Product | null; setProduct: (v: Product | null) => void; submit: Submit; busy: boolean; brands: string[] }) { return <Dialog open={!!product} onOpenChange={(v) => !v && setProduct(null)}><DialogContent className="rounded-3xl"><DialogHeader><DialogTitle>編輯洗車用品</DialogTitle><DialogDescription>修改用品資料；流程關聯與過去洗車紀錄會保留。</DialogDescription></DialogHeader>{product && <EditProductForm key={product.id} product={product} setProduct={setProduct} submit={submit} busy={busy} brands={brands} />}</DialogContent></Dialog>; }
