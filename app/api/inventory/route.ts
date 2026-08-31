@@ -134,10 +134,13 @@ async function saveFlow(body: Record<string, unknown>, ownerEmail: string) {
 }
 
 async function logWash(body: Record<string, unknown>, ownerEmail: string) {
-  const washedAt = clean(body.washedAt), note = clean(body.note) || null, flowId = positive(body.flowId);
+  const washedAt = clean(body.washedAt), note = clean(body.note) || null, adHoc = body.adHoc === true;
+  const flowId = adHoc ? null : positive(body.flowId);
   const usages = normalizeUsages(body.usages);
   if (!/^\d{4}-\d{2}-\d{2}$/.test(washedAt) || !usages.length) throw new Error("請選擇流程並確認用品");
-  const selectedFlow = await db().prepare("SELECT name FROM wash_flows WHERE id = ? AND owner_email = ?").bind(flowId, ownerEmail).first<{ name: string }>();
+  const selectedFlow = adHoc
+    ? { name: "自訂" }
+    : await db().prepare("SELECT name FROM wash_flows WHERE id = ? AND owner_email = ?").bind(flowId, ownerEmail).first<{ name: string }>();
   if (!selectedFlow) throw new Error("找不到這個流程");
   const placeholders = usages.map(() => "?").join(",");
   const current = await db().prepare(`SELECT id, remaining FROM products WHERE active = 1 AND owner_email = ? AND id IN (${placeholders})`).bind(ownerEmail, ...usages.map((u) => u.productId)).all<{ id: number; remaining: number }>();
