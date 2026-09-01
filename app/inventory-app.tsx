@@ -186,8 +186,9 @@ export default function InventoryApp({
       <div className="mx-auto max-w-6xl px-5 py-7 sm:px-8 sm:py-10">
         <Tabs value={activeTab} onValueChange={setActiveTab}>
           <TabsContent value="dashboard" className="!mt-0">
-            <section className="grid gap-4 md:grid-cols-2 xl:grid-cols-[1.45fr_.7fr_.7fr_.7fr]">
-              <div className="relative overflow-hidden rounded-[28px] bg-cyan-950 p-6 text-white shadow-[0_18px_55px_rgba(8,51,68,.17)] sm:p-8 md:col-span-2 xl:col-span-1">
+            <section className="grid gap-4 md:grid-cols-2 xl:grid-cols-[.7fr_1.45fr_.7fr_.7fr]">
+              <Metric icon={<CalendarDays />} value={loading ? "—" : daysSinceWash === null ? "—" : daysSinceWash} suffix={daysSinceWash === null ? undefined : "天"} label={daysSinceWash === null ? "尚無洗車紀錄" : "距上次洗車"} tone={washTone} />
+              <div className="relative overflow-hidden rounded-[28px] bg-cyan-950 p-6 text-white shadow-[0_18px_55px_rgba(8,51,68,.17)] sm:p-8">
                 <div className="absolute -right-16 -top-20 size-52 rounded-full border-[28px] border-cyan-700/30" />
                 <p className="text-sm text-cyan-200">目前庫存概況</p>
                 <div className="mt-8 flex items-end gap-3">
@@ -202,7 +203,6 @@ export default function InventoryApp({
               </div>
               <Metric icon={<Archive />} value={data.products.length} label="庫存品項" />
               <Metric icon={<AlertTriangle />} value={lowStock.length} label="需要補貨" tone={lowStock.length > 0 ? "warning" : "neutral"} />
-              <Metric icon={<CalendarDays />} value={loading ? "—" : daysSinceWash === null ? "—" : daysSinceWash} suffix={daysSinceWash === null ? undefined : "天"} label={daysSinceWash === null ? "尚無洗車紀錄" : "距上次洗車"} tone={washTone} />
             </section>
           </TabsContent>
           <TabsContent value="inventory" className="!mt-0">
